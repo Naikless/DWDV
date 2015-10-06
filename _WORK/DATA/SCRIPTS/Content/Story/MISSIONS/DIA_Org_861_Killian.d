@@ -108,8 +108,7 @@ func int org_861_killian_lost_condition()
 {
 	var C_Npc Killian;
 	Killian = Hlp_GetNpc(Org_861_Killian);
-	(Killian.aivar[AIV_WASDEFEATEDBYSC] == TRUE) && (Kalom_DrugMonopol == LOG_RUNNING) && Npc_KnowsInfo(hero,org_860_renyu_deal)Killian.aivar[AIV_WASDEFEATEDBYSC];
-	if()
+	if((Killian.aivar[AIV_WASDEFEATEDBYSC] == TRUE) && Npc_KnowsInfo(hero,org_860_renyu_deal) && (Kalom_DrugMonopol == LOG_RUNNING))
 	{
 		return TRUE;
 	};

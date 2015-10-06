@@ -45,7 +45,7 @@ func void DIA_Harlok_FetchHarlok_Info()
 {
 	AI_Output(other,self,"DIA_Harlok_FetchHarlok_15_00");	//Ghorim schickt mich.
 	AI_OutputSVM(self,other,"$AWAKE");
-	AI_Output(self,other,"DIA_Harlok_FetchHarlok_01_01");	//
+	AI_Output(self,other,"DIA_Harlok_FetchHarlok_01_01");	//Was?
 	Info_ClearChoices(DIA_Harlok_FetchHarlok);
 	Info_AddChoice(DIA_Harlok_FetchHarlok,DIALOG_BACK,DIA_Harlok_FetchHarlok_BACK);
 	Info_AddChoice(DIA_Harlok_FetchHarlok,"Schwing deinen Hintern zu den Krautstampfern, oder es gibt saures.",DIA_Harlok_FetchHarlok_OrElse);

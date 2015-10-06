@@ -99,7 +99,7 @@ func void Info_BereitsErpresst_Info()
 	}
 	else
 	{
-		AI_Output(self,other,"Info_BereitsErpresst_Info_13_02");	//
+		AI_Output(self,other,"Info_BereitsErpresst_Info_13_02");	//Du hast bezahlt, du kannst vorbei. Geh jetzt bevor ich's mir anders überlege!
 	};
 	AI_StopProcessInfos(self);
 };
@@ -132,7 +132,7 @@ func void Info_BereitsAufsMaul_Info()
 	}
 	else
 	{
-		AI_Output(self,other,"Info_BereitsAufsMaul_Info_13_02");	//
+		AI_Output(self,other,"Info_BereitsAufsMaul_Info_13_02");	//Mach dass du wegkommst oder ich hau dir noch eins auf's Maul!
 	};
 	AI_StopProcessInfos(self);
 };

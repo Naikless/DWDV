@@ -377,8 +377,8 @@ func int info_gorhanis_meditate_condition()
 func void info_gorhanis_meditate_info()
 {
 	AI_OutputSVM(self,other,"$Om");
-	AI_Output(self,other,"Info_GorHanis_Meditate_08_01");	//
-	AI_Output(self,other,"Info_GorHanis_Meditate_08_02");	//Wenn du aber schonmal hier bist, kannst ich dir auch direkt was über die Meditation der Templer beibringen.
+	AI_Output(self,other,"Info_GorHanis_Meditate_08_01");	//Ommm... du störst meine Konzentration. (Seufzt)
+	AI_Output(self,other,"Info_GorHanis_Meditate_08_02");	//Wenn du aber schonmal hier bist, kann ich dir auch direkt etwas über die Meditation der Templer beibringen.
 	AI_Output(self,other,"Info_GorHanis_Meditate_08_03");	//Im Kampf zählt nicht deine körperliche Strärke. Es ist die geistige Stärke auf die es wirklich ankommt.
 	AI_Output(self,other,"Info_GorHanis_Meditate_08_04");	//Bist du im geiste klar, ist kein Gegner mehr eine Gefahr für dich.
 	AI_Output(self,other,"Info_GorHanis_Meditate_08_05");	//Denn wisse, nur wer die Klinge mit der Kraft seines Geistes schwingt, dem wird niemand im Kampf überlegen sein.
