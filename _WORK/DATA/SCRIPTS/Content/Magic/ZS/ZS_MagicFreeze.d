@@ -15,7 +15,7 @@ func void B_StopMagicFreeze()
 	};
 };
 
-func int ZS_MagicFreeze()
+func void ZS_MagicFreeze()
 {
 	PrintDebugNpc(PD_MAGIC,"ZS_MagicFreeze");
 	PrintGlobals(PD_MAGIC);

@@ -34,6 +34,10 @@ instance ORG_860_Renyu_GetLost(C_Info)
 
 func int ORG_860_Renyu_GetLost_Condition()
 {
+	if(Npc_IsInState(self,ZS_Talk))
+	{
+		return 1;
+	};
 };
 
 func void ORG_860_Renyu_GetLost_Info()

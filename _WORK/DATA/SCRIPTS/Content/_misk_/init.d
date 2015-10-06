@@ -1613,7 +1613,7 @@ func void Startup_Sub_Surface()
 	Wld_InsertNpc(Scavenger,"SPAWN_OW_SCAVENGER_BANDIT_02");
 	Wld_InsertNpc(Scavenger,"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2");
 	Wld_InsertNpc(Scavenger,"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2");
-	Wld_InsertNpc(Molerat,"SPAWN_OW_MOLERAT_PSI_PATH7_Movement");
+	Wld_InsertNpc(Molerat,"SPAWN_OW_MOLERAT_PSI_PATH7_MOVEMENT");
 	Wld_InsertNpc(Molerat,"LOCATION_24_IN");
 	Wld_InsertNpc(Molerat,"LOCATION_24_IN");
 	Wld_InsertNpc(Molerat,"LOCATION_24_IN");

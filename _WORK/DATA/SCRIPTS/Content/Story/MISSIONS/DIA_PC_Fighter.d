@@ -223,6 +223,10 @@ instance DIA_Gorn_DuHehler(C_Info)
 
 func int Dia_Gorn_DuHehler_Condition()
 {
+	if(Npc_KnowsInfo(hero,ORG_801_Lares_BringListBack))
+	{
+		return 1;
+	};
 };
 
 func void Dia_Gorn_DuHehler_Info()

@@ -132,6 +132,7 @@ func int evt_trollschlucht_gate_trigger()
 	else
 	{
 		G_PrintScreen(_STR_MESSAGE_WHEEL_STUCKS);
+		return FALSE;
 	};
 };
 

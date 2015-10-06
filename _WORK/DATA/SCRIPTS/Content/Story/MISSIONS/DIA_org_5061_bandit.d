@@ -42,6 +42,6 @@ func int org_5061_bandit_getlost_condition()
 func void org_5061_bandit_getlost_info()
 {
 	AI_Output(other,self,"DIA_Shrike_Hello_15_00");	//Wie sieht's aus?
-	AI_OutputSVM(self,other,"$NotNow");
+	AI_OutputSVM(self,other,"$NOTNOW");
 };
 

@@ -17,13 +17,14 @@ func int ZS_WaitForPassage_Loop()
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_WaitForPassage_Loop");
 	if(Npc_IsWayBlocked(self))
 	{
+		AI_Wait(self,0.5);
+		return 0;
 	}
 	else
 	{
 		PrintDebugNpc(PD_ZS_Check,"...Weg nicht mehr geblockt!");
 		return 1;
 	};
-	AI_Wait(self,0.5);
 };
 
 func void ZS_WaitForPassage_End()

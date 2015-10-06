@@ -267,7 +267,7 @@ func void ZS_Orc_Speech()
 	OrcDefaultPerc();
 };
 
-func int ZS_Orc_Speech_Loop()
+func void ZS_Orc_Speech_Loop()
 {
 	var int ani;
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_Orc_Speech_Loop");

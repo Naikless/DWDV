@@ -51,7 +51,7 @@ func int Info_Grd_213_LastWarn_Condition()
 	};
 };
 
-func int Info_Grd_213_LastWarn_Info()
+func void Info_Grd_213_LastWarn_Info()
 {
 	AI_Output(self,hero,"Info_Grd_213_LastWarn_07_01");	//Bist du taub? Noch ein Schritt und du bist Futter für die Würmer!
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_213_CHECKPOINT);
@@ -79,7 +79,7 @@ func int Info_Grd_213_Attack_Condition()
 	};
 };
 
-func int Info_Grd_213_Attack_Info()
+func void Info_Grd_213_Attack_Info()
 {
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;

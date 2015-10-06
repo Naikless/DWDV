@@ -35,13 +35,13 @@ func void B_AssessTalk()
 		Npc_SetPercTime(self,1);
 		if(C_BodyStateContains(self,BS_SIT) || !Npc_CanSeeNpc(self,hero) || (Npc_IsInState(self,ZS_HerbAlchemy) || Npc_IsInState(self,ZS_Smoke)))
 		{
-			AI_OutputSVM_Overlay(hero,NULL,"$SC_HeyTurnAround");
+			AI_OutputSVM_Overlay(hero,NULL,"$SC_HEYTURNAROUND");
 			AI_Wait(self,1);
 			AI_StartState(self,ZS_Talk,1,"");
 		}
 		else if(C_BodyStateContains(self,BS_WALK) || C_BodyStateContains(self,BS_RUN))
 		{
-			AI_OutputSVM_Overlay(hero,NULL,"$SC_HeyWaitASecond");
+			AI_OutputSVM_Overlay(hero,NULL,"$SC_HEYWAITASECOND");
 			AI_Wait(self,1);
 			AI_StartState(self,ZS_Talk,1,"");
 		}

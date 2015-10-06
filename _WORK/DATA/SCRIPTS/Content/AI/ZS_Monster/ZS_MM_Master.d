@@ -19,7 +19,7 @@ func int C_PreyToPredator(var C_Npc prey,var C_Npc predator)
 	return 0;
 };
 
-func int B_MM_DeSynchronize()
+func void B_MM_DeSynchronize()
 {
 	var int msec;
 	PrintDebugNpc(PD_MST_FRAME,"B_MM_DeSynchronize");

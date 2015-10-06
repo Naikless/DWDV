@@ -35,6 +35,10 @@ instance ORG_861_Killian_GetLost(C_Info)
 
 func int ORG_861_Killian_GetLost_Condition()
 {
+	if(Npc_IsInState(self,ZS_Talk))
+	{
+		return 1;
+	};
 };
 
 func void ORG_861_Killian_GetLost_Info()

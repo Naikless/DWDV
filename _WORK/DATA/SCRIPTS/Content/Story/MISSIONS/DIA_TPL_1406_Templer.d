@@ -223,7 +223,7 @@ func int info_tpl_1406_lastwarn_condition()
 	};
 };
 
-func int info_tpl_1406_lastwarn_info()
+func void info_tpl_1406_lastwarn_info()
 {
 	AI_Output(self,hero,"Info_Tpl_1406_LastWarn_13_01");	//Dein nächster Schritt wird dein Letzter sein.
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,TPL_1441_CHECKPOINT);
@@ -251,7 +251,7 @@ func int info_tpl_1406_attack_condition()
 	};
 };
 
-func int info_tpl_1406_attack_info()
+func void info_tpl_1406_attack_info()
 {
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;

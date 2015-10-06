@@ -52,6 +52,7 @@ func int ZS_Berzerk_Loop()
 			AI_PlayAni(self,"T_SEARCH");
 		};
 	};
+	return 0;
 };
 
 func void ZS_Berzerk_End()

@@ -173,7 +173,7 @@ func int info_grd_215_lastwarn_condition()
 	};
 };
 
-func int info_grd_215_lastwarn_info()
+func void info_grd_215_lastwarn_info()
 {
 	AI_Output(self,hero,"Info_Org_876_LastWarn_06_00");	//Du hörst wohl schlecht, Bürschchen!
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,GRD_215_CHECKPOINT);
@@ -201,7 +201,7 @@ func int info_grd_215_attack_condition()
 	};
 };
 
-func int info_grd_215_attack_info()
+func void info_grd_215_attack_info()
 {
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;

@@ -20,7 +20,7 @@ func void ZS_Babe_Flee()
 	};
 };
 
-func int ZS_Babe_Flee_Loop()
+func void ZS_Babe_Flee_Loop()
 {
 	var int state_time;
 	var string state_time_str;

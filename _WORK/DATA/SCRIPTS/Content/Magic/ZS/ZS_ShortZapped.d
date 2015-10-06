@@ -15,7 +15,7 @@ func void B_StopShortZapped()
 	};
 };
 
-func int ZS_ShortZapped()
+func void ZS_ShortZapped()
 {
 	PrintDebugNpc(PD_ZS_FRAME,"ZS_ShortZapped");
 	if(!Npc_HasBodyFlag(self,BS_FLAG_INTERRUPTABLE))
@@ -30,7 +30,7 @@ func int ZS_ShortZapped()
 	};
 };
 
-func int ZS_ShortZapped_Loop()
+func void ZS_ShortZapped_Loop()
 {
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_ShortZapped Loop");
 	if(Npc_GetStateTime(self) > SPL_TIME_SHORTZAPPED)
