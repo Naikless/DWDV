@@ -1,0 +1,3 @@
+# Die Welt der Verurteilten
+
+Dies ist ein Ableger der Gothic Mod "[Die Welt der Verurteilten](http://forum.worldofplayers.de/forum/threads/1061707-Release-Gothic-Welt-der-Verurteilten-v1-03)" von Issues. Da er selbst aufgrund eines Datenverlusts nicht mehr über die Skripte verfügt, habe ich seine Mod mit dem [GothicSourcer](http://www.worldofgothic.de/dl/download_234.htm) dekompiliert, repariert und kann nun die Entwicklung fortsetzen. Die Zielsetzung ist dabei nach wie vor die Einbindung ungenutzter Inhalte, die Vertiefung der Geschichte, die Beseitigung von Bugs und der Ausbau bestehender Funktionen.
