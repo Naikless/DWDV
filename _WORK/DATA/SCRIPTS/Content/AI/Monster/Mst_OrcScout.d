@@ -1,3 +1,4 @@
+var int mst_default_orcscout.inventar_5;
 
 prototype Mst_Default_OrcScout(C_Npc)
 {
@@ -90,20 +91,19 @@ prototype Mst_Default_OrcScout(C_Npc)
 	start_aistate = ZS_GuardPatrol;
 };
 
-var int mst_default_orcscout.inventar_5;
-
 func void Set_OrcScout_Visuals()
 {
 	Mdl_SetVisual(self,"Orc.mds");
 	Mdl_SetVisualBody(self,"Orc_BodyScout",DEFAULT,DEFAULT,"Orc_HeadWarrior",DEFAULT,DEFAULT,-1);
 };
 
-
 instance OrcScout(Mst_Default_OrcScout)
 {
 	Set_OrcScout_Visuals();
 	EquipItem(self,ItMw2hOrcSword01);
 };
+
+var int orcpeasanteatanddrink.inventar_6;
 
 instance OrcPeasantEatAndDrink(Mst_Default_OrcScout)
 {
@@ -172,8 +172,7 @@ instance OrcPeasantEatAndDrink(Mst_Default_OrcScout)
 	start_aistate = ZS_Orc_EatAndDrink;
 };
 
-
-var int orcpeasanteatanddrink.inventar_6;
+var int orcscoutgyd.inventar_7;
 
 instance OrcScoutGYD(Mst_Default_OrcScout)
 {
@@ -247,6 +246,3 @@ instance OrcScoutGYD(Mst_Default_OrcScout)
 		CreateInvItems(self,ItMi_Stuff_OldCoin_01,3);
 	};
 };
-
-
-var int orcscoutgyd.inventar_7;

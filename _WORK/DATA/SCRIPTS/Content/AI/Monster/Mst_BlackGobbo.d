@@ -1,3 +1,4 @@
+var int mst_default_blackgobbo.inventar_3;
 
 prototype Mst_Default_BlackGobbo(C_Npc)
 {
@@ -90,14 +91,11 @@ prototype Mst_Default_BlackGobbo(C_Npc)
 	};
 };
 
-var int mst_default_blackgobbo.inventar_3;
-
 func void Set_BlackGobbo_Visuals()
 {
 	Mdl_SetVisual(self,"Gobbo.mds");
 	Mdl_SetVisualBody(self,"Gob_Body",1,DEFAULT,"",DEFAULT,DEFAULT,-1);
 };
-
 
 instance BlackGobboMace(Mst_Default_BlackGobbo)
 {
@@ -105,6 +103,8 @@ instance BlackGobboMace(Mst_Default_BlackGobbo)
 	Npc_SetToFightMode(self,ItMw_1H_Nailmace_01);
 	attribute[ATR_STRENGTH] = attribute[ATR_STRENGTH] + 35;
 };
+
+var int blackgobbowarrior.inventar_4;
 
 instance BlackGobboWarrior(Mst_Default_BlackGobbo)
 {
@@ -176,6 +176,3 @@ instance BlackGobboWarrior(Mst_Default_BlackGobbo)
 		CreateInvItems(self,ItMi_Stuff_OldCoin_01,3);
 	};
 };
-
-
-var int blackgobbowarrior.inventar_4;

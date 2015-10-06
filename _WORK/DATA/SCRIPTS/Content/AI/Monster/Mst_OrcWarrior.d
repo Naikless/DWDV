@@ -1,4 +1,3 @@
-
 prototype Mst_Default_OrcWarrior(C_Npc)
 {
 	name[0] = "Ork-Krieger";
@@ -38,6 +37,7 @@ func void Set_OrcWarrior_Visuals()
 	Mdl_SetVisualBody(self,"Orc_BodyWarrior",DEFAULT,DEFAULT,"Orc_HeadWarrior",DEFAULT,DEFAULT,-1);
 };
 
+var int orcwarrior1.inventar_9;
 
 instance OrcWarrior1(Mst_Default_OrcWarrior)
 {
@@ -105,8 +105,7 @@ instance OrcWarrior1(Mst_Default_OrcWarrior)
 	};
 };
 
-
-var int orcwarrior1.inventar_9;
+var int orcwarrior2.inventar_10;
 
 instance OrcWarrior2(Mst_Default_OrcWarrior)
 {
@@ -174,8 +173,7 @@ instance OrcWarrior2(Mst_Default_OrcWarrior)
 	};
 };
 
-
-var int orcwarrior2.inventar_10;
+var int orcwarrior3.inventar_11;
 
 instance OrcWarrior3(Mst_Default_OrcWarrior)
 {
@@ -255,8 +253,7 @@ instance OrcWarrior3(Mst_Default_OrcWarrior)
 	};
 };
 
-
-var int orcwarrior3.inventar_11;
+var int orcwarrior4.inventar_12;
 
 instance OrcWarrior4(Mst_Default_OrcWarrior)
 {
@@ -335,6 +332,3 @@ instance OrcWarrior4(Mst_Default_OrcWarrior)
 		CreateInvItems(self,ItMi_Stuff_OldCoin_01,3);
 	};
 };
-
-
-var int orcwarrior4.inventar_12;

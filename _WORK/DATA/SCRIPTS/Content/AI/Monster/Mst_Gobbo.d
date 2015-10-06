@@ -1,4 +1,3 @@
-
 prototype Mst_Default_GreenGobbo(C_Npc)
 {
 	name[0] = "Goblin";
@@ -38,6 +37,7 @@ func void Set_GreenGobbo_Visuals()
 	Mdl_SetVisualBody(self,"Gob_Body",0,DEFAULT,"",DEFAULT,DEFAULT,-1);
 };
 
+var int greengobboclub.inventar;
 
 instance GreenGobboClub(Mst_Default_GreenGobbo)
 {
@@ -119,8 +119,7 @@ instance GreenGobboClub(Mst_Default_GreenGobbo)
 	};
 };
 
-
-var int greengobboclub.inventar;
+var int greengobbosword.inventar_2;
 
 instance GreenGobboSword(Mst_Default_GreenGobbo)
 {
@@ -197,6 +196,3 @@ instance GreenGobboSword(Mst_Default_GreenGobbo)
 		CreateInvItems(self,ItMi_Stuff_OldCoin_01,3);
 	};
 };
-
-
-var int greengobbosword.inventar_2;

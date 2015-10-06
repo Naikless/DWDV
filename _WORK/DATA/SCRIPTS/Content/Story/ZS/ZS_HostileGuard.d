@@ -7,7 +7,7 @@ func void ZS_HostileGuard()
 	GuardPerception();
 	Npc_PercEnable(self,PERC_ASSESSPLAYER,B_AssessSC);
 	self.senses = SENSE_SEE | SENSE_HEAR | SENSE_SMELL;
-	self.senses_range = npc;
+	self.senses_range = 2500;
 	AI_Standup(self);
 	AI_SetWalkMode(self,NPC_WALK);
 	AI_GotoWP(self,self.wp);

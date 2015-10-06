@@ -1,4 +1,3 @@
-
 prototype Mst_Default_OrcShaman(C_Npc)
 {
 	name[0] = "Ork-Schamane";
@@ -39,6 +38,7 @@ func void Set_OrcShaman_Visuals()
 	Mdl_SetVisualBody(self,"Orc_BodyShaman",DEFAULT,DEFAULT,"Orc_HeadShaman",DEFAULT,DEFAULT,-1);
 };
 
+var int orcshaman.inventar_8;
 
 instance OrcShaman(Mst_Default_OrcShaman)
 {
@@ -104,6 +104,3 @@ instance OrcShaman(Mst_Default_OrcShaman)
 		CreateInvItems(self,ItMi_Stuff_OldCoin_01,3);
 	};
 };
-
-
-var int orcshaman.inventar_8;
