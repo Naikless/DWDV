@@ -382,7 +382,7 @@ func void Sld_700_Lee_ARMOR_BACK()
 
 func void Sld_700_Lee_ARMOR_M()
 {
-	AI_Output(other,self,"DIA_Wolf_SellArmor_M_15_01");	//Ich möchte die mittlere Rüstung haben.
+	AI_Output(other,self,"Sld_700_Lee_ARMOR_M_Info_08_01");	//Ich möchte die mittlere Rüstung haben.
 	if(Kapitel < 3)
 	{
 		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_02");	//Du bist noch nicht so weit, eine bessere Rüstung zu tragen. Komm wieder, wenn du erfahrener geworden bist.
@@ -404,7 +404,7 @@ func void Sld_700_Lee_ARMOR_M()
 
 func void Sld_700_Lee_ARMOR_H()
 {
-	AI_Output(other,self,"DIA_LEE_BUYARMORH_15_00");	//Gib mir die schwere Rüstung.
+	AI_Output(other,self,"Sld_700_Lee_ARMOR_H_Info_08_01");	//Gib mir die schwere Rüstung.
 	if(Kapitel < 4)
 	{
 		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_02");	//Du bist noch nicht so weit, die schwere Rüstung zu tragen. Komm wieder, wenn du erfahrener geworden bist.
