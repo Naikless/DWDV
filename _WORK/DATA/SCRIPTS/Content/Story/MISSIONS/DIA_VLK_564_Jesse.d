@@ -78,6 +78,8 @@ func void DIA_Jesse_Warn_Info()
 };
 
 
+var int Jesse_NoHelp;
+
 instance DIA_Jesse_Mission(C_Info)
 {
 	npc = VLK_564_Jesse;
@@ -109,8 +111,9 @@ func void DIA_Jesse_Mission_Info()
 
 func void DIA_Jesse_Mission_ForgetIt()
 {
-	AI_Output(other,self,"DIA_Jesse_Mission_ForgetIt_15_00");	//Ich schulde dir GAR nichts!
+	AI_Output(other,self,"DIA_Jesse_Mission_ForgetIt_15_00");	//Vergiß es! Ich schulde dir GAR nichts!
 	AI_Output(self,other,"DIA_Jesse_Mission_NO_03_01");	//So kann man sich in jemandem irren. Mit meiner Hilfe rechnest du am besten nicht mehr.
+	Jesse_NoHelp = TRUE;
 	Npc_SetPermAttitude(self,ATT_ANGRY);
 	Info_ClearChoices(DIA_Jesse_Mission);
 	AI_StopProcessInfos(self);
@@ -122,14 +125,16 @@ func void DIA_Jesse_Mission_What()
 	AI_Output(self,other,"DIA_Jesse_Mission_What_03_01");	//Ich hab' kein Erz mehr, und Bloodwyn hat schon versucht, das letzte Bröckchen aus mir rauszupressen.
 	AI_Output(self,other,"DIA_Jesse_Mission_What_03_02");	//Jetzt, wo ich dir geholfen habe, könntest du ihm doch meine 10 Erz geben, oder? Sag ihm, sie kommen von mir.
 	Npc_SetTrueGuild(self,GIL_None);
-	Info_AddChoice(DIA_Jesse_Mission,"Ich für dich zahlen? Vergiß es!",DIA_Jesse_Mission_NO);
+	Info_ClearChoices(DIA_Jesse_Mission);
 	Info_AddChoice(DIA_Jesse_Mission,"Ich werd sehen, was ich machen kann...",DIA_Jesse_Mission_YES);
+	Info_AddChoice(DIA_Jesse_Mission,"Ich für dich zahlen? Vergiß es!",DIA_Jesse_Mission_NO);
 };
 
 func void DIA_Jesse_Mission_YES()
 {
 	AI_Output(other,self,"DIA_Jesse_Mission_YES_15_00");	//Ich werd sehen, was ich machen kann ...
 	AI_Output(self,other,"DIA_Jesse_Mission_YES_03_01");	//Danke, Mann! Du bist meine Rettung! Sag mir Bescheid, wenn die Sache gelaufen ist, ja?
+	Jesse_NoHelp = FALSE;
 	Jesse_PayForMe = LOG_RUNNING;
 	Log_CreateTopic(CH1_JESSE,LOG_MISSION);
 	B_LogEntry(CH1_JESSE,"Der Buddler Jesse hat mich gebeten, die Schutzgeldsumme von 10 Erz an Bloodwyn zu zahlen.");
@@ -141,6 +146,7 @@ func void DIA_Jesse_Mission_NO()
 {
 	AI_Output(other,self,"DIA_Jesse_Mission_NO_15_00");	//Ich für dich zahlen? Vergiss es!
 	AI_Output(self,other,"DIA_Jesse_Mission_NO_03_01");	//So kann man sich in jemandem irren. Mit meiner Hilfe rechnest du am besten nicht mehr.
+	Jesse_NoHelp = TRUE;
 	Npc_SetPermAttitude(self,ATT_ANGRY);
 	Info_ClearChoices(DIA_Jesse_Mission);
 };
@@ -215,8 +221,16 @@ func int dia_jesse_sword_condition()
 func void dia_jesse_sword_info()
 {
 	AI_Output(other,self,"DIA_Jesse_Sword_15_00");	//Wo ist Hunos Schwert?
-	AI_Output(self,other,"DIA_Jesse_Sword_03_01");	//Was?! Ich weiß nichts davon.
-	AI_Output(other,self,"DIA_Jesse_Sword_03_02");	//Nun spucks schon aus, ich weiß das DU etwas mit der Sache zu tun hast.
+	if(Jesse_NoHelp == TRUE)
+	{
+		AI_Output(self,other,"DIA_Jesse_Sword_03_01");	//Ich sagte doch, dass du mit meiner Hilfe nicht mehr rechnen brauchst!
+		AI_Output(other,self,"DIA_Jesse_Sword_15_01");	//Nun spuck's schon aus, oder ich hau dir auf's Maul.
+	}
+	else
+	{
+		AI_Output(self,other,"DIA_Jesse_Sword_03_02");	//Was?! Ich weiß nichts davon.
+		AI_Output(other,self,"DIA_Jesse_Sword_15_02");	//Nun spucks schon aus, ich weiß das DU etwas mit der Sache zu tun hast.
+	};
 	AI_Output(self,other,"DIA_Jesse_Sword_03_03");	//Schon gut, ich geb's ja zu ich hab' das Schwert gestohlen.
 	AI_Output(self,other,"DIA_Jesse_Sword_03_04");	//Ich bin auf das Erz angewiesen, sonst kann ich den Gardisten kein Schutzgeld mehr bezahlen.
 	AI_Output(self,other,"DIA_Jesse_Sword_03_05");	//Ich hab' das Schwert an einen Hehler aus dem Neuen Lager verkauft.
