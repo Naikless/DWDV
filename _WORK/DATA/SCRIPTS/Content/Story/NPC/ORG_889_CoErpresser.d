@@ -1,7 +1,7 @@
 
 instance ORG_889_CoErpresser(Npc_Default)
 {
-	name[0] = "Co Erpresser";
+	name[0] = "Erpresser";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 11;
