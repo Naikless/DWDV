@@ -254,7 +254,7 @@ instance DIA_Snaf_WhereNek(C_Info)
 
 func int DIA_Snaf_WhereNek_Condition()
 {
-	if(Snaf_Zutaten == LOG_RUNNING)
+	if(Npc_KnowsInfo(hero,DIA_Snaf_Zutaten) && (Sly_LostNek == LOG_RUNNING))
 	{
 		return 1;
 	};
@@ -265,11 +265,6 @@ func void DIA_Snaf_WhereNek_Info()
 	AI_Output(other,self,"DIA_Snaf_WhereNek_15_00");	//Wer war der Typ, den du vor mir losgeschickt hast?
 	AI_Output(self,other,"DIA_Snaf_WhereNek_01_01");	//Sein Name war Nek. Er war ziemlich unzufrieden hier - ich denke, er ist jetzt im Neuen Lager.
 	AI_Output(self,other,"DIA_Snaf_WhereNek_01_02");	//Hab ihn Pilze suchen geschickt - aber er kam nicht wieder ...
-	if((Sly_LostNek != LOG_SUCCESS) && (Npc_GetTrueGuild(hero) == GIL_None))
-	{
-		Log_CreateTopic(CH1_LostNek,LOG_MISSION);
-		Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
-	};
 	B_LogEntry(CH1_LostNek,"Der Koch Snaf hat Nek zum letzten Mal gesehen, als er Pilze pflücken ging.");
 };
 

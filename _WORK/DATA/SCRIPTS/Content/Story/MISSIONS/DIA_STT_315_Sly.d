@@ -98,16 +98,14 @@ func void DIA_STT_315_LostNek_DoIt()
 	AI_Output(other,self,"DIA_STT_315_LostNek_DoIt_15_02");	//Wo finde ich ihn?
 	AI_Output(self,other,"DIA_STT_315_LostNek_DoIt_10_03");	//Sein Viertel ist das Arenaviertel.
 	Sly_LostNek = LOG_RUNNING;
+	Log_CreateTopic(CH1_LostNek,LOG_MISSION);
+	Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
 	if(Npc_GetTrueGuild(hero) == GIL_None)
 	{
-		Log_CreateTopic(CH1_LostNek,LOG_MISSION);
-		Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
 		B_LogEntry(CH1_LostNek,"Der Schatten Sly hat mir versprochen, ein gutes Wort bei Diego für mich einzulegen, wenn ich Nek finde. Der Gardist könnte zum Neuen Lager übergelaufen sein. Fletcher aus dem Arenaviertel sollte ich nach Nek fragen.");
 	}
 	else
 	{
-		Log_CreateTopic(CH1_LostNek,LOG_MISSION);
-		Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
 		B_LogEntry(CH1_LostNek,"Der Schatten Sly hat mich beauftragt, den verschwundenen Gardisten Nek zu finden.Der Gardist könnte zum Neuen Lager übergelaufen sein. Fletcher aus dem Arenaviertel sollte ich nach Nek fragen.");
 	};
 	Info_ClearChoices(DIA_STT_315_LostNek);

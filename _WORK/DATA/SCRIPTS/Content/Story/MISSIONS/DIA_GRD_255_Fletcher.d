@@ -122,7 +122,7 @@ instance DIA_Fletcher_WoNek(C_Info)
 
 func int DIA_Fletcher_WoNek_Condition()
 {
-	if(Npc_KnowsInfo(hero,DIA_STT_315_LostNek) || (fletcher_whytalk == TRUE))
+	if(Npc_KnowsInfo(hero,DIA_Fletcher_Hello) && (Sly_LostNek == LOG_RUNNING))
 	{
 		return 1;
 	};
@@ -134,11 +134,6 @@ func void DIA_Fletcher_WoNek_Info()
 	AI_Output(self,other,"DIA_Fletcher_WoNek_06_01");	//Nein, und ich werde es auch nicht rausfinden.
 	AI_Output(self,other,"DIA_Fletcher_WoNek_06_02");	//Wenn einer was weiß, dann die Buddler aus diesem Viertel. Aber die Buddler reden nicht mit Gardisten.
 	AI_Output(self,other,"DIA_Fletcher_WoNek_06_03");	//Vor allem nicht jetzt, denn sie wissen, dass ich diese Drecksarbeit hier verabscheue, und insgeheim lachen sie sich über mich tot!
-	if(Sly_LostNek != LOG_SUCCESS)
-	{
-		Log_CreateTopic(CH1_LostNek,LOG_MISSION);
-	};
-	Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
 	B_LogEntry(CH1_LostNek,"Die Buddler im Arenaviertel wissen vielleicht, wohin Nek verschwunden ist.");
 };
 
@@ -156,7 +151,7 @@ instance DIA_Fletcher_TroSchu(C_Info)
 
 func int DIA_Fletcher_TroSchu_Condition()
 {
-	if(Npc_KnowsInfo(hero,DIA_Fletcher_Hello))
+	if(Npc_KnowsInfo(hero,DIA_Fletcher_Hello) && (fletcher_whytalk == TRUE))
 	{
 		return 1;
 	};
@@ -169,22 +164,20 @@ func void DIA_Fletcher_TroSchu_Info()
 };
 
 
-var int fletcher_foundNek;
-
 instance DIA_Fletcher_WegenNek(C_Info)
 {
 	npc = GRD_255_Fletcher;
 	nr = 1;
 	condition = DIA_Fletcher_WegenNek_Condition;
 	information = DIA_Fletcher_WegenNek_Info;
-	permanent = 1;
+	permanent = 0;
 	description = "Wegen Nek...";
 };
 
 
 func int DIA_Fletcher_WegenNek_Condition()
 {
-	if(Npc_KnowsInfo(hero,DIA_Fletcher_WoNek) && (fletcher_foundNek == FALSE))
+	if(Sly_LostNek == LOG_SUCCESS)
 	{
 		return 1;
 	};
@@ -192,24 +185,11 @@ func int DIA_Fletcher_WegenNek_Condition()
 
 func void DIA_Fletcher_WegenNek_Info()
 {
-	var C_Npc Nek;
 	AI_Output(other,self,"DIA_Fletcher_WegenNek_15_00");	//Wegen Nek ...
-	AI_Output(self,other,"DIA_Fletcher_WegenNek_06_01");	//Ja?
-	Nek = Hlp_GetNpc(GRD_282_Nek);
-	if((Sly_LostNek == LOG_SUCCESS) || !Hlp_IsValidNpc(Nek))
-	{
-		AI_Output(other,self,"DIA_Fletcher_WegenNek_15_02");	//Ich glaub', ich hab' ihn gefunden.
-		AI_Output(self,other,"DIA_Fletcher_WegenNek_06_03");	//Was? Wo ist er?
-		AI_Output(other,self,"DIA_Fletcher_WegenNek_15_04");	//Er ist Futter für die Ratten.
-		AI_Output(self,other,"DIA_Fletcher_WegenNek_06_05");	//Nein! Verdammt! Dann muss ICH jetzt den Laden hier schmeißen. Ich hatte gehofft, er kommt wieder.
-		AI_Output(self,other,"DIA_Fletcher_WegenNek_06_06");	//Jetzt hab' ich ein Problem ...
-		fletcher_foundNek = TRUE;
-	}
-	else
-	{
-		AI_Output(other,self,"DIA_Fletcher_WegenNek_15_07");	//Noch nichts Neues.
-		AI_Output(self,other,"DIA_Fletcher_WegenNek_06_08");	//Halt mich auf dem Laufenden.
-	};
+	AI_Output(self,other,"DIA_Fletcher_WegenNek_06_03");	//Was? Wo ist er?
+	AI_Output(other,self,"DIA_Fletcher_WegenNek_15_04");	//Er ist Futter für die Ratten.
+	AI_Output(self,other,"DIA_Fletcher_WegenNek_06_05");	//Nein! Verdammt! Dann muss ICH jetzt den Laden hier schmeißen. Ich hatte gehofft, er kommt wieder.
+	AI_Output(self,other,"DIA_Fletcher_WegenNek_06_06");	//Jetzt hab' ich ein Problem ...
 };
 
 
@@ -226,7 +206,7 @@ instance DIA_Fletcher_Problem(C_Info)
 
 func int DIA_Fletcher_Problem_Condition()
 {
-	if(fletcher_foundNek == TRUE)
+	if(Npc_KnowsInfo(hero,DIA_Fletcher_WegenNek))
 	{
 		return 1;
 	};
