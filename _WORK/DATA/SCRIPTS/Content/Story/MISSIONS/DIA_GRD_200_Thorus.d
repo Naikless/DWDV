@@ -498,14 +498,22 @@ func void Info_Thorus_ReadyForGomez_Info()
 	AI_Output(other,self,"Info_Thorus_ReadyForGomez_15_02");	//Und wie lautet deine Entscheidung?
 	AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_03");	//Hmmm ...
 	AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_04");	//Du hast wohl die meisten Sachen gut gemacht, so viel muss man sagen.
-	AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_05");	//Gut! Du kannst zu Gomez gehen. Er allein bestimmt, wer aufgenommen wird und wer nicht.
-	AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_06");	//Ab jetzt bist du auf dich allein gestellt, Kleiner.
-	wache212 = Hlp_GetNpc(Grd_212_Torwache);
-	wache213 = Hlp_GetNpc(Grd_213_Torwache);
-	wache218 = Hlp_GetNpc(Grd_218_Gardist);
-	wache212.aivar[AIV_PASSGATE] = TRUE;
-	wache213.aivar[AIV_PASSGATE] = TRUE;
-	wache218.aivar[AIV_PASSGATE] = TRUE;
+	if(Npc_GetTrueGuild(hero) == GIL_None)
+	{
+		AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_05");	//Gut! Du kannst zu Gomez gehen. Er allein bestimmt, wer aufgenommen wird und wer nicht.
+		AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_06");	//Ab jetzt bist du auf dich allein gestellt, Kleiner.
+		wache212 = Hlp_GetNpc(Grd_212_Torwache);
+		wache213 = Hlp_GetNpc(Grd_213_Torwache);
+		wache218 = Hlp_GetNpc(Grd_218_Gardist);
+		wache212.aivar[AIV_PASSGATE] = TRUE;
+		wache213.aivar[AIV_PASSGATE] = TRUE;
+		wache218.aivar[AIV_PASSGATE] = TRUE;
+	}
+	else
+	{
+		AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_07");	//Doch du hast dich bereits einem anderen Lager angeschlossen.
+		AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_08");	//Ich kann dich daher nicht ohne weiteres in die Burg lassen.
+	};
 };
 
 

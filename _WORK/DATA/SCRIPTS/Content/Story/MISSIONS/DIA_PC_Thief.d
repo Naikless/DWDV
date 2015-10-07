@@ -798,7 +798,7 @@ instance Info_Diego_JoinAnalyze(C_Info)
 
 func int Info_Diego_JoinAnalyze_Condition()
 {
-	if(Npc_KnowsInfo(hero,Info_Diego_Rules) && (Npc_GetTrueGuild(hero) == GIL_None) && (oldHeroGuild == 0))
+	if(Npc_KnowsInfo(hero,Info_Diego_Rules) && (Npc_GetTrueGuild(hero) == GIL_None) && (Diego_GomezAudience == FALSE))
 	{
 		return 1;
 	};
@@ -956,7 +956,7 @@ instance Info_Diego_WhatToSayToGomez(C_Info)
 
 func int Info_Diego_WhatToSayToGomez_Condition()
 {
-	if(Diego_GomezAudience == TRUE)
+	if((Npc_GetTrueGuild(hero) == GIL_None) && (Diego_GomezAudience == TRUE))
 	{
 		return 1;
 	};
