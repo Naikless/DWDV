@@ -1386,7 +1386,7 @@ instance Info_Gorn_FMGATE(C_Info)
 
 func int Info_Gorn_FMGATE_Condition()
 {
-	if(Gorn_JoinedForFM && !FM_GateOpen && (Npc_GetDistToWP(hero,"FMC_FM_ENTRANCE") < 1000))
+	if(Gorn_JoinedForFM && (Npc_GetDistToWP(hero,"FMC_FM_ENTRANCE") < 1000))
 	{
 		return TRUE;
 	};
