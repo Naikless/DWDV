@@ -477,7 +477,7 @@ func void nov_1301_caine_traenke_health3()
 	{
 		other.lp = other.lp - 3;
 		PrintScreen("Lerne: Elixier heilender Kraft",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_Health3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_Health3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_Health3_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_HEILELIXIER = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -509,7 +509,7 @@ func void nov_1301_caine_traenke_mana1()
 	{
 		other.lp = other.lp - 1;
 		B_GiveSkill(other,NPC_TALENT_REGENERATE,1,0);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_Mana1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_Mana1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_Mana1_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_MANAESSENZ = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -533,7 +533,7 @@ func void nov_1301_caine_traenke_mana2()
 	{
 		other.lp = other.lp - 2;
 		PrintScreen("Lerne: Extrakt magischer Energie",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_Mana2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_Mana2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_Mana2_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_MANAEXTRAKT = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -557,7 +557,7 @@ func void nov_1301_caine_traenke_mana3()
 	{
 		other.lp = other.lp - 3;
 		PrintScreen("Lerne: Elixier magischer Energie",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_Mana3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_Mana3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_Mana3_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_MANAELIXIER = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -597,7 +597,7 @@ func void nov_1301_caine_traenke_manaperma1()
 	{
 		other.lp = other.lp - 5;
 		PrintScreen("Lerne: Essenz des Geistes",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_ManaPerma1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_ManaPerma1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_ManaPerma1_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_MANAPERMAESSENZ = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -621,7 +621,7 @@ func void nov_1301_caine_traenke_manaperma2()
 	{
 		other.lp = other.lp - 8;
 		PrintScreen("Lerne: Extrakt des Geistes",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_ManaPerma2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_ManaPerma2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_ManaPerma2_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_MANAPERMAEXTRAKT = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -645,7 +645,7 @@ func void nov_1301_caine_traenke_manaperma3()
 	{
 		other.lp = other.lp - 10;
 		PrintScreen("Lerne: Elixier des Geistes",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_ManaPerma3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_ManaPerma3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_ManaPerma3_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_MANAPERMAELIXIER = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -665,7 +665,7 @@ func void nov_1301_caine_traenke_healthperma1()
 	{
 		other.lp = other.lp - 5;
 		PrintScreen("Lerne: Essenz des Lebens",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_HealthPerma1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_HealthPerma1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_HealthPerma1_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_HEILPERMAESSENZ = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -689,7 +689,7 @@ func void nov_1301_caine_traenke_healthperma2()
 	{
 		other.lp = other.lp - 8;
 		PrintScreen("Lerne: Extrakt des Lebens",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_HealthPerma2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_HealthPerma2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_HealthPerma2_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_HEILPERMAEXTRAKT = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -713,7 +713,7 @@ func void nov_1301_caine_traenke_healthperma3()
 	{
 		other.lp = other.lp - 10;
 		PrintScreen("Lerne: Elixier des Lebens",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_HealthPerma3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_HealthPerma3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_HealthPerma3_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_HEILPERMAELIXIER = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -733,7 +733,7 @@ func void nov_1301_caine_traenke_strengthperma1()
 	{
 		other.lp = other.lp - 5;
 		PrintScreen("Lerne: Essenz der Stärke",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_StrengthPerma1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_StrengthPerma1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_StrengthPerma1_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_STRENGTHESSENZ = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -757,7 +757,7 @@ func void nov_1301_caine_traenke_strengthperma2()
 	{
 		other.lp = other.lp - 8;
 		PrintScreen("Lerne: Extrakt der Stärke",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_StrengthPerma2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_StrengthPerma2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_StrengthPerma2_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_STRENGTHEXTRAKT = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -781,7 +781,7 @@ func void nov_1301_caine_traenke_strengthperma3()
 	{
 		other.lp = other.lp - 10;
 		PrintScreen("Lerne: Elixier der Stärke",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_StrengthPerma3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_StrengthPerma3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_StrengthPerma3_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_STRENGTHELIXIER = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -801,7 +801,7 @@ func void nov_1301_caine_traenke_dexperma1()
 	{
 		other.lp = other.lp - 5;
 		PrintScreen("Lerne: Essenz der Geschicklichkeit",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_DexPerma1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_DexPerma1_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_DexPerma1_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_DEXESSENZ = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -825,7 +825,7 @@ func void nov_1301_caine_traenke_dexperma2()
 	{
 		other.lp = other.lp - 8;
 		PrintScreen("Lerne: Extrakt der Geschicklichkeit",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_DexPerma2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_DexPerma2_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_DexPerma2_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_DEXEXTRAKT = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -849,7 +849,7 @@ func void nov_1301_caine_traenke_dexperma3()
 	{
 		other.lp = other.lp - 10;
 		PrintScreen("Lerne: Elixier der Geschicklichkeit",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_DexPerma3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_DexPerma3_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_DexPerma3_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_DEXELIXIER = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -869,7 +869,7 @@ func void nov_1301_caine_traenke_elixier()
 	{
 		other.lp = other.lp - 10;
 		PrintScreen("Lerne: Elixier",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_Elixier_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_Elixier_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_Elixier_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_PSIELIXIER = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
@@ -889,7 +889,7 @@ func void nov_1301_caine_traenke_crawlerelixier()
 	{
 		other.lp = other.lp - 10;
 		PrintScreen("Lerne: Crawler-Elixier",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
-		AI_Output(self,other,"Nov_1301_Caine_Traenke_CrawlerElixier_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
+		AI_Output(self,other,"Nov_1301_Caine_Traenke_CrawlerElixier_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeiten einfüllst.
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_CrawlerElixier_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
 		KNOWS_DEXELIXIER = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
