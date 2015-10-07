@@ -186,7 +186,6 @@ func int nov_1356_shrat_tavern_condition()
 
 func void nov_1356_shrat_tavern_info()
 {
-	AI_Output(self,other,"Nov_1356_Shrat_WELCOME_Info_08_01");	//Mann, du scheinst es ja weit gebracht zu haben bei diesen Spinnern. Oh ich vergaß, du hast mir ja gar nicht erlaubt dich anzusprechen, was? Hehe.
 	AI_PlayAni(self,"T_SEARCH");
 	AI_Output(self,other,"Nov_1356_Shrat_WELCOME_Info_08_02");	//...sieht ja gar nicht mal so schlecht aus, was?
 	AI_Output(self,other,"Nov_1356_Shrat_WELCOME_Info_08_03");	//Ich denke, wenn du das nächste mal alleine weiterziehen willst, werd' ich hier bleiben statt zurück in den monsterverseuchten Sumpf zu gehen.
