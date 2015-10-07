@@ -146,7 +146,6 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		B_ClearImmortal(GUR_1209_BaalOrun);
 		B_ClearImmortal(GUR_1210_BaalTyon);
 		B_ClearImmortal(TPL_1402_GorNaToth);
-		B_ClearImmortal(Org_801_Lares);
 		B_ClearImmortal(GRD_263_Asghan);
 		B_ClearImmortal(STT_301_Ian);
 		B_ExchangeRoutine(TPL_1439_GorNaDrak,"FMTaken");
@@ -244,15 +243,8 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		B_ClearImmortal(GRD_280_Gardist);
 		B_ClearImmortal(EBR_101_Scar);
 		B_ClearImmortal(EBR_102_Arto);
-		B_ClearImmortal(EBR_105_Raven);
-		B_ClearImmortal(GRD_200_Thorus);
-		B_ClearImmortal(org_871_logan);
 		B_ClearImmortal(SLD_752_Okyl);
-		B_ClearImmortal(Sld_700_Lee);
 		B_ClearImmortal(SLD_701_Orik);
-		B_ClearImmortal(SLD_737_Torlof);
-		B_ClearImmortal(Sld_709_Cord);
-		B_ClearImmortal(SLD_728_Jarvis);
 		B_KillNpc(KDF_400_Rodriguez);
 		B_KillNpc(KDF_401_Damarok);
 		B_KillNpc(Kdf_402_Corristo);
@@ -380,8 +372,6 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		b_give_mordragchapter6weapons();
 		b_give_kaganchapter6joints();
 		B_ClearImmortal(GRD_219_Stone);
-		B_ClearImmortal(GUR_1202_CorAngar);
-		B_ClearImmortal(STT_336_Cavalorn);
 		B_ChangeGuild(ORG_855_Wolf,GIL_SLD);
 		Mdl_ApplyOverlayMds(ORG_855_Wolf,"Humans_Militia.mds");
 		Mdl_SetVisualBody(ORG_855_Wolf,"hum_body_Naked0",0,1,"Hum_Head_FatBald",38,1,sld_armor_m);
