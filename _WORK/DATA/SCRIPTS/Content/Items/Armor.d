@@ -389,7 +389,7 @@ instance ORG_ARMOR_L(C_Item)
 
 instance ORG_ARMOR_M(C_Item)
 {
-	name = "Mittlere Banditenkleidung";
+	name = "Banditenkleidung";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 35;
@@ -534,7 +534,7 @@ instance SLD_ARMOR_H(C_Item)
 
 instance NOV_ARMOR_L(C_Item)
 {
-	name = "Novizen Rock";
+	name = "Novizenrock";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 20;
@@ -927,6 +927,7 @@ instance CRW_ARMOR_H(C_Item)
 	visual_skin = 0;
 	material = MAT_WOOD;
 	description = name;
+	text[0] = "Wurde aus Crawler-Platten angefertigt.";
 	text[1] = NAME_Prot_Edge;
 	count[1] = protection[PROT_EDGE];
 	text[2] = NAME_Prot_Point;
@@ -956,7 +957,7 @@ instance ORE_ARMOR_M(C_Item)
 	visual_skin = 0;
 	material = MAT_WOOD;
 	description = name;
-	text[0] = "vollständig aus magischem Erz geschmiedet.";
+	text[0] = "Vollständig aus magischem Erz geschmiedet.";
 	text[1] = NAME_Prot_Edge;
 	count[1] = protection[PROT_EDGE];
 	text[2] = NAME_Prot_Point;
@@ -986,7 +987,7 @@ instance ORE_ARMOR_H(C_Item)
 	visual_skin = 0;
 	material = MAT_WOOD;
 	description = name;
-	text[0] = "von Stone dem Schmied noch weiter verbessert.";
+	text[0] = "Von Stone dem Schmied noch weiter verbessert.";
 	text[1] = NAME_Prot_Edge;
 	count[1] = protection[PROT_EDGE];
 	text[2] = NAME_Prot_Point;
@@ -1260,6 +1261,7 @@ instance NON_ARMOR_U(C_Item)
 	visual_skin = 0;
 	material = MAT_LEATHER;
 	description = name;
+	text[0] = "Wurde aus Lurkerhaut angefertigt.";
 	text[1] = NAME_Prot_Edge;
 	count[1] = protection[PROT_EDGE];
 	text[2] = NAME_Prot_Point;
@@ -1289,6 +1291,7 @@ instance NON_ARMOR_P(C_Item)
 	visual_skin = 0;
 	material = MAT_LEATHER;
 	description = name;
+	text[0] = "Wurde aus Trollfell angefertigt.";
 	text[1] = NAME_Prot_Edge;
 	count[1] = protection[PROT_EDGE];
 	text[2] = NAME_Prot_Point;
@@ -1303,7 +1306,7 @@ instance NON_ARMOR_P(C_Item)
 
 instance NOV_ARMOR_L_UPGRADE(C_Item)
 {
-	name = "Verbesserter Novizen Rock";
+	name = "Verbesserter Novizenrock";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 25;
