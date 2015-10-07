@@ -434,7 +434,7 @@ instance DIA_GORNATOTH_JAGD(C_Info)
 	nr = 1;
 	condition = dia_gornatoth_jagd_condition;
 	information = dia_gornatoth_jagd_info;
-	permanent = 1;
+	permanent = 0;
 	description = "Wonach hälst du ausschau?";
 };
 
@@ -488,7 +488,7 @@ func void dia_gornatoth_helfen_info()
 {
 	AI_Output(other,self,"DIA_GorNaToth_Helfen_15_00");	//Kann ich dir bei deiner "heiligen Aufgabe" helfen?
 	AI_Output(self,other,"DIA_GorNaToth_Helfen_11_01");	//Ja das kannst du. Ich denke es wird am besten sein, wenn wir den Sumpfhai zu zweit angreifen.
-	if(Npc_GetTrueGuild(hero) == GIL_TPL)
+	if(Npc_GetTrueGuild(hero) == GIL_NOV)
 	{
 		AI_Output(self,other,"DIA_GorNaToth_Helfen_11_02");	//Du bist zwar noch ein Novize, aber wenn der Schläfer mit dir ist, bist auch du in der Lage diese Aufgabe zu meistern.
 	}
