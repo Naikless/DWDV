@@ -396,7 +396,7 @@ instance ORG_ARMOR_M(C_Item)
 	protection[PROT_BLUNT] = 35;
 	protection[PROT_POINT] = 35;
 	protection[PROT_FIRE] = 15;
-	protection[PROT_MAGIC] = 0;
+	protection[PROT_MAGIC] = 5;
 	value = value_org_armor_m;
 	wear = WEAR_TORSO;
 	visual = "orgm.3ds";
@@ -569,7 +569,7 @@ instance NOV_ARMOR_M(C_Item)
 	protection[PROT_EDGE] = 30;
 	protection[PROT_BLUNT] = 30;
 	protection[PROT_POINT] = 30;
-	protection[PROT_FIRE] = 5;
+	protection[PROT_FIRE] = 10;
 	protection[PROT_MAGIC] = 10;
 	wear = WEAR_TORSO;
 	value = value_nov_armor_m;
@@ -1080,7 +1080,7 @@ instance BAB_ARMOR_NUDE(C_Item)
 
 instance BAB_ARMOR_BIKINI(C_Item)
 {
-	name = "bikini babe";
+	name = "Bikini Babe";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	value = 1;
@@ -1283,7 +1283,7 @@ instance NON_ARMOR_P(C_Item)
 	protection[PROT_BLUNT] = 70;
 	protection[PROT_POINT] = 75;
 	protection[PROT_FIRE] = 20;
-	protection[PROT_MAGIC] = 5;
+	protection[PROT_MAGIC] = 10;
 	value = VALUE_NON_ARMOR_W;
 	wear = WEAR_TORSO;
 	visual = "orgh.3ds";
@@ -1341,7 +1341,7 @@ instance NOV_ARMOR_M_UPGRADE(C_Item)
 	protection[PROT_EDGE] = 35;
 	protection[PROT_BLUNT] = 35;
 	protection[PROT_POINT] = 35;
-	protection[PROT_FIRE] = 10;
+	protection[PROT_FIRE] = 15;
 	protection[PROT_MAGIC] = 15;
 	wear = WEAR_TORSO;
 	value = VALUE_NOV_ARMOR_M;
@@ -1683,14 +1683,14 @@ instance ORG_ARMOR_L_UPGRADE(C_Item)
 
 instance ORG_ARMOR_M_UPGRADE(C_Item)
 {
-	name = "Verbesserte mittlere Banditenkleidung";
+	name = "Verbesserte Banditenkleidung";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 40;
 	protection[PROT_BLUNT] = 40;
 	protection[PROT_POINT] = 40;
 	protection[PROT_FIRE] = 20;
-	protection[PROT_MAGIC] = 0;
+	protection[PROT_MAGIC] = 10;
 	value = VALUE_ORG_ARMOR_M;
 	wear = WEAR_TORSO;
 	visual = "orgm.3ds";
