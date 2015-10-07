@@ -91,7 +91,7 @@ instance DIA_BAALLUKOR_HYPNOTICTEACHER(C_Info)
 
 func int dia_baallukor_hypnoticteacher_condition()
 {
-	if(BAALLUKOR_ANSPRECHBAR == TRUE)
+	if((BAALLUKOR_ANSPRECHBAR == TRUE) && (Npc_GetTrueGuild(hero) == GIL_None))
 	{
 		return 1;
 	};
