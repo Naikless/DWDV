@@ -248,7 +248,7 @@ instance GUR_1200_Yberion_EARN(C_Info)
 
 func int GUR_1200_Yberion_EARN_Condition()
 {
-	if(((YBerion_BringFocus == LOG_SUCCESS) && (Npc_GetTrueGuild(hero) != GIL_NOV) && C_IsChapter(2)) || ((YBerion_BringFocus == LOG_SUCCESS) && (Npc_GetTrueGuild(hero) != GIL_GUR) && C_IsChapter(2)) || ((YBerion_BringFocus == LOG_SUCCESS) && (Npc_GetTrueGuild(hero) != GIL_TPL) && C_IsChapter(2)))
+	if((YBerion_BringFocus == LOG_SUCCESS) && ((Npc_GetTrueGuild(hero) != GIL_NOV) && (Npc_GetTrueGuild(hero) != GIL_GUR) && (Npc_GetTrueGuild(hero) != GIL_TPL)) && C_IsChapter(2))
 	{
 		return 1;
 	};
