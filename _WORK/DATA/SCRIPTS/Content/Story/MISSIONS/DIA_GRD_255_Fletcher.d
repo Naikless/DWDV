@@ -466,7 +466,7 @@ func int Info_Fletcher_DIE_Condition()
 func void Info_Fletcher_DIE_Info()
 {
 	AI_GotoNpc(self,hero);
-	if((oldHeroGuild == GIL_STT) || (oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF))
+	if((oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF) || (oldHeroGuild == GIL_STT) || (oldHeroGuild == GIL_EBR))
 	{
 		if(oldHeroGuild == GIL_GRD)
 		{
@@ -476,13 +476,13 @@ func void Info_Fletcher_DIE_Info()
 		{
 			AI_Output(self,hero,"Info_Fletcher_DIE_06_02");	//Da ist noch einer von diesen verräterischen Feuermagiern! PAH!
 		}
+		else if(oldHeroGuild == GIL_STT)
+		{
+			AI_Output(self,hero,"Info_Fletcher_DIE_06_03");	//Hallo Verräter! Auch dein früherer Status als einer von Gomez' Schatten wird dir jetzt nichts mehr helfen!
+		}
 		else if(oldHeroGuild == GIL_EBR)
 		{
 			AI_Output(self,hero,"Info_Fletcher_DIE_07_02");	//Was Raven dazu veranlasst hat DICH zu einem Erzbaron zu machen, ist mir bis heute ein Rätsel. Schade das du uns verraten hast. Du hättest es weit bringen können. PAH!
-		}
-		else
-		{
-			AI_Output(self,hero,"Info_Fletcher_DIE_06_03");	//Hallo Verräter! Auch dein früherer Status als einer von Gomez' Schatten wird dir jetzt nichts mehr helfen!
 		};
 		AI_Output(hero,self,"Info_Fletcher_DIE_15_04");	//Moment. Wovon redest du, Fletcher?
 		AI_Output(self,hero,"Info_Fletcher_DIE_06_05");	//Steckst mit diesem abtrünnigen Abschaum aus dem Neuen Lager unter einer Decke, was?
@@ -508,15 +508,15 @@ func void Info_Fletcher_DIE_Info()
 		if(C_NpcBelongsToNewCamp(hero))
 		{
 			AI_Output(self,hero,"Info_Fletcher_DIE_06_11");	//Sieh mal einer an. Einer aus dem Neuen Lager!
+			AI_Output(hero,self,"Info_Fletcher_DIE_15_13");	//Ja, und? Was geht dich das an?
+			AI_Output(self,hero,"Info_Fletcher_DIE_06_14");	//Bald wird auch eure Mine zu uns gehören.
+			AI_Output(hero,self,"Info_Fletcher_DIE_15_15");	//Davon träumst du doch nur!
+			AI_Output(self,hero,"Info_Fletcher_DIE_06_16");	//Leider können wir es nicht zulassen, dass du das irgendwo herumerzählst!
 		}
 		else
 		{
 			AI_Output(self,hero,"Info_Fletcher_DIE_06_12");	//Sieh mal einer an. Einer aus dem Sumpflager!
 		};
-		AI_Output(hero,self,"Info_Fletcher_DIE_15_13");	//Ja, und? Was geht dich das an?
-		AI_Output(self,hero,"Info_Fletcher_DIE_06_14");	//Bald wird auch eure Mine zu uns gehören.
-		AI_Output(hero,self,"Info_Fletcher_DIE_15_15");	//Davon träumst du doch nur!
-		AI_Output(self,hero,"Info_Fletcher_DIE_06_16");	//Leider können wir es nicht zulassen, dass du das irgendwo herumerzählst!
 		AI_Output(hero,self,"Info_Fletcher_DIE_15_17");	//Warte mal, ich bin nicht auf Streit aus ...
 		AI_Output(self,hero,"Info_Fletcher_DIE_06_18");	//Das hättest du dir überlegen sollen, bevor du hier aufkreuzt!
 		AI_Output(hero,self,"Info_Fletcher_DIE_15_19");	//He, was soll der Unfug ...

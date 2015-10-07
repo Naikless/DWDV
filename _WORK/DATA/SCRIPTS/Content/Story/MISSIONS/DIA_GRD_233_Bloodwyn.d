@@ -363,7 +363,7 @@ func int Info_Bloodwyn_DIE_Condition()
 func void Info_Bloodwyn_DIE_Info()
 {
 	AI_GotoNpc(self,hero);
-	if((oldHeroGuild == GIL_STT) || (oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF))
+	if((oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF) || (oldHeroGuild == GIL_STT) || (oldHeroGuild == GIL_EBR))
 	{
 		if(oldHeroGuild == GIL_GRD)
 		{
@@ -373,13 +373,13 @@ func void Info_Bloodwyn_DIE_Info()
 		{
 			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_02");	//Wir haben wohl einen der aufständischen Feuermagier übersehen!
 		}
+		else if(oldHeroGuild == GIL_STT)
+		{
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03");	//Das ist der Schatten, der uns verraten hat!
+		}
 		else if(oldHeroGuild == GIL_EBR)
 		{
 			AI_Output(self,hero,"Info_Bloodwyn_DIE_09_03");	//Eine Schande das du dich mal Erzbaron genannt hast. PAH!
-		}
-		else
-		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03");	//Das ist der Schatten, der uns verraten hat!
 		};
 		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_04");	//Moment. Was redest du da, Bloodwyn?
 		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_05");	//Machst gemeinsame Sache mit dem Neuen Lager, was?
@@ -405,15 +405,15 @@ func void Info_Bloodwyn_DIE_Info()
 		if(C_NpcBelongsToNewCamp(hero))
 		{
 			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_11");	//Du wagst dich tatsächlich aus deinem Neuen Lager heraus? Wie dumm von dir!
+			AI_Output(hero,self,"Info_Bloodwyn_DIE_15_13");	//Was soll das? Was meinst du?
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_14");	//Hast wohl noch nichts von unserem Überfall auf eure Mine gehört, was?
+			AI_Output(hero,self,"Info_Bloodwyn_DIE_15_15");	//Moment mal ...
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16");	//Leider können wir es nicht zulassen, dass du das irgendwo herumerzählst!
 		}
 		else
 		{
 			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_12");	//Du wagst dich tatsächlich aus deinem Sumpflager heraus? Wie dumm von dir!
 		};
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_13");	//Was soll das? Was meinst du?
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_14");	//Hast wohl noch nichts von unserem Überfall auf eure Mine gehört, was?
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_15");	//Moment mal ...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16");	//Leider können wir es nicht zulassen, dass du das irgendwo herumerzählst!
 		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_17");	//Hey, ich will keinen Streit ...
 		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_18");	//Das hättest du dir vorher überlegen sollen!
 		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_19");	//Jetzt ist es aber genug ...
