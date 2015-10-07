@@ -158,9 +158,7 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		Npc_ExchangeRoutine(nyras,"AfterRitual");
 		AI_ContinueRoutine(nyras);
 		YBerion = Hlp_GetNpc(GUR_1200_YBerion);
-		YBerion.flags = 0;
 		Npc_ChangeAttribute(YBerion,ATR_HITPOINTS,-YBerion.attribute[ATR_HITPOINTS_MAX] + 1);
-		YBerion.flags = NPC_FLAG_IMMORTAL;
 		Npc_ExchangeRoutine(YBerion,"DRAINED");
 		AI_ContinueRoutine(YBerion);
 		Npc_ExchangeRoutine(SFB_1039_Schuerfer,"FMCstart");

@@ -235,7 +235,6 @@ func void Sld_728_Jarvis_AUFNAHMESOLDIER_Info()
 	AI_GotoNpc(hero,self);
 	AI_Output(self,other,"Sld_728_Jarvis_AUFNAHMESOLDIER_Info_08_01");	//Hey, ich habe gehört, du hast die Crawler in der Mine ganz schön aufgemischt.
 	AI_Output(self,other,"Sld_728_Jarvis_AUFNAHMESOLDIER_Info_08_02");	//Lee ist bestimmt bereit, dich als Söldner aufzunehmen. Sprich doch einfach mal mit ihm.
-	self.flags = 0;
 	Log_CreateTopic(GE_BecomeMercenary,LOG_NOTE);
 	B_LogEntry(GE_BecomeMercenary,"Ich sollte mal mit Lee reden. Vielleicht nimmt er mich in die Reihen der Söldner auf.");
 };

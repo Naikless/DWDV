@@ -68,7 +68,6 @@ func void B_Story_ExploreSunkenTower()
 	Npc_SetTempAttitude(Bartholo,ATT_NEUTRAL);
 	Npc_SetPermAttitude(Gomez,ATT_NEUTRAL);
 	Npc_SetTempAttitude(Gomez,ATT_NEUTRAL);
-	Thorus.flags = 0;
 	Gomez.flags = 0;
 	Bartholo.flags = 0;
 	CreateInvItem(Gomez,DungeonKey);
