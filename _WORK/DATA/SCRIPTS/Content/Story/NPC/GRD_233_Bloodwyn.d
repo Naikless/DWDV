@@ -7,6 +7,7 @@ instance GRD_233_Bloodwyn(Npc_Default)
 	level = 15;
 	voice = 8;
 	id = 233;
+	flags = NPC_FLAG_IMMORTAL;
 	attribute[ATR_STRENGTH] = 80;
 	attribute[ATR_DEXTERITY] = 60;
 	attribute[ATR_MANA_MAX] = 0;
