@@ -113,7 +113,7 @@ instance TPL_1402_GorNaToth_GETSTUFF(C_Info)
 	information = TPL_1402_GorNaToth_GETSTUFF_Info;
 	important = 0;
 	permanent = 0;
-	description = "Ich möchte meine Templer-Rüstung abholen.";
+	description = "Ich möchte meine Templerrüstung abholen.";
 };
 
 
@@ -127,12 +127,12 @@ func int TPL_1402_GorNaToth_GETSTUFF_Condition()
 
 func void TPL_1402_GorNaToth_GETSTUFF_Info()
 {
-	AI_Output(other,self,"TPL_1402_GorNaToth_GETSTUFF_Info_15_01");	//Ich möchte meine Templer-Rüstung abholen.
+	AI_Output(other,self,"TPL_1402_GorNaToth_GETSTUFF_Info_15_01");	//Ich möchte meine Templerrüstung abholen.
 	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_02");	//Es ist mir eine Freude, dem Mann eine von unseren Rüstungen zu überreichen, der die Eier der Minecrawler gefunden hat.
 	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_03");	//Diese Rüstung soll dich schützen, so wie der Schläfer die Bruderschaft schützt!
-	B_LogEntry(GE_BecomeTemplar,"Gor Na Toth überreichte mir meine erste Templer-Rüstung. Nun bin ich ein vollwertiges Mitglied dieser Kriegergemeinschaft!");
+	B_LogEntry(GE_BecomeTemplar,"Gor Na Toth überreichte mir meine erste Templerrüstung. Nun bin ich ein vollwertiges Mitglied dieser Kriegergemeinschaft!");
 	Log_CreateTopic(GE_TraderPSI,LOG_NOTE);
-	B_LogEntry(GE_TraderPSI,"Gor Na Toth verteilt bessere Templer-RÜSTUNGEN. Dafür erwarteter allerdings eine großzügige Spende an die Bruderschaft. Er ist tagsüber auf dem Übungsplatz der Templer zu finden.");
+	B_LogEntry(GE_TraderPSI,"Gor Na Toth verteilt bessere TemplerrüstungEN. Dafür erwarteter allerdings eine großzügige Spende an die Bruderschaft. Er ist tagsüber auf dem Übungsplatz der Templer zu finden.");
 	CreateInvItem(hero,tpl_armor_l);
 	CreateInvItem(self,ItAmArrow);
 	B_GiveInvItems(self,hero,ItAmArrow,1);
@@ -172,7 +172,7 @@ func void TPL_1402_GorNaToth_ARMOR_Info()
 
 func void TPL_1402_GorNaToth_ARMOR_M()
 {
-	AI_Output(hero,self,"Info_GorNaToth_ARMOR_M_15_01");	//Ich möchte eine mittelschwere Templer-Rüstung haben.
+	AI_Output(hero,self,"Info_GorNaToth_ARMOR_M_15_01");	//Ich möchte eine mittelschwere Templerrüstung haben.
 	if(Kapitel < 3)
 	{
 		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_02");	//Du bist noch nicht so weit! Bewähre dich erst als Templer, dann wirst dir auch das Recht zuteil, eine bessere Rüstung zu tragen.
@@ -196,7 +196,7 @@ func void TPL_1402_GorNaToth_ARMOR_M()
 
 func void TPL_1402_GorNaToth_ARMOR_H()
 {
-	AI_Output(hero,self,"Info_GorNaToth_ARMOR_H_15_01");	//Ich möchte eine schwere Templer-Rüstung haben.
+	AI_Output(hero,self,"Info_GorNaToth_ARMOR_H_15_01");	//Ich möchte eine schwere Templerrüstung haben.
 	if(Kapitel < 4)
 	{
 		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02");	//Du bist noch nicht so weit! Bewähre dich erst noch weiter für unsere Gemeinschaft, dann wirst dir auch das Recht zuteil, solch eine erlesene Rüstung zu tragen.
