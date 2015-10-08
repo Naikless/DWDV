@@ -7,6 +7,7 @@ instance GRD_210_Scatty(Npc_Default)
 	level = 15;
 	voice = 1;
 	id = 210;
+	flags = NPC_FLAG_IMMORTAL;
 	attribute[ATR_STRENGTH] = 80;
 	attribute[ATR_DEXTERITY] = 60;
 	attribute[ATR_MANA_MAX] = 0;

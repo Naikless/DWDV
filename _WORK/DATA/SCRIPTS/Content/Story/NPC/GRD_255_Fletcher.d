@@ -7,6 +7,7 @@ instance GRD_255_Fletcher(Npc_Default)
 	level = 15;
 	voice = 6;
 	id = 255;
+	flags = NPC_FLAG_IMMORTAL;
 	attribute[ATR_STRENGTH] = 80;
 	attribute[ATR_DEXTERITY] = 60;
 	attribute[ATR_MANA_MAX] = 0;

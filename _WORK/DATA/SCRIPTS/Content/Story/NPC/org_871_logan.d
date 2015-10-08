@@ -7,6 +7,7 @@ instance ORG_871_LOGAN(Npc_Default)
 	level = 12;
 	voice = 7;
 	id = 871;
+	flags = NPC_FLAG_IMMORTAL;
 	attribute[ATR_STRENGTH] = 75;
 	attribute[ATR_DEXTERITY] = 50;
 	attribute[ATR_MANA_MAX] = 0;
