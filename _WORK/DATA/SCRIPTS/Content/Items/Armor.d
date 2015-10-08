@@ -1335,7 +1335,7 @@ instance NOV_ARMOR_L_UPGRADE(C_Item)
 
 instance NOV_ARMOR_M_UPGRADE(C_Item)
 {
-	name = "Verbesserte Leichte Novizenrüstung";
+	name = "Verbesserte leichte Novizenrüstung";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 35;
