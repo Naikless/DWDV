@@ -175,7 +175,9 @@ instance Stt_311_Fisk_MordragKO(C_Info)
 
 func int Stt_311_Fisk_MordragKO_Condition()
 {
-	if((MordragKO_HauAb == TRUE) && (Npc_GetTrueGuild(hero) == GIL_None) && ((Thorus_MordragKo == LOG_RUNNING) || (Thorus_MordragKo == LOG_SUCCESS)))
+	var C_NPC Mordrag;
+	Mordrag = Hlp_GetNpc(Org_826_Mordrag);
+	if((Npc_GetTrueGuild(hero) == GIL_NONE) && ((MordragKO_HauAb == TRUE) || (MordragKO_StayAtNC == TRUE) || (Npc_IsDead(Mordrag))))
 	{
 		return 1;
 	};
