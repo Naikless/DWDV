@@ -46,11 +46,12 @@ func void Org_819_Drax_HuntHere_Info()
 	AI_Output(other,self,"Org_819_Drax_HuntHere_15_04");	//Und der wäre?
 	AI_Output(self,other,"Org_819_Drax_HuntHere_06_05");	//Für den Anfang reicht ein ordentlicher Schluck Bier - danach sehen wir weiter.
 	Npc_ExchangeRoutine(self,"HUNT");
+	Log_CreateTopic(GE_TeacherOW,LOG_NOTE);
+	B_LogEntry(GE_TeacherOW,"Der Bandit Drax bot an, mir viel über das Ausnehmen von Tieren hier beizubringen, wenn ich seine Preise bezahlen kann. Er jagt am Weg vom Austauschplatz zum Alten Lager.");
 };
 
 
 var int drax_bierbekommen;
-var int drax_Lehrer_frei;
 
 instance Org_819_Drax_Scavenger(C_Info)
 {
@@ -95,9 +96,6 @@ func void Org_819_Drax_Scavenger_Info()
 		AI_Output(self,other,"Org_819_Drax_Scavenger_KEIN_BIER_06_01");	//Dann geh und hol eins, so billig kommst du nie wieder an einen guten Rat. Und wenn du schon mal dabei bist - bring gleich noch etwas Erz mit!
 		AI_Output(self,other,"Org_819_Drax_Scavenger_KEIN_BIER_06_02");	//Ich kann dir einiges über Tiere beibringen, aber das kostet dich was!
 	};
-	drax_Lehrer_frei = TRUE;
-	Log_CreateTopic(GE_TeacherOW,LOG_NOTE);
-	B_LogEntry(GE_TeacherOW,"Der Bandit Drax bot an, mir viel über das Ausnehmen von Tieren hier beizubringen, wenn ich seine Preise bezahlen kann. Er jagt am Weg vom Austauschplatz zum Alten Lager.");
 };
 
 
@@ -114,7 +112,7 @@ instance Org_819_Drax_Creatures(C_Info)
 
 func int Org_819_Drax_Creatures_Condition()
 {
-	if((drax_Lehrer_frei == TRUE) && ((Knows_GetTeeth == FALSE) || (Knows_GetFur == FALSE) || (Knows_GetClaws == FALSE) || (Knows_GetHide == FALSE)))
+	if((drax_bierbekommen == TRUE) && ((Knows_GetTeeth == FALSE) || (Knows_GetFur == FALSE) || (Knows_GetClaws == FALSE) || (Knows_GetHide == FALSE)))
 	{
 		return 1;
 	};
