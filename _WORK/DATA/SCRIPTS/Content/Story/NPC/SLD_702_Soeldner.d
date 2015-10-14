@@ -1,7 +1,7 @@
 
 instance SLD_702_Soeldner(Npc_Default)
 {
-	name[0] = NAME_Soeldner;
+	name[0] = "Grunt";
 	npcType = npctype_main;
 	guild = GIL_SLD;
 	level = 18;
