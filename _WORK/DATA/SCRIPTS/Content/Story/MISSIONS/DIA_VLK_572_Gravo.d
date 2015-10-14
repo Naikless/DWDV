@@ -74,6 +74,7 @@ func void DIA_Gravo_HelpHow_Info()
 	AI_Output(self,other,"DIA_Gravo_HelpHow_04_03");	//Denn als Neuer bist du auf ihn angewiesen. Also kommst du zu mir. Ich kenne 'ne Menge Leute hier, die Einfluss auf Thorus haben.
 	AI_Output(self,other,"DIA_Gravo_HelpHow_04_04");	//Die legen ein gutes Wort für dich ein und Thorus ist wieder auf deiner Seite. Natürlich wollen die Jungs dafür Erz sehen. Dein Erz.
 	AI_Output(self,other,"DIA_Gravo_HelpHow_04_05");	//Und ICH kümmere mich darum, dass dein Erz die richtigen Leute erreicht ...
+	Log_CreateTopic(GE_TraderOC,LOG_NOTE);
 	B_LogEntry(GE_TraderOC,"Der Buddler Gravo verkauft eine Dienstleistung besonderer Art. Wenn ich es mir bei wichtigen Leuten im Alten Lager verscherzt habe, kann ich ihn bezahlen, um den Streit beizulegen.");
 };
 
