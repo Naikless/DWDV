@@ -125,7 +125,7 @@ instance DIA_Whistler_Running110(C_Info)
 	condition = DIA_Whistler_Running110_Condition;
 	information = DIA_Whistler_Running110_Info;
 	permanent = 0;
-	description = "Fisk will jetzt 110 Erz für dein Schwert";
+	description = "Fisk will jetzt 110 Erz für dein Schwert.";
 };
 
 
@@ -170,18 +170,43 @@ func int DIA_Whistler_RunningPayBack_Condition()
 func void DIA_Whistler_RunningPayBack_Info()
 {
 	AI_Output(other,self,"DIA_Whistler_RunningPayBack_15_00");	//Ich kriege das Schwert nicht - hier hast du deine 100 Erz zurück.
-	if(Npc_HasItems(other,ItMiNugget) >= 100)
+	if(Npc_KnowsInfo(other,DIA_Whistler_Running110))
 	{
-		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_01");	//Du Idiot! So 'ne Flasche wie dich können wir hier nicht gebrauchen! Zieh Leine!
-		B_GiveInvItems(hero,self,ItMiNugget,100);
-		Whistler_BuyMySword = LOG_OBSOLETE;
-		B_LogEntry(CH1_JoinOC,"Ich habs vermasselt, Whistler kriegt sein Schwert nie.");
-		AI_StopProcessInfos(self);
+		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_03");	//Und was ist mit den anderen 10 Erz? Du willst mich wohl verarschen, oder was?
+		AI_Output(other,self,"DIA_Whistler_RunningPayBack_15_01");	//Ähh..
+		if(Npc_HasItems(hero,ItMiNugget) >= 110)
+		{
+			AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_01");	//Du Idiot! So 'ne Flasche wie dich können wir hier nicht gebrauchen! Zieh Leine!
+			B_GiveInvItems(hero,self,ItMiNugget,110);
+			Whistler_BuyMySword = LOG_OBSOLETE;
+			B_LogEntry(CH1_JoinOC,"Ich habs vermasselt, Whistler kriegt sein Schwert nie.");
+			AI_StopProcessInfos(self);
+		}
+		else
+		{
+			Whistler_BuyMySword = LOG_OBSOLETE;
+			B_LogEntry(CH1_JoinOC,"Ich habs vermasselt, Whistler kriegt sein Schwert nie und schäumt vor Wut.");
+			AI_StopProcessInfos(self);
+			Npc_SetPermAttitude(self,ATT_HOSTILE);
+			Npc_SetTarget(self,other);
+			AI_StartState(self,ZS_Attack,1,"");
+		};
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_02");	//Ich sehe aber keine 100 Erz - du besorgst sie am besten, so schnell du kannst, sonst gibt's Ärger!
-		AI_StopProcessInfos(self);
+		if(Npc_HasItems(hero,ItMiNugget) >= 100)
+		{
+			AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_01");	//Du Idiot! So 'ne Flasche wie dich können wir hier nicht gebrauchen! Zieh Leine!
+			B_GiveInvItems(hero,self,ItMiNugget,100);
+			Whistler_BuyMySword = LOG_OBSOLETE;
+			B_LogEntry(CH1_JoinOC,"Ich habs vermasselt, Whistler kriegt sein Schwert nie.");
+			AI_StopProcessInfos(self);
+		}
+		else
+		{
+			AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_02");	//Ich sehe aber keine 100 Erz - du besorgst sie am besten, so schnell du kannst, sonst gibt's Ärger!
+			AI_StopProcessInfos(self);
+		};
 	};
 };
 
