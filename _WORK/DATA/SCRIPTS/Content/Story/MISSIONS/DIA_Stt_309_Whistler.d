@@ -172,10 +172,10 @@ func void DIA_Whistler_RunningPayBack_Info()
 	AI_Output(other,self,"DIA_Whistler_RunningPayBack_15_00");	//Ich kriege das Schwert nicht - hier hast du deine 100 Erz zurück.
 	if(Npc_KnowsInfo(other,DIA_Whistler_Running110))
 	{
-		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_03");	//Und was ist mit den anderen 10 Erz? Du willst mich wohl verarschen, oder was?
-		AI_Output(other,self,"DIA_Whistler_RunningPayBack_15_01");	//Ähh..
+		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_03");	//Und was ist mit den anderen 10 Erz, willst du mich verarschen?
 		if(Npc_HasItems(hero,ItMiNugget) >= 110)
 		{
+			AI_Output(other,self,"DIA_Whistler_RunningPayBack_15_01");	//Ähhm..
 			AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_01");	//Du Idiot! So 'ne Flasche wie dich können wir hier nicht gebrauchen! Zieh Leine!
 			B_GiveInvItems(hero,self,ItMiNugget,110);
 			Whistler_BuyMySword = LOG_OBSOLETE;
@@ -184,10 +184,12 @@ func void DIA_Whistler_RunningPayBack_Info()
 		}
 		else
 		{
+			AI_Output(other,self,"DIA_Whistler_RunningPayBack_15_02");	//Die müssen mir wohl entfallen sein.
+			AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_04");	//Ich werde dir beibringen was es für Konsequenzen haben kann, wenn man sich in unserem Lager mit den Falschen anlegt.
 			Whistler_BuyMySword = LOG_OBSOLETE;
 			B_LogEntry(CH1_JoinOC,"Ich habs vermasselt, Whistler kriegt sein Schwert nie und schäumt vor Wut.");
 			AI_StopProcessInfos(self);
-			Npc_SetPermAttitude(self,ATT_HOSTILE);
+			Npc_SetPermAttitude(self,ATT_ANGRY);
 			Npc_SetTarget(self,other);
 			AI_StartState(self,ZS_Attack,1,"");
 		};
