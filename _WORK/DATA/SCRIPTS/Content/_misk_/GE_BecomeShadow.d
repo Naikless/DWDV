@@ -28,7 +28,6 @@ const string CH1_LostNek = "Verschwundener Gardist";
 const string CH1_FiskNewDealer = "Neuer Hehler für Fisk";
 const string CH1_KalomsRecipe = "Rezept der Sekte";
 const string CH1_BringList = "Prüfung des Vertrauens";
-const string CH1_GoToPsi = "Die Große Sache der Bruderschaft";
 const string CH1_JoinNC = "Aufnahme Neues Lager";
 const string CH1_CarryWater = "Wasserträger für Lefty";
 const string CH1_DamLurker = "Lurker am Damm";

@@ -420,7 +420,7 @@ instance Org_826_Mordrag_GotoKalomNOW(C_Info)
 
 func int Org_826_Mordrag_GotoKalomNOW_Condition()
 {
-	if((Npc_GetTrueGuild(other) == GIL_ORG) && Npc_KnowsInfo(hero,ORG_801_Lares_GotoKalom))
+	if(((Npc_GetTrueGuild(other) == GIL_ORG) || (Npc_GetTrueGuild(other) == GIL_SLD)) && Npc_KnowsInfo(hero,ORG_801_Lares_GotoKalom))
 	{
 		return TRUE;
 	};
@@ -482,24 +482,26 @@ func void Org_826_Mordrag_RUNNING_Info()
 {
 	AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_00");	//Wegen der Sektensache ...
 	AI_Output(self,other,"Org_826_Mordrag_RUNNING_11_01");	//Was gibt's?
-	if(CorKalom_BringMCQBalls == LOG_SUCCESS)
+	if(Kapitel >= 3)
 	{
-		if(Kapitel >= 3)
-		{
-			AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_04");	//Die große Beschwörung hat stattgefunden.
-			AI_Output(self,other,"Org_826_Mordrag_RUNNING_11_09");	//Nein! Du machst bei dem Schwachsinn mit?
-		}
-		else
-		{
-			AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_06");	//Sie wollen mit der Hilfe eines mächtigen Elixiers, das sie aus Minecrawlereiern gewinnen, ihre geistigen Kräfte stärken und Kontakt zum Schläfer herstellen.
-			AI_Output(self,other,"Org_826_Mordrag_RUNNING_11_07");	//Ich lach' mich tot! Diese Spinner glauben wirklich daran, was?
-		};
-		AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_10");	//Ich bin neugierig, was dabei rauskommt.
-		AI_Output(self,other,"Org_826_Mordrag_RUNNING_11_11");	//Ich auch. Sag mir Bescheid, wenn sich die Gurus bis auf die Knochen blamiert haben.
+		AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_04");	//Die große Beschwörung hat stattgefunden.
+		AI_Output(self,other,"Org_826_Mordrag_RUNNING_11_10");	//Unglaublich! Das hätte ich nicht für möglich gehalten.
 		Mordrag_GotoKalom = LOG_SUCCESS;
 		B_GiveXP(XP_ReportToMordrag);
 		Log_SetTopicStatus(CH1_GotoPsiCamp,LOG_SUCCESS);
-		B_LogEntry(CH1_GotoPsiCamp,"Mordrag hat sich halbtotgelacht, als ich ihm von den Minecrawlereiern erzählte. Er scheint allerdings kein großes Interesse mehr an der Spitzelei bei den Gurus zu haben. Ich betrachte den Auftrag einfach als erledigt!");
+		B_LogEntry(CH1_GotoPsiCamp,"Mordrag war erstaunt, dass die Anrufung des Schläfers stattfand. Ich betrachte den Auftrag damit als erledigt.");
+	}
+	else if((Npc_HasItems(other,ItAt_Crawlerqueen) >= 1) || (CorKalom_BringMCQBalls == LOG_SUCCESS))
+	{
+		AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_06");	//Sie wollen mit der Hilfe eines mächtigen Elixiers, das sie aus Minecrawlereiern gewinnen, ihre geistigen Kräfte stärken und Kontakt zum Schläfer herstellen.
+		if(Npc_HasItems(other,ItAt_Crawlerqueen) >= 1)
+		{
+			AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_08");	//Ich habe die Eier bei mir.
+		};
+		AI_Output(self,other,"Org_826_Mordrag_RUNNING_11_07");	//Ich lach' mich tot! Diese Spinner glauben wirklich daran, was?
+		AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_10");	//Ich bin neugierig, was dabei rauskommt.
+		AI_Output(self,other,"Org_826_Mordrag_RUNNING_11_11");	//Ich auch. Sag mir Bescheid, wenn sich die Gurus bis auf die Knochen blamiert haben.
+		B_LogEntry(CH1_GotoPsiCamp,"Mordrag hat sich halbtotgelacht, als ich ihm von den Minecrawlereiern erzählte. Ich soll ihm jedoch weiterhin berichten.");
 	}
 	else
 	{

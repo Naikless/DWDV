@@ -245,9 +245,9 @@ func void DIA_Raven_SpySect_Info()
 	AI_Output(other,self,"DIA_Raven_SpySect_15_05");	//Bleib ruhig, ich werde ihren Zorn nicht heraufbeschwören.
 	AI_Output(self,other,"DIA_Raven_SpySect_10_06");	//Ich wusste, dass du mich verstehen würdest.
 	Raven_SpySect = LOG_RUNNING;
-	Log_CreateTopic(CH1_GoToPsi,LOG_MISSION);
-	Log_SetTopicStatus(CH1_GoToPsi,LOG_RUNNING);
-	B_LogEntry(CH1_GoToPsi,"Raven hat mich im Auftrag des Alten Lagers zur Bruderschaft im Sumpf geschickt. Ich soll mich dort umsehen und -hören. Vielleicht gibt es ein paar nützliche Informationen für die Erzbarone.");
+	Log_CreateTopic(CH1_GotoPsiCamp,LOG_MISSION);
+	Log_SetTopicStatus(CH1_GotoPsiCamp,LOG_RUNNING);
+	B_LogEntry(CH1_GotoPsiCamp,"Raven hat mich im Auftrag des Alten Lagers zur Bruderschaft im Sumpf geschickt. Ich soll mich dort umsehen und -hören. Vielleicht gibt es ein paar nützliche Informationen für die Erzbarone.");
 };
 
 
@@ -308,33 +308,24 @@ func void DIA_Raven_SpyBericht_Info()
 {
 	AI_Output(other,self,"DIA_Raven_SpyBericht_15_00");	//Ich will einen Zwischenbericht abgeben.
 	AI_Output(self,other,"DIA_Raven_SpyBericht_10_01");	//Gut. Ich bin gerne gut informiert.
-	if((Npc_HasItems(other,ItAt_Crawlerqueen) >= 1) || (CorKalom_BringMCQBalls == LOG_SUCCESS))
+	if(Kapitel >= 3)
 	{
-		if(Kapitel >= 3)
+		AI_Output(other,self,"DIA_Raven_SpyBericht_15_04");	//Die große Beschwörung hat stattgefunden.
+		AI_Output(self,other,"DIA_Raven_SpyBericht_10_04");	//Du hast deine Sache gut gemacht.
+		Raven_SpySect = LOG_SUCCESS;
+		B_GiveXP(XP_ReportToRaven);
+		Log_SetTopicStatus(CH1_GotoPsiCamp,LOG_SUCCESS);
+		B_LogEntry(CH1_GotoPsiCamp,"Raven hat mich mit billigen Worten abgespeist! Das ist nicht die Art der großzügigen Dankbarkeit, die ich erwartet habe! Von nun an gehe ich meinen eigenen Plänen nach.");
+	}
+	else if((Npc_HasItems(other,ItAt_Crawlerqueen) >= 1) || (CorKalom_BringMCQBalls == LOG_SUCCESS))
+	{
+		AI_Output(other,self,"DIA_Raven_SpyBericht_15_02");	//Sie wollen die Eier einer Minecrawler-Königin, um daraus ein Elixier herzustellen, durch das sie Kontakt zum Schläfer aufnehmen können.
+		if(Npc_HasItems(other,ItAt_Crawlerqueen) >= 1)
 		{
-			AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_04");	//Die große Beschwörung hat stattgefunden.
-			AI_Output(self,other,"DIA_Raven_SpyBericht_10_04");	//Du hast deine Sache gut gemacht.
-			Raven_SpySect = LOG_SUCCESS;
-			B_GiveXP(XP_ReportToRaven);
-			Log_SetTopicStatus(CH1_GoToPsi,LOG_SUCCESS);
-			B_LogEntry(CH1_GoToPsi,"Raven hat mich mit billigen Worten abgespeist! Das ist nicht die Art der großzügigen Dankbarkeit, die ich erwartet habe! Von nun an gehe ich meinen eigenen Plänen nach.");
-		}
-		else
-		{
-			AI_Output(other,self,"DIA_Raven_SpyBericht_15_02");	//Sie wollen die Eier einer Minecrawler-Königin, um daraus ein Elixier herzustellen, durch das sie Kontakt zum Schläfer aufnehmen können. Ich habe die Eier bei mir.
-			if(CorKalom_BringMCQBalls != LOG_SUCCESS)
-			{
-				AI_Output(self,other,"DIA_Raven_SpyBericht_10_03");	//Interessant. Bin gespannt, ob die Sache funktioniert. Bring die Eier in den Tempel.
-			}
-			else
-			{
-				AI_Output(self,other,"DIA_Raven_SpyBericht_10_04");	//Du hast deine Sache gut gemacht.
-				Raven_SpySect = LOG_SUCCESS;
-				B_GiveXP(XP_ReportToRaven);
-				Log_SetTopicStatus(CH1_GoToPsi,LOG_SUCCESS);
-				B_LogEntry(CH1_GoToPsi,"Raven hat mich mit billigen Worten abgespeist! Das ist nicht die Art der großzügigen Dankbarkeit, die ich erwartet habe! Von nun an gehe ich meinen eigenen Plänen nach.");
-			};
+			AI_Output(other,self,"DIA_Raven_SpyBericht_15_08");	//Ich habe die Eier bei mir.
 		};
+		AI_Output(self,other,"DIA_Raven_SpyBericht_10_03");	//Interessant. Bin gespannt, ob die Sache funktioniert. Bring die Eier in den Tempel.
+		B_LogEntry(CH1_GotoPsiCamp,"Raven ist gespannt, wie sich die Angelegenheit entwickelt. Er hat mich angewiesen, die Eier der Minecrawler-Königin in das Sumpflager zu bringen.");
 	}
 	else
 	{

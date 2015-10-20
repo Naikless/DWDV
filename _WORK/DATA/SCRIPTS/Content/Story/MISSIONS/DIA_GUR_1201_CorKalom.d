@@ -826,8 +826,14 @@ func void Info_CorKalom_BringMCQBalls_Success_Info()
 	B_GiveXP(XP_BringMCEggs);
 	B_LogEntry(CH2_MCEggs,"Ich habe Cor Kalom 3 der Minecrawler-Eier übergeben. Er war recht unhöflich und ich mußte meine karge Belohnung erst penetrant einfordern!");
 	Log_SetTopicStatus(CH2_MCEggs,LOG_SUCCESS);
-	B_LogEntry(CH1_GotoPsiCamp,"Ich glaube, ich weiß jetzt genug über die Sektensache, daß ich Mordrag etwas darüber erzählen kann.");
-	B_LogEntry(CH1_GoToPsi,"Ich glaube, ich weiß jetzt genug über die Sektensache. Ich sollte Raven davon erzählen, sobald ich wieder im alten Lager bin.");
+	if(C_NpcBelongsToNewCamp(hero))
+	{
+		B_LogEntry(CH1_GotoPsiCamp,"Ich glaube, ich weiß jetzt genug über die Sektensache, daß ich Mordrag etwas darüber erzählen kann.");
+	}
+	else if(C_NpcBelongsToOldCamp(hero))
+	{
+		B_LogEntry(CH1_GotoPsiCamp,"Ich glaube, ich weiß jetzt genug über die Sektensache. Ich sollte Raven davon erzählen, sobald ich wieder im alten Lager bin.");
+	};
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
 	Info_AddChoice(Info_CorKalom_BringMCQBalls_Success,"Eine Rune.",Info_CorKalom_BringMCQBalls_Success_RUNE);
 	Info_AddChoice(Info_CorKalom_BringMCQBalls_Success,"Eine Waffe.",Info_CorKalom_BringMCQBalls_Success_WAFFE);
