@@ -44,30 +44,6 @@ func void B_Story_FMTaken()
 	Wld_InsertNpc(Grd_283_Gardist,"FMC_ENTRANCE");
 	Wld_InsertNpc(Grd_285_Gardist,"FMC_ENTRANCE");
 	B_ExchangeRoutine(Grd_201_Jackal,"FMTaken");
-	Wld_SetObjectRoutine(0,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(1,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(2,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(3,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(4,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(5,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(6,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(7,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(8,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(9,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(10,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(11,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(12,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(13,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(14,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(15,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(16,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(17,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(18,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(19,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(20,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(21,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(22,0,"EVT_AM_LOB_GATE_BIG",1);
-	Wld_SetObjectRoutine(23,0,"EVT_AM_LOB_GATE_BIG",1);
 	if(Npc_KnowsInfo(hero,Info_Milten_OCWARN))
 	{
 		B_LogEntry(CH4_Firemages,"Diego konnte mir tatsächlich mehr über die Ereignisse im Alten Lager berichten.");

@@ -5,6 +5,7 @@ instance GRD_5072_GARDIST(Npc_Default)
 	npcType = NpcType_MINE_Guard;
 	guild = GIL_GRD;
 	level = 15;
+	flags = NPC_FLAG_IMMORTAL;
 	voice = 7;
 	id = 5072;
 	attribute[ATR_STRENGTH] = 80;

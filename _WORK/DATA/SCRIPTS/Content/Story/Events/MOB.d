@@ -20,7 +20,7 @@ func int mc_oldmine_entrance()
 {
 	PrintDebugNpc(PD_ITEM_MOBSI,"MC_OLDMINE_ENTRANCE");
 	PrintGlobals(PD_ITEM_MOBSI);
-	if((Kapitel >= 4) && Hlp_IsValidNpc(self))
+	if((Kapitel >= 4) && (self.id == hero.id))
 	{
 		PrintDebugNpc(PD_ITEM_MOBSI,"...blockiert");
 		G_PrintScreen(_STR_MESSAGE_WHEEL_STUCKS);
