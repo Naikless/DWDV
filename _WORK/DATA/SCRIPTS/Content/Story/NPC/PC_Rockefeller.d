@@ -386,5 +386,13 @@ instance PC_Rockefeller(Npc_Default)
 	CreateInvItems(self,ItAt_Bloodfly_02,5);
 	CreateInvItems(self,ItAt_Bloodfly_01,5);
 	CreateInvItems(self,ItAt_Meatbug_01,5);
+	daily_routine = Rtn_Start_0;
+	fight_tactic = FAI_HUMAN_MASTER;
+	senses = SENSE_SEE | SENSE_HEAR | SENSE_SMELL;
 };
 
+func void Rtn_Start_0()
+{
+	TA_Position(0,0,12,0,"WP_INTRO_FALL3");
+	TA_Position(12,0,0,0,"WP_INTRO_FALL3");
+};
