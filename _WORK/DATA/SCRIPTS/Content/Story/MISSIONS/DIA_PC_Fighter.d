@@ -1397,7 +1397,10 @@ func void Info_Gorn_FMGATE_Info()
 	AI_GotoNpc(self,hero);
 	AI_Output(self,hero,"Info_Gorn_FMGATE_09_01");	//Ich hörte dich kämpfen, da bin ich sofort hinterher.
 	AI_Output(hero,self,"Info_Gorn_FMGATE_15_02");	//Ein alter Bekannter ... aber die Rechnung ist beglichen.
-	AI_Output(self,hero,"Info_Gorn_FMGATE_09_03");	//Gut, öffne du das Tor, ich pass' hier auf!
+	if(!FM_GateOpen)
+	{
+		AI_Output(self,hero,"Info_Gorn_FMGATE_09_03");	//Gut, öffne du das Tor, ich pass' hier auf!
+	};
 	Npc_ExchangeRoutine(self,"WaitFM");
 	AI_StopProcessInfos(self);
 };

@@ -142,7 +142,7 @@ instance PC_FighterFM(Npc_Default)
 {
 	name[0] = "Gorn";
 	npcType = npctype_friend;
-	guild = GIL_None;
+	guild = GIL_SLD;
 	level = 15;
 	voice = 9;
 	id = 5;
