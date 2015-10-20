@@ -19,7 +19,6 @@ func int NOV_1320_Novize_CALLSLEEPER_Condition()
 	{
 		return TRUE;
 	};
-	return PrintScreen("JETZT IST ALLES KLAR",-1,-1,"font_old_20_white.tga",3);
 };
 
 func void NOV_1320_Novize_CALLSLEEPER_Info()
