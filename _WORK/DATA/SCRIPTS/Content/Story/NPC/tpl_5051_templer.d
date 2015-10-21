@@ -37,7 +37,7 @@ func void rtn_start_5051()
 
 func void rtn_tattooritual_5051()
 {
-	TA_Stand(8,0,23,0,"WP_PSI_RITUAL_SWAMP_03");
-	TA_Stand(23,0,8,0,"WP_PSI_RITUAL_SWAMP_03");
+	TA_Stay(8,0,23,0,"WP_PSI_RITUAL_SWAMP_03");
+	TA_Stay(23,0,8,0,"WP_PSI_RITUAL_SWAMP_03");
 };
 

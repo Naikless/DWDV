@@ -507,7 +507,7 @@ instance GUR_1200_YBERION_RITUAL(C_Info)
 
 func int gur_1200_yberion_ritual_condition()
 {
-	if((YBERION_GURAUFNAHME == 4) && (Npc_GetDistToWP(hero,"PSI_TEMPLE_IN_05") < 1000))
+	if((YBERION_GURAUFNAHME == 4) && (Npc_GetDistToWP(hero,"GURU_RITUAL_HERO") < 1000))
 	{
 		return 1;
 	};
@@ -515,10 +515,9 @@ func int gur_1200_yberion_ritual_condition()
 
 func void gur_1200_yberion_ritual_info()
 {
-	YBERION_GURAUFNAHME = 5;
-	AI_UnequipWeapons(hero);
 	AI_SetWalkMode(hero,NPC_WALK);
 	AI_GotoNpc(hero,self);
+	YBERION_GURAUFNAHME = 5;
 	b_story_guruaufnahme();
 	AI_Output(self,other,"GUR_1200_Yberion_RITUAL_Info_12_01");	//Unter den wachsamen Augen des Schläfers, haben wir uns zusammen gefunden um diese Bruder in den Kreis der unseren aufzunehmen.
 	AI_Output(self,other,"GUR_1200_Yberion_RITUAL_Info_12_02");	//Dieser Mann hat im Namen des Schläfers großes Vollbracht. Er hat vielen Unwissenden den Weg gewiesen. Er hat ihnen gezeigt, welche Kraft ihm der Schläfer verliehen hat.
@@ -573,7 +572,6 @@ func void gur_1200_yberion_robe_info()
 	hero.guild = GIL_GUR;
 	Mdl_ApplyOverlayMds(hero,"Humans_Mage.mds");
 	AI_EquipBestArmor(hero);
-	AI_UnequipWeapons(hero);
 	Wld_AssignRoomToGuild("hütte26",GIL_VLK);
 	Wld_AssignRoomToGuild("NLHU25",GIL_SLD);
 	B_LogEntry(GE_BECOMEGURU,"Ich habe die letzte Prüfung auf dem Weg zum Guru bestanden. Ich habe damit die höchste Gilde der Bruderschaft erreicht und darf mich ab jetzt mit der Magie des Schläfers beschäftigen. Baal Cadar kann mich darin unterrichten.");

@@ -280,10 +280,10 @@ func int gur_1204_baalnamib_guruaufnahme_condition()
 func void gur_1204_baalnamib_guruaufnahme_info()
 {
 	AI_GotoNpc(self,hero);
-	AI_Output(self,other,"Gur_1204_BaalNamib_GURAUFNAHME_Info_13_01");	//Warte einen Moment!
-	AI_Output(self,other,"Gur_1204_BaalNamib_GURAUFNAHME_Info_13_10");	//Deine Taten in der Mine haben uns gezeigt, dass der Schläfer mit dir ist.
-	AI_Output(self,other,"Gur_1204_BaalNamib_GURAUFNAHME_Info_13_03");	//Dir wird die Ehre zuteil, einen besonderen Platz in unserer Gemeinschaft einzunehmen.
-	AI_Output(self,other,"Gur_1204_BaalNamib_GURAUFNAHME_Info_13_04");	//Begib dich zu Y'Berion, er wird dir mehr dazu erzählen.
+	AI_Output(self,other,"Gur_1204_BaalNamib_GURAUFNAHME_Info_15_01");	//Warte einen Moment!
+	AI_Output(self,other,"Gur_1204_BaalNamib_GURAUFNAHME_Info_15_02");	//Deine Taten in der Mine haben uns gezeigt, dass der Schläfer mit dir ist.
+	AI_Output(self,other,"Gur_1204_BaalNamib_GURAUFNAHME_Info_15_03");	//Dir wird die Ehre zuteil, einen besonderen Platz in unserer Gemeinschaft einzunehmen.
+	AI_Output(self,other,"Gur_1204_BaalNamib_GURAUFNAHME_Info_15_04");	//Begib dich zu Y'Berion, er wird dir mehr dazu erzählen.
 	Log_CreateTopic(GE_BECOMEGURU,LOG_NOTE);
 	B_LogEntry(GE_BECOMEGURU,"Baal Namib erzählte mir, dass der Schläfer mich erwählt hätte und mir die Ehre zuteil wird, einen besonderen Platz im Lager der Bruderschaft einzunehmen. Ich soll mich zu Y'Berion begeben, er könne mir mehr erzählen.");
 };
@@ -310,11 +310,11 @@ func int info_baalnamib_tattoos_condition()
 func void info_baalnamib_tattoos_info()
 {
 	AI_Output(self,other,"Info_BaalNamib_TATTOOS_15_01");	//Wie ich sehe, hat dich Cor Kalom zu mir geschickt.
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_15_02");	//Worum geht's denn?
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_01_01");	//Es geht um ein Ritual. Ein Ritual mit dem du deine Zugehörigkeit zur Bruderschaft besiegeln wirst.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_01_02");	//Jeder neue Anhänger unserer Gemeinschaft nimmt an einem solchen Ritual teil.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_01_03");	//Bevor wir jedoch beginnen, muss ich dir allerdings noch eine letzte Frage stellen.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_01_04");	//Warum hast du dich für den Weg des Schläfers entschieden?
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_02_01");	//Worum geht's denn?
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_15_02");	//Es geht um ein Ritual. Ein Ritual mit dem du deine Zugehörigkeit zur Bruderschaft besiegeln wirst.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_15_03");	//Jeder neue Anhänger unserer Gemeinschaft nimmt an einem solchen Ritual teil.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_15_04");	//Bevor wir jedoch beginnen, muss ich dir allerdings noch eine letzte Frage stellen.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_15_05");	//Warum hast du dich für den Weg des Schläfers entschieden?
 	Info_ClearChoices(info_baalnamib_tattoos);
 	Info_AddChoice(info_baalnamib_tattoos,"Weil...",info_baalnamib_tattoos_weil);
 };
@@ -332,145 +332,145 @@ func void info_baalnamib_tattoos_weil()
 
 func void info_baalnamib_tattoos_kraut()
 {
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_24_01");	//Weil mich das Kraut davon überzeugt hatte.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_24_02");	//Dann hoffe ich, dass dich das Kraut auch dem Schläfer näher bringen wird.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_24_03");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_24_04");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_24_05");	//Wenn du soweit bist, nimm Platz vor dem Portal.
-	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_24_06");	//Was ist das für ein Portal?
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_24_07");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_24_08");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_24_10");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_24_09");	//Lass uns nun mit dem Ritual beginnen.
 	Info_ClearChoices(info_baalnamib_tattoos);
 	HERO_FACE1 = TRUE;
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Kraut_02_01");	//Weil mich das Kraut davon überzeugt hatte.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Kraut_15_01");	//Dann hoffe ich, dass dich das Kraut auch dem Schläfer näher bringen wird.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Kraut_15_02");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Kraut_15_03");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Kraut_15_04");	//Nimm anschließend deinen Platz neben mir ein.
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Kraut_02_02");	//Wie du wünschst, Meister.
 	CreateInvItem(self,itfo_potion_elixier_crawler);
 	B_GiveInvItems(self,hero,itfo_potion_elixier_crawler,1);
 	AI_UseItem(hero,itfo_potion_elixier_crawler);
 	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
+	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_02");
+	AI_TurnToNpc(hero,self);
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Kraut_02_03");	//Was ist das für ein Portal?
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Kraut_15_05");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Kraut_15_06");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Kraut_15_07");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Kraut_15_08");	//Lass uns nun mit dem Ritual beginnen.
 	AI_StopProcessInfos(self);
 };
 
 func void info_baalnamib_tattoos_frei()
 {
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_21_01");	//Weil ich wusste das ich in den anderen Lagern niemals frei sein kann.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_21_02");	//Gut. Der Schläfer wird uns den Weg in die Freiheit weisen.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_21_03");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_21_04");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_21_05");	//Wenn du soweit bist, nimm Platz vor dem Portal.
-	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_21_06");	//Was ist das für ein Portal?
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_21_07");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_21_08");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_21_10");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_21_09");	//Lass uns nun mit dem Ritual beginnen.
 	Info_ClearChoices(info_baalnamib_tattoos);
 	HERO_FACE2 = TRUE;
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Frei_02_01");	//Weil ich wusste das ich in den anderen Lagern niemals frei sein kann.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Frei_15_01");	//Gut. Der Schläfer wird uns den Weg in die Freiheit weisen.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Frei_15_02");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Frei_15_03");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Frei_15_04");	//Nimm anschließend deinen Platz neben mir ein.
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Frei_02_02");	//Wie du wünschst, Meister.
 	CreateInvItem(self,itfo_potion_elixier_crawler);
 	B_GiveInvItems(self,hero,itfo_potion_elixier_crawler,1);
 	AI_UseItem(hero,itfo_potion_elixier_crawler);
 	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
+	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_02");
+	AI_TurnToNpc(hero,self);
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Frei_02_03");	//Was ist das für ein Portal?
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Frei_15_05");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Frei_15_06");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Frei_15_07");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Frei_15_08");	//Lass uns nun mit dem Ritual beginnen.
 	AI_StopProcessInfos(self);
 };
 
 func void info_baalnamib_tattoos_ergeben()
 {
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_22_01");	//Weil es sich einfach so ergeben hatte.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_22_02");	//Vielleicht wird sich mit der Zeit auch der Kontakt mit dem Schläfer ergeben.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_22_03");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_22_04");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_22_05");	//Wenn du soweit bist, nimm Platz vor dem Portal.
-	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_22_06");	//Was ist das für ein Portal?
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_22_07");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_22_08");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_22_10");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_22_09");	//Lass uns nun mit dem Ritual beginnen.
 	Info_ClearChoices(info_baalnamib_tattoos);
 	HERO_FACE3 = TRUE;
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Ergeben_02_01");	//Weil es sich einfach so ergeben hatte.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Ergeben_15_01");	//Vielleicht wird sich mit der Zeit auch der Kontakt mit dem Schläfer ergeben.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Ergeben_15_02");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Ergeben_15_03");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Ergeben_15_04");	//Nimm anschließend deinen Platz neben mir ein.
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Ergeben_02_02");	//Wie du wünschst, Meister.
 	CreateInvItem(self,itfo_potion_elixier_crawler);
 	B_GiveInvItems(self,hero,itfo_potion_elixier_crawler,1);
 	AI_UseItem(hero,itfo_potion_elixier_crawler);
 	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
+	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_02");
+	AI_TurnToNpc(hero,self);
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Ergeben_02_03");	//Was ist das für ein Portal?
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Ergeben_15_05");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Ergeben_15_06");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Ergeben_15_07");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Ergeben_15_08");	//Lass uns nun mit dem Ritual beginnen.
 	AI_StopProcessInfos(self);
 };
 
 func void info_baalnamib_tattoos_erlÖser()
 {
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_23_01");	//Weil ich den Schläfer als meinen wahren Erlöser erkannt habe.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_23_02");	//Dann bist du ein wahrer Anhänger unseres Glaubens und vor dir liegt ein Pfad voller Erkenntnis.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_23_03");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_23_04");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_23_05");	//Wenn du soweit bist, nimm Platz vor dem Portal.
-	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_23_06");	//Was ist das für ein Portal?
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_23_07");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_23_08");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_23_10");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_23_09");	//Lass uns nun mit dem Ritual beginnen.
 	Info_ClearChoices(info_baalnamib_tattoos);
 	HERO_FACE4 = TRUE;
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Erlöser_02_01");	//Weil ich den Schläfer als meinen wahren Erlöser erkannt habe.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Erlöser_15_01");	//Dann bist du ein wahrer Anhänger unseres Glaubens und vor dir liegt ein Pfad voller Erkenntnis.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Erlöser_15_02");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Erlöser_15_03");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Erlöser_15_04");	//Nimm anschließend deinen Platz neben mir ein.
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Erlöser_02_02");	//Wie du wünschst, Meister.
 	CreateInvItem(self,itfo_potion_elixier_crawler);
 	B_GiveInvItems(self,hero,itfo_potion_elixier_crawler,1);
 	AI_UseItem(hero,itfo_potion_elixier_crawler);
 	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
+	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_02");
+	AI_TurnToNpc(hero,self);
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Erlöser_02_03");	//Was ist das für ein Portal?
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Erlöser_15_05");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Erlöser_15_06");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Erlöser_15_07");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Erlöser_15_08");	//Lass uns nun mit dem Ritual beginnen.
 	AI_StopProcessInfos(self);
 };
 
 func void info_baalnamib_tattoos_wahl()
 {
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_25_01");	//Weil ich keine andere Wahl hatte.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_25_02");	//Ich hoffe, dass du auch noch die Erkenntnis finden wirst, dass man als Anhänger unseres Glaubens besser lebt, als an jedem anderen Ort in der Kolonie.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_25_03");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_25_04");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_25_05");	//Wenn du soweit bist, nimm Platz vor dem Portal.
-	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
-	AI_Output(other,self,"Info_BaalNamib_TATTOOS_25_06");	//Was ist das für ein Portal?
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_25_07");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_25_08");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_25_10");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
-	AI_Output(self,other,"Info_BaalNamib_TATTOOS_25_09");	//Lass uns nun mit dem Ritual beginnen.
 	Info_ClearChoices(info_baalnamib_tattoos);
 	HERO_FACE5 = TRUE;
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Wahl_02_01");	//Weil ich keine andere Wahl hatte.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Wahl_15_01");	//Ich hoffe, dass du auch noch die Erkenntnis finden wirst, dass man als Anhänger unseres Glaubens besser lebt, als an jedem anderen Ort in der Kolonie.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Wahl_15_02");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Wahl_15_03");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Wahl_15_04");	//Nimm anschließend deinen Platz neben mir ein.
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Wahl_02_02");	//Wie du wünschst, Meister.
 	CreateInvItem(self,itfo_potion_elixier_crawler);
 	B_GiveInvItems(self,hero,itfo_potion_elixier_crawler,1);
 	AI_UseItem(hero,itfo_potion_elixier_crawler);
 	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
+	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_02");
+	AI_TurnToNpc(hero,self);
+	AI_Output(other,self,"Info_BaalNamib_TATTOOS_Wahl_02_03");	//Was ist das für ein Portal?
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Wahl_15_05");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Wahl_15_06");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Wahl_15_07");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
+	AI_Output(self,other,"Info_BaalNamib_TATTOOS_Wahl_15_08");	//Lass uns nun mit dem Ritual beginnen.
 	AI_StopProcessInfos(self);
 };
 
 func void info_baalnamib_tattoos_vision()
 {
-	AI_Output(other,self,"Info_BaalNamib_VISION_25_01");	//Weil ich eine Vision vom Schläfer empfing.
-	AI_Output(self,other,"Info_BaalNamib_VISION_25_02");	//Dann hat dich der Schläfer erwählt uns beizutreten. Dein Schicksal wird sich schon bald erfüllen.
-	AI_Output(self,other,"Info_BaalNamib_VISION_25_03");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
-	AI_Output(self,other,"Info_BaalNamib_VISION_25_04");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
-	AI_Output(self,other,"Info_BaalNamib_VISION_25_05");	//Wenn du soweit bist, nimm Platz vor dem Portal.
-	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
-	AI_Output(other,self,"Info_BaalNamib_VISION_25_06");	//Was ist das für ein Portal?
-	AI_Output(self,other,"Info_BaalNamib_VISION_25_07");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
-	AI_Output(self,other,"Info_BaalNamib_VISION_25_08");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
-	AI_Output(self,other,"Info_BaalNamib_VISION_25_10");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
-	AI_Output(self,other,"Info_BaalNamib_VISION_25_09");	//Lass uns nun mit dem Ritual beginnen.
 	Info_ClearChoices(info_baalnamib_tattoos);
 	HERO_FACE6 = TRUE;
+	AI_Output(other,self,"Info_BaalNamib_VISION_02_01");	//Weil ich eine Vision vom Schläfer empfing.
+	AI_Output(self,other,"Info_BaalNamib_VISION_15_01");	//Dann hat dich der Schläfer erwählt uns beizutreten. Dein Schicksal wird sich schon bald erfüllen.
+	AI_Output(self,other,"Info_BaalNamib_VISION_15_02");	//Wir werden nun das Ritual durchführen, was dich an dem Schicksal unser aller binden wird.
+	AI_Output(self,other,"Info_BaalNamib_VISION_15_03");	//Hier ist ein Trank aus dem Sekret des Schläfers. Trinke ihn, bevor wir uns in Meditation begeben.
+	AI_Output(self,other,"Info_BaalNamib_VISION_15_04");	//Nimm anschließend deinen Platz neben mir ein.
+	AI_Output(other,self,"Info_BaalNamib_VISION_02_02");	//Wie du wünschst, Meister.
 	CreateInvItem(self,itfo_potion_elixier_crawler);
 	B_GiveInvItems(self,hero,itfo_potion_elixier_crawler,1);
 	AI_UseItem(hero,itfo_potion_elixier_crawler);
 	AI_SetWalkMode(hero,NPC_WALK);
-	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_04");
+	AI_GotoWP(hero,"WP_PSI_RITUAL_SWAMP_02");
+	AI_TurnToNpc(hero,self);
+	AI_Output(other,self,"Info_BaalNamib_VISION_02_03");	//Was ist das für ein Portal?
+	AI_Output(self,other,"Info_BaalNamib_VISION_15_05");	//Dieses Portal ist ein heiliges Artefakt unserer Bruderschaft und wird es dir ermöglichen dem Schläfer nahe zu sein.
+	AI_Output(self,other,"Info_BaalNamib_VISION_15_06");	//Außerdem wird es dir die Zeichen des Schläfers auf den Körper setzen.
+	AI_Output(self,other,"Info_BaalNamib_VISION_15_07");	//Durch diese Zeichen, wirst du als ein Diener des Schläfers erkannt werden.
+	AI_Output(self,other,"Info_BaalNamib_VISION_15_08");	//Lass uns nun mit dem Ritual beginnen.
 	AI_StopProcessInfos(self);
 };
 
@@ -495,162 +495,29 @@ func int info_baalnamib_beginning_condition()
 
 func void info_baalnamib_beginning_info()
 {
-	if(HERO_FACE1 == TRUE)
-	{
-		AI_PlayAniBS(self,"T_STAND_2_PRAY",BS_SIT);
-		AI_PlayAniBS(hero,"T_STAND_2_PRAY",BS_SIT);
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_01");	//Schläfer, ich bringe dir einen Diener.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_02");	//Er hat bewiesen, dass er würdig ist und sollte bereit sein dir zu dienen.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_03");	//Er ist ein wahrer Anhänger des Glaubens und will wie wir alle von diesem Ort befreit werden.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_04");	//Weise ihm den Weg und schütze seinen Geist vor allerlei Gefahren.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_05");	//Denn er soll von nun an ein Teil dieser Gemeinschaft sein.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_06");	//Sprich mir nach.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_07");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_08");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_09");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_10");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_11");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_12");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_13");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_14");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_15");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_16");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_StopProcessInfos(self);
-		Wld_PlayEffect("SPELLFX_TELEPORT",hero,hero,0,0,0,FALSE);
-		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",124,2,-1);
-		AI_Standup(self);
-		AI_Standup(hero);
-	}
-	else if(HERO_FACE2 == TRUE)
-	{
-		AI_PlayAniBS(self,"T_STAND_2_PRAY",BS_SIT);
-		AI_PlayAniBS(hero,"T_STAND_2_PRAY",BS_SIT);
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_01");	//Schläfer, ich bringe dir einen Diener.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_02");	//Er hat bewiesen, dass er würdig ist und sollte bereit sein dir zu dienen.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_03");	//Er ist ein wahrer Anhänger des Glaubens und will wie wir alle von diesem Ort befreit werden.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_04");	//Weise ihm den Weg und schütze seinen Geist vor allerlei Gefahren.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_05");	//Denn er soll von nun an ein Teil dieser Gemeinschaft sein.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_06");	//Sprich mir nach.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_07");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_08");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_09");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_10");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_11");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_12");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_13");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_14");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_15");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_16");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_StopProcessInfos(self);
-		Wld_PlayEffect("SPELLFX_TELEPORT",hero,hero,0,0,0,FALSE);
-		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",118,2,-1);
-		AI_Standup(self);
-		AI_Standup(hero);
-	}
-	else if(HERO_FACE3 == TRUE)
-	{
-		AI_PlayAniBS(self,"T_STAND_2_PRAY",BS_SIT);
-		AI_PlayAniBS(hero,"T_STAND_2_PRAY",BS_SIT);
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_01");	//Schläfer, ich bringe dir einen Diener.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_02");	//Er hat bewiesen, dass er würdig ist und sollte bereit sein dir zu dienen.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_03");	//Er ist ein wahrer Anhänger des Glaubens und will wie wir alle von diesem Ort befreit werden.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_04");	//Weise ihm den Weg und schütze seinen Geist vor allerlei Gefahren.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_05");	//Denn er soll von nun an ein Teil dieser Gemeinschaft sein.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_06");	//Sprich mir nach.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_07");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_08");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_09");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_10");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_11");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_12");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_13");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_14");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_15");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_16");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_StopProcessInfos(self);
-		Wld_PlayEffect("SPELLFX_TELEPORT",hero,hero,0,0,0,FALSE);
-		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",122,2,-1);
-		AI_Standup(self);
-		AI_Standup(hero);
-	}
-	else if(HERO_FACE4 == TRUE)
-	{
-		AI_PlayAniBS(self,"T_STAND_2_PRAY",BS_SIT);
-		AI_PlayAniBS(hero,"T_STAND_2_PRAY",BS_SIT);
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_01");	//Schläfer, ich bringe dir einen Diener.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_02");	//Er hat bewiesen, dass er würdig ist und sollte bereit sein dir zu dienen.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_03");	//Er ist ein wahrer Anhänger des Glaubens und will wie wir alle von diesem Ort befreit werden.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_04");	//Weise ihm den Weg und schütze seinen Geist vor allerlei Gefahren.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_05");	//Denn er soll von nun an ein Teil dieser Gemeinschaft sein.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_06");	//Sprich mir nach.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_07");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_08");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_09");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_10");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_11");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_12");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_13");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_14");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_15");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_16");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_StopProcessInfos(self);
-		Wld_PlayEffect("SPELLFX_TELEPORT",hero,hero,0,0,0,FALSE);
-		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",121,2,-1);
-		AI_Standup(self);
-		AI_Standup(hero);
-	}
-	else if(HERO_FACE5 == TRUE)
-	{
-		AI_PlayAniBS(self,"T_STAND_2_PRAY",BS_SIT);
-		AI_PlayAniBS(hero,"T_STAND_2_PRAY",BS_SIT);
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_01");	//Schläfer, ich bringe dir einen Diener.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_02");	//Er hat bewiesen, dass er würdig ist und sollte bereit sein dir zu dienen.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_03");	//Er ist ein wahrer Anhänger des Glaubens und will wie wir alle von diesem Ort befreit werden.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_04");	//Weise ihm den Weg und schütze seinen Geist vor allerlei Gefahren.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_05");	//Denn er soll von nun an ein Teil dieser Gemeinschaft sein.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_06");	//Sprich mir nach.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_07");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_08");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_09");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_10");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_11");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_12");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_13");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_14");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_15");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_16");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_StopProcessInfos(self);
-		Wld_PlayEffect("SPELLFX_TELEPORT",hero,hero,0,0,0,FALSE);
-		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",123,2,-1);
-		AI_Standup(self);
-		AI_Standup(hero);
-	}
-	else if(HERO_FACE6 == TRUE)
-	{
-		AI_PlayAniBS(self,"T_STAND_2_PRAY",BS_SIT);
-		AI_PlayAniBS(hero,"T_STAND_2_PRAY",BS_SIT);
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_01");	//Schläfer, ich bringe dir einen Diener.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_02");	//Er hat bewiesen, dass er würdig ist und sollte bereit sein dir zu dienen.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_03");	//Er ist ein wahrer Anhänger des Glaubens und will wie wir alle von diesem Ort befreit werden.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_04");	//Weise ihm den Weg und schütze seinen Geist vor allerlei Gefahren.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_05");	//Denn er soll von nun an ein Teil dieser Gemeinschaft sein.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_06");	//Sprich mir nach.
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_07");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_08");	//Schläfer ich unterwerfe mich hiermit...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_09");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_10");	//...und bin bereit dir für alle Zeit zu dienen...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_11");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_12");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_13");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_14");	//...weise mir den Weg in die Freiheit und erleuchte mich...
-		AI_Output(self,other,"Info_BaalNamib_BEGINNING_01_15");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_16");	//...denn dein Weg, ist der Weg der Freiheit.
-		AI_StopProcessInfos(self);
-		Wld_PlayEffect("SPELLFX_TELEPORT",hero,hero,0,0,0,FALSE);
-		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",125,2,-1);
-		AI_Standup(self);
-		AI_Standup(hero);
-	};
+	var C_Npc templer_1;
+	var C_Npc templer_2;
+	templer_1 = Hlp_GetNpc(tpl_5051_templer);
+	templer_2 = Hlp_GetNpc(tpl_5052_templer);
+	AI_PlayAniBS(templer_1,"T_STAND_2_PRAY",BS_SIT);
+	AI_PlayAniBS(templer_2,"T_STAND_2_PRAY",BS_SIT);
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_01");	//Schläfer, ich bringe dir einen Diener.
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_02");	//Er hat bewiesen, dass er würdig ist und sollte bereit sein dir zu dienen.
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_03");	//Er ist ein wahrer Anhänger des Glaubens und will wie wir alle von diesem Ort befreit werden.
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_04");	//Weise ihm den Weg und schütze seinen Geist vor allerlei Gefahren.
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_05");	//Denn er soll von nun an ein Teil dieser Gemeinschaft sein.
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_06");	//Sprich mir nach.
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_07");	//Schläfer ich unterwerfe mich hiermit...
+	AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_01");	//Schläfer ich unterwerfe mich hiermit...
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_08");	//...und bin bereit dir für alle Zeit zu dienen...
+	AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_02");	//...und bin bereit dir für alle Zeit zu dienen...
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_09");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
+	AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_03");	//...denn meine Seele, wird nur durch deine Macht befreit werden...
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_10");	//...weise mir den Weg in die Freiheit und erleuchte mich...
+	AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_04");	//...weise mir den Weg in die Freiheit und erleuchte mich...
+	AI_Output(self,other,"Info_BaalNamib_BEGINNING_15_11");	//...denn dein Weg, ist der Weg der Freiheit.
+	AI_Output(other,self,"Info_BaalNamib_BEGINNING_01_05");	//...denn dein Weg, ist der Weg der Freiheit.
+	AI_StopProcessInfos(self);
 };
 
 
@@ -674,23 +541,54 @@ func int info_baalnamib_willkommen_condition()
 
 func void info_baalnamib_willkommen_info()
 {
+	var C_Npc templer_1;
+	var C_Npc templer_2;
+	templer_1 = Hlp_GetNpc(tpl_5051_templer);
+	templer_2 = Hlp_GetNpc(tpl_5052_templer);
+	Wld_PlayEffect("SPELLFX_TELEPORT",hero,hero,0,0,0,FALSE);
+	if(HERO_FACE1 == TRUE)
+	{
+		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",124,2,-1);
+	}
+	else if(HERO_FACE2 == TRUE)
+	{
+		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",118,2,-1);
+	}
+	else if(HERO_FACE3 == TRUE)
+	{
+		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",122,2,-1);
+	}
+	else if(HERO_FACE4 == TRUE)
+	{
+		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",121,2,-1);
+	}
+	else if(HERO_FACE5 == TRUE)
+	{
+		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",123,2,-1);
+	}
+	else if(HERO_FACE6 == TRUE)
+	{
+		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,1,"HUM_HEAD_BALD",125,2,-1);
+	};
 	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_15_01");	//Ich heiße dich in der Bruderschaft des Schläfers willkommen.
 	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_15_02");	//Vor dir liegt ein langer aber lohnender Weg.
-	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_01_03");	//Du hast die richtige Wahl getroffen.
-	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_01_04");	//Die Zeit wird zeigen, welches Schicksal der Schläfer für dich vorgesehen hat.
-	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_01_05");	//Vielleicht wirst auch du ein Auserwählter des Schläfers, wie ich es bin.
-	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_01_06");	//Oder du wirst zum Hüter des Lagers berufen, wie Cor Angar es ist.
-	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_01_07");	//Wir werden es sehen.
-	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_01_08");	//Möge der Schläfer über dich wachen, Novize.
-	AI_Standup(self);
-	AI_Standup(hero);
+	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_15_03");	//Du hast die richtige Wahl getroffen.
+	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_15_04");	//Die Zeit wird zeigen, welches Schicksal der Schläfer für dich vorgesehen hat.
+	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_15_05");	//Vielleicht wirst auch du ein Auserwählter des Schläfers, wie ich es bin.
+	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_15_06");	//Oder du wirst zum Hüter des Lagers berufen, wie Cor Angar es ist.
+	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_15_07");	//Wir werden es sehen.
+	AI_Output(self,other,"Info_BaalNamib_WILLKOMMEN_15_08");	//Möge der Schläfer über dich wachen, Novize.
+	AI_PlayAniBS(templer_1,"T_PRAY_2_STAND",BS_STAND);
+	AI_PlayAniBS(templer_2,"T_PRAY_2_STAND",BS_STAND);
 	NAMIB_RITUAL = LOG_SUCCESS;
 	Log_SetTopicStatus(CH1_RITUAL,LOG_SUCCESS);
 	B_LogEntry(CH1_RITUAL,"Baal Namib führte ein Ritual mit mir durch, bei dem ich offiziell in die Bruderschaft aufgenommen wurde.");
 	B_GiveXP(XP_NAMIBRITUAL);
-	Npc_ExchangeRoutine(GUR_1204_BaalNamib,"START");
-	Npc_ExchangeRoutine(tpl_5051_templer,"START");
-	Npc_ExchangeRoutine(tpl_5052_templer,"START");
+	Npc_ExchangeRoutine(self,"START");
+	Npc_ExchangeRoutine(templer_1,"START");
+	AI_ContinueRoutine(templer_1);
+	Npc_ExchangeRoutine(templer_2,"START");
+	AI_ContinueRoutine(templer_2);
 	AI_StopProcessInfos(self);
 };
 

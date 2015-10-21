@@ -35,8 +35,8 @@ func void Rtn_start_1200()
 
 func void rtn_ritual_1200()
 {
-	TA_Stay(5,0,1,0,"PSI_TEMPLE_IN_05");
-	TA_Stay(1,0,5,0,"PSI_TEMPLE_IN_05");
+	TA_GuidePC(5,0,1,0,"GURU_RITUAL_HERO");
+	TA_GuidePC(1,0,5,0,"GURU_RITUAL_HERO");
 };
 
 func void Rtn_CallSleeper_1200()

@@ -62,21 +62,27 @@ func void b_story_guruaufnahme()
 		guru_1 = Hlp_GetNpc(GUR_1203_BaalTondral);
 		AI_PlayAniBS(guru_1,"T_PRAY_2_STAND",BS_STAND);
 		Npc_ExchangeRoutine(guru_1,"START");
+		AI_ContinueRoutine(guru_1);
 		guru_2 = Hlp_GetNpc(GUR_1204_BaalNamib);
 		AI_PlayAniBS(guru_2,"T_PRAY_2_STAND",BS_STAND);
 		Npc_ExchangeRoutine(guru_2,"START");
+		AI_ContinueRoutine(guru_2);
 		guru_3 = Hlp_GetNpc(GUR_1209_BaalOrun);
 		AI_PlayAniBS(guru_3,"T_PRAY_2_STAND",BS_STAND);
 		Npc_ExchangeRoutine(guru_3,"START");
+		AI_ContinueRoutine(guru_3);
 		guru_4 = Hlp_GetNpc(GUR_1208_BaalCadar);
 		AI_PlayAniBS(guru_4,"T_PRAY_2_STAND",BS_STAND);
 		Npc_ExchangeRoutine(guru_4,"START");
+		AI_ContinueRoutine(guru_4);
 		guru_5 = Hlp_GetNpc(GUR_1210_BaalTyon);
 		AI_PlayAniBS(guru_5,"T_PRAY_2_STAND",BS_STAND);
 		Npc_ExchangeRoutine(guru_5,"START");
+		AI_ContinueRoutine(guru_5);
 		guru_6 = Hlp_GetNpc(gur_5021_baallukor);
 		AI_PlayAniBS(guru_6,"T_PRAY_2_STAND",BS_STAND);
 		Npc_ExchangeRoutine(guru_6,"START");
+		AI_ContinueRoutine(guru_6);
 	};
 };
 
