@@ -1096,35 +1096,6 @@ instance BAB_ARMOR_BIKINI(C_Item)
 	material = MAT_LEATHER;
 };
 
-instance NON_ARMOR_H(C_Item)
-{
-	name = "Antike Tempelrüstung";
-	mainflag = ITEM_KAT_ARMOR;
-	flags = 0;
-	protection[PROT_EDGE] = 65;
-	protection[PROT_BLUNT] = 65;
-	protection[PROT_POINT] = 65;
-	protection[PROT_FIRE] = 35;
-	protection[PROT_MAGIC] = 30;
-	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
-	wear = WEAR_TORSO;
-	visual = "tplh.3ds";
-	visual_change = "Armor_MayaZombie_Addon.asc";
-	visual_skin = 0;
-	material = MAT_WOOD;
-	description = name;
-	text[1] = NAME_Prot_Edge;
-	count[1] = protection[PROT_EDGE];
-	text[2] = NAME_Prot_Point;
-	count[2] = protection[PROT_POINT];
-	text[3] = NAME_Prot_Fire;
-	count[3] = protection[PROT_FIRE];
-	text[4] = NAME_Prot_Magic;
-	count[4] = protection[PROT_MAGIC];
-	text[5] = NAME_Value;
-	count[5] = value;
-};
-
 instance NON_ARMOR_I(C_Item)
 {
 	name = "Rüstung des Wächters";

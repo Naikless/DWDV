@@ -326,58 +326,6 @@ func void dia_darrion_learnyes_roter_wind()
 };
 
 
-instance INFO_DARRION_ARMORFINISHED(C_Info)
-{
-	npc = NOV_1312_Darrion;
-	condition = info_darrion_armorfinished_condition;
-	information = info_darrion_armorfinished_info;
-	important = 0;
-	permanent = 0;
-	description = "Du wolltest mich sprechen? ";
-};
-
-
-func int info_darrion_armorfinished_condition()
-{
-	if(((FreemineOrc_LookingUlumulu == LOG_SUCCESS) && (Npc_GetTrueGuild(hero) == GIL_NOV)) || ((FreemineOrc_LookingUlumulu == LOG_SUCCESS) && (Npc_GetTrueGuild(hero) == GIL_TPL)))
-	{
-		return TRUE;
-	};
-};
-
-func void info_darrion_armorfinished_info()
-{
-	if(Npc_GetTrueGuild(hero) == GIL_TPL)
-	{
-		AI_Output(hero,self,"Info_Darrion_DIE_06_01");	//Du wolltest mich sprechen?
-		AI_Output(self,hero,"Info_Darrion_DIE_06_02");	//Da bist du ja. Ja, ich wollte dich sprechen.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_03");	//Ich hab' schon gehört was alles passiert ist und hab' ein Geschenk für dich.
-		AI_Output(self,hero,"Info_Darrion_DIE_14_04");	//Als einen unserer besten Templer, ist es mir eine Ehre dir diese Rüstung zu verleihen.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_04");	//Wir fanden diese Rüstung bei der Errichtung unseres Lagers im Tempel.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_05");	//Wir wissen nicht woher sie stammt. Sie gehörte wahrscheinlich den früheren Bewohnern der Tempel.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_06");	//Ihre Kultur hat sich auf jeden Fall von der unseren sehr unterschieden.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_07");	//Hoffentlich leistet dir diese Rüstung gute Dienste.
-		B_GiveXP(XP_GorMCPlateArmor);
-		CreateInvItem(self,non_armor_h);
-		B_GiveInvItems(self,hero,non_armor_h,1);
-	}
-	else
-	{
-		AI_Output(hero,self,"Info_Darrion_DIE_06_01");	//Du wolltest mich sprechen?
-		AI_Output(self,hero,"Info_Darrion_DIE_06_02");	//Da bist du ja. Ja, ich wollte dich sprechen.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_03");	//Ich hab' schon gehört was alles passiert ist und hab' ein Geschenk für dich.
-		AI_Output(self,hero,"Info_Darrion_DIE_15_04");	//Du hast es selbst als Novize sehr weit gebracht. Aus diesem Grund hast du dir sie verdient.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_04");	//Wir fanden diese Rüstung bei der Errichtung unseres Lagers im Tempel.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_05");	//Wir wissen nicht woher sie stammt. Sie gehörte wahrscheinlich den früheren Bewohnern der Tempel.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_06");	//Ihre Kultur hat sich auf jeden Fall von der unseren sehr unterschieden.
-		AI_Output(self,hero,"Info_Darrion_DIE_06_07");	//Hoffentlich leistet dir diese Rüstung gute Dienste.
-		B_GiveXP(XP_GorMCPlateArmor);
-		CreateInvItem(self,non_armor_h);
-		B_GiveInvItems(self,hero,non_armor_h,1);
-	};
-};
-
-
 instance INFO_DARRION_CRAFT_WHICH(C_Info)
 {
 	npc = NOV_1312_Darrion;

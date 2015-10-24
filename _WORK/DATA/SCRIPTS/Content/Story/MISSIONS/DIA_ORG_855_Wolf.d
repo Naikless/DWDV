@@ -600,52 +600,14 @@ func void Info_Wolf_MCPLATESENOUGH_Info()
 	var int zufallsbelohnung;
 	AI_Output(hero,self,"Info_Wolf_MCPLATESENOUGH_15_01");	//Ich habe jede Menge dieser Minecrawler-Panzerplatten eingesammelt!
 	AI_Output(self,hero,"Info_Wolf_MCPLATESENOUGH_09_02");	//Fantastisch!!! Ich werde mich gleich an die Arbeit machen!
-	if(Npc_GetTrueGuild(hero) == GIL_SLD)
-	{
-		AI_Output(hero,self,"Info_Wolf_MCPLATESENOUGH_15_03");	//Wie lange wirst du dafür brauchen?
-		AI_Output(self,hero,"Info_Wolf_MCPLATESENOUGH_09_04");	//Ich habe nicht die geringste Ahnung. Das ist eine komplette Neuentwicklung, Mann!
-		AI_Output(self,hero,"Info_Wolf_MCPLATESENOUGH_09_05");	//Schau einfach ab und zu bei mir rein, wenn du in der Nähe bist!
-		MCPlatesDelivered = TRUE;
-		B_LogEntry(CH4_MCPlateArmor,"Wolf hat 15 dieser Minecralwerplatten von mir erhalten. Er benötigt etwas Zeit und bat mich später wiederzukommen.");
-		B_GiveXP(XP_DeliveredMCPlates);
-		B_GiveInvItems(hero,self,ItAt_Crawler_02,15);
-		AI_StopProcessInfos(self);
-	}
-	else if(Npc_GetTrueGuild(hero) != GIL_SLD)
-	{
-		AI_Output(self,hero,"Info_Wolf_MCPLATESENOUGH_19_01");	//Schade nur, dass du nicht zu uns gehört. Dann würde ich dir die Rüstung anfertigen.
-		AI_Output(self,hero,"Info_Wolf_MCPLATESENOUGH_19_02");	//Als Lagerfremder, musst du leider ohne auskommen.
-		AI_Output(self,hero,"Info_Wolf_MCPLATESENOUGH_19_03");	//Ich hab' sogar schon einen Kunden aus dem Lager, der sich für eine solche Rüstung interessiert.
-		AI_Output(self,hero,"Info_Wolf_MCPLATESENOUGH_19_04");	//Aber ich hab' trotzdem was für dich. Deine Arbeit soll ja nicht umsonst gewesen sein. Hier nimm!
-		Log_SetTopicStatus(CH4_MCPlateArmor,LOG_SUCCESS);
-		B_LogEntry(CH4_MCPlateArmor,"Nachdem ich Wolf 15 Minecrawlerplatten gebracht hatte, erklärte er mir, dass er die Rüstung nur für Lagerangehörige bauen würde. Somit muss ich also ohne auskommen. Stattdessen bekam ich einen wertvollen Trank.");
-		B_GiveXP(XP_GORPSIPLATEARMOR);
-		Mdl_SetVisualBody(org_5033_gestath,"hum_body_Naked0",0,3,"Hum_Head_Psionic",12,0,crw_armor_h);
-		Npc_RemoveInvItem(org_5033_gestath,ItRw_Bow_Long_01);
-		Npc_RemoveInvItem(org_5033_gestath,ItMw_1H_Mace_War_02);
-		CreateInvItems(org_5033_gestath,ItMw_2H_Sword_Heavy_02,1);
-		AI_EquipBestMeleeWeapon(org_5033_gestath);
-		AI_EquipBestArmor(org_5033_gestath);
-		B_GiveInvItems(hero,self,ItAt_Crawler_02,15);
-		MCPlatesDelivered = TRUE;
-		zufallsbelohnung = Hlp_Random(100);
-		if(zufallsbelohnung >= 75)
-		{
-			CreateInvItem(self,ItFo_Potion_Dex_03);
-			B_GiveInvItems(self,hero,ItFo_Potion_Dex_03,1);
-		}
-		else if(zufallsbelohnung >= 50)
-		{
-			CreateInvItem(self,ItFo_Potion_Strength_03);
-			B_GiveInvItems(self,hero,ItFo_Potion_Strength_03,1);
-		}
-		else if(zufallsbelohnung >= 25)
-		{
-			CreateInvItem(self,ItFo_Potion_Health_Perma_03);
-			B_GiveInvItems(self,hero,ItFo_Potion_Health_Perma_03,1);
-		};
-		AI_StopProcessInfos(self);
-	};
+	AI_Output(hero,self,"Info_Wolf_MCPLATESENOUGH_15_03");	//Wie lange wirst du dafür brauchen?
+	AI_Output(self,hero,"Info_Wolf_MCPLATESENOUGH_09_04");	//Ich habe nicht die geringste Ahnung. Das ist eine komplette Neuentwicklung, Mann!
+	AI_Output(self,hero,"Info_Wolf_MCPLATESENOUGH_09_05");	//Schau einfach ab und zu bei mir rein, wenn du in der Nähe bist!
+	MCPlatesDelivered = TRUE;
+	B_LogEntry(CH4_MCPlateArmor,"Wolf hat 15 dieser Minecralwerplatten von mir erhalten. Er benötigt etwas Zeit und bat mich später wiederzukommen.");
+	B_GiveXP(XP_DeliveredMCPlates);
+	B_GiveInvItems(hero,self,ItAt_Crawler_02,15);
+	AI_StopProcessInfos(self);
 };
 
 
@@ -662,7 +624,7 @@ instance Info_Wolf_ARMORINWORK(C_Info)
 
 func int Info_Wolf_ARMORINWORK_Condition()
 {
-	if((MCPlatesDelivered == TRUE) && (FreemineOrc_LookingUlumulu != LOG_SUCCESS) && (Npc_GetTrueGuild(hero) == GIL_SLD))
+	if((MCPlatesDelivered == TRUE) && (FreemineOrc_LookingUlumulu != LOG_SUCCESS))
 	{
 		return TRUE;
 	};
@@ -690,7 +652,7 @@ instance Info_Wolf_ARMORFINISHED(C_Info)
 
 func int Info_Wolf_ARMORFINISHED_Condition()
 {
-	if((MCPlatesDelivered == TRUE) && (FreemineOrc_LookingUlumulu == LOG_SUCCESS) && (Npc_GetTrueGuild(hero) == GIL_SLD))
+	if((MCPlatesDelivered == TRUE) && (FreemineOrc_LookingUlumulu == LOG_SUCCESS))
 	{
 		return TRUE;
 	};
