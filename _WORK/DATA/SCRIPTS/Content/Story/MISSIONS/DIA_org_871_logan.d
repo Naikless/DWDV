@@ -121,13 +121,13 @@ func void org_859_logan_creatures_zahn()
 		}
 		else
 		{
-			AI_Output(self,other,"Org_859_Logan_Creatures_KEINE_LP_13_00");	//
+			AI_Output(self,other,"Org_859_Logan_Creatures_KEINE_LP_13_00");	//Du muﬂt mehr Erfahrung sammeln, vorher wird dich mein Wissen nicht weiterbringen.
 			PrintScreen("Zu wenig Lernpunkte!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 		};
 	}
 	else
 	{
-		AI_Output(self,other,"Org_859_Logan_Creatures_KEIN_ERZ_13_00");	//
+		AI_Output(self,other,"Org_859_Logan_Creatures_KEIN_ERZ_13_00");	//Erst will ich mein Erz sehen - wie gesagt: Es hat alles seinen Preis!
 	};
 };
 
@@ -149,13 +149,13 @@ func void org_859_logan_creatures_fell()
 		}
 		else
 		{
-			AI_Output(self,other,"Org_859_Logan_Creatures_KEINE_LP_13_00");	//
+			AI_Output(self,other,"Org_859_Logan_Creatures_KEINE_LP_13_00");	//Du muﬂt mehr Erfahrung sammeln, vorher wird dich mein Wissen nicht weiterbringen.
 			PrintScreen("Zu wenig Lernpunkte!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 		};
 	}
 	else
 	{
-		AI_Output(self,other,"Org_859_Logan_Creatures_KEIN_ERZ_13_00");	//
+		AI_Output(self,other,"Org_859_Logan_Creatures_KEIN_ERZ_13_00");	//Erst will ich mein Erz sehen - wie gesagt: Es hat alles seinen Preis!
 	};
 };
 
@@ -177,13 +177,13 @@ func void org_859_logan_creatures_kralle()
 		}
 		else
 		{
-			AI_Output(self,other,"Org_859_Logan_Creatures_KEINE_LP_13_00");	//
+			AI_Output(self,other,"Org_859_Logan_Creatures_KEINE_LP_13_00");	//Du muﬂt mehr Erfahrung sammeln, vorher wird dich mein Wissen nicht weiterbringen.
 			PrintScreen("Zu wenig Lernpunkte!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 		};
 	}
 	else
 	{
-		AI_Output(self,other,"Org_859_Logan_Creatures_KEIN_ERZ_13_00");	//
+		AI_Output(self,other,"Org_859_Logan_Creatures_KEIN_ERZ_13_00");	//Erst will ich mein Erz sehen - wie gesagt: Es hat alles seinen Preis!
 	};
 };
 
@@ -205,13 +205,13 @@ func void org_859_logan_creatures_haut()
 		}
 		else
 		{
-			AI_Output(self,other,"Org_859_Logan_Creatures_KEINE_LP_13_00");	//
+			AI_Output(self,other,"Org_859_Logan_Creatures_KEINE_LP_13_00");	//Du muﬂt mehr Erfahrung sammeln, vorher wird dich mein Wissen nicht weiterbringen.
 			PrintScreen("Zu wenig Lernpunkte!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 		};
 	}
 	else
 	{
-		AI_Output(self,other,"Org_859_Logan_Creatures_KEIN_ERZ_13_00");	//
+		AI_Output(self,other,"Org_859_Logan_Creatures_KEIN_ERZ_13_00");	//Erst will ich mein Erz sehen - wie gesagt: Es hat alles seinen Preis!
 	};
 };
 
