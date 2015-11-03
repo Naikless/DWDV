@@ -1037,12 +1037,11 @@ instance GRD_ARMOR_I(C_Item)
 	flags = 0;
 	protection[PROT_EDGE] = 50;
 	protection[PROT_BLUNT] = 50;
-	protection[PROT_POINT] = 5;
-	protection[PROT_FIRE] = 25;
-	protection[PROT_MAGIC] = 1;
+	protection[PROT_POINT] = 50;
+	protection[PROT_FIRE] = 20;
+	protection[PROT_MAGIC] = 0;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
 	wear = WEAR_TORSO;
-	ownerGuild = GIL_GRD;
 	visual = "grdi.3ds";
 	visual_change = "Hum_GRDI_ARMOR.asc";
 	visual_skin = 0;
