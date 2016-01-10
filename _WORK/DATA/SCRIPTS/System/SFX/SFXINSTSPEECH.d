@@ -1,119 +1,561 @@
-instance  svm_11_CatchUp 			(C_SFX_DEF)          					  {file="SVM_11_CatchUp.WAV";};   
-instance  svm_11_CatchUpOrForgetIt 	(C_SFX_DEF)                               {file="SVM_11_CatchUpOrForgetIt.WAV";};
-instance  svm_11_ForgetIt 			(C_SFX_DEF)                               {file="SVM_11_ForgetIt.WAV";};
-instance  svm_11_YouAreNotOneOfUs	(C_SFX_DEF)                               {file="SVM_11_YouAreNotOneOfUs.WAV";};
-instance  svm_11_IknowThisSucker 	(C_SFX_DEF)                               {file="SVM_11_IknowThisSucker.WAV";};
-instance  svm_11_ThatsOurArmor 		(C_SFX_DEF)                               {file="SVM_11_ThatsOurArmor.WAV";};
-instance  svm_11_ThatsMyHelmet 		(C_SFX_DEF)                               {file="SVM_11_ThatsMyHelmet.WAV";};
-instance  svm_11_ThatsMyWeapon 		(C_SFX_DEF)                               {file="SVM_11_ThatsMyWeapon.WAV";};
-instance  svm_11_GiveItToMe 		(C_SFX_DEF)                               {file="SVM_11_GiveItToMe.WAV";};
-instance  svm_11_WhatsThat 			(C_SFX_DEF)                               {file="SVM_11_WhatsThat.WAV";};
-instance  svm_11_AhhYes 			(C_SFX_DEF)                               {file="SVM_11_AhhYes.WAV";};
-instance  svm_11_WhyDidYouDoThis 	(C_SFX_DEF)                               {file="SVM_11_WhyDidYouDoThis.WAV";};
-instance  svm_11_Thanks 			(C_SFX_DEF)                               {file="SVM_11_Thanks.WAV";};
-instance  svm_11_YouWasteYourPowers (C_SFX_DEF)                               {file="SVM_11_YouWasteYourPowers.WAV";};
-instance  svm_11_StopThat 			(C_SFX_DEF)                               {file="SVM_11_StopThat.WAV";};
-instance  svm_11_YouScaredMeToDeath (C_SFX_DEF)                               {file="SVM_11_YouScaredMeToDeath.WAV";};
-instance  svm_11_WeWillMeetAgain 	(C_SFX_DEF)                               {file="SVM_11_WeWillMeetAgain.WAV";};
-instance  svm_11_Help 				(C_SFX_DEF)                               {file="SVM_11_Help.WAV";};
-instance  svm_11_OutOfMyWay 		(C_SFX_DEF)                               {file="SVM_11_OutOfMyWay.WAV";};
-instance  svm_11_YouDeafOrWhat 		(C_SFX_DEF)                               {file="SVM_11_YouDeafOrWhat.WAV";};
-instance  svm_11_MakeWay 			(C_SFX_DEF)                               {file="SVM_11_MakeWay.WAV";};
-instance  svm_11_Alarm 				(C_SFX_DEF)                               {file="SVM_11_Alarm.WAV";};
-instance  svm_11_BehindYou 			(C_SFX_DEF)                               {file="SVM_11_BehindYou.WAV";};
-instance  svm_11_NowWait 			(C_SFX_DEF)                               {file="SVM_11_NowWait.WAV";};
-instance  svm_11_Die 				(C_SFX_DEF)                               {file="SVM_11_Die.WAV";};
-instance  svm_11_Revenge 			(C_SFX_DEF)                               {file="SVM_11_Revenge.WAV";};
-instance  svm_11_DirtyThief 		(C_SFX_DEF)                               {file="SVM_11_DirtyThief.WAV";};
-instance  svm_11_YeahWellDone 		(C_SFX_DEF)                               {file="SVM_11_YeahWellDone.WAV";};
-instance  svm_11_WatchYourAim 		(C_SFX_DEF)                               {file="SVM_11_WatchYourAim.WAV";};
-instance  svm_11_WhatAreYouDoing 	(C_SFX_DEF)                               {file="SVM_11_WhatAreYouDoing.WAV";};
-instance  svm_11_StopMagic 			(C_SFX_DEF)                               {file="SVM_11_StopMagic.WAV";};
-instance  svm_11_ISaidStopMagic 	(C_SFX_DEF)                               {file="SVM_11_ISaidStopMagic.WAV";};
-instance  svm_11_GetLost 			(C_SFX_DEF)                               {file="SVM_11_GetLost.WAV";};
-instance  svm_11_ISaidGetLost 		(C_SFX_DEF)                               {file="SVM_11_ISaidGetLost.WAV";};
-instance  svm_11_LookingForTroubleEh (C_SFX_DEF)                               {file="SVM_11_LookingForTroubleEh.WAV";};
-instance  svm_11_HeyHeyHey 			(C_SFX_DEF)                               {file="SVM_11_HeyHeyHey.WAV";};
-instance  svm_11_RunCoward 			(C_SFX_DEF)                               {file="SVM_11_RunCoward.WAV";};
-instance  svm_11_Ooh 				(C_SFX_DEF)                               {file="SVM_11_Ooh.WAV";};
-instance  svm_11_CheerFight 		(C_SFX_DEF)                               {file="SVM_11_CheerFight.WAV";};
-instance  svm_11_CheerFriend 		(C_SFX_DEF)                               {file="SVM_11_CheerFriend.WAV";};
-instance  svm_11_HeyThatsMine 		(C_SFX_DEF)                               {file="SVM_11_HeyThatsMine.WAV";};
-instance  svm_11_IForgiveYou 		(C_SFX_DEF)                               {file="SVM_11_IForgiveYou.WAV";};
-instance  svm_11_IdontWantThis 		(C_SFX_DEF)                               {file="SVM_11_IdontWantThis.WAV";};
-instance  svm_11_HandsOff 			(C_SFX_DEF)                               {file="SVM_11_HandsOff.WAV";};
-instance  svm_11_YoullBeSorryForThis (C_SFX_DEF)                               {file="SVM_11_YoullBeSorryForThis.WAV";};
-instance  svm_11_WiseMove 			(C_SFX_DEF)                               {file="SVM_11_WiseMove.WAV";};
-instance  svm_11_YouWannaFoolMe 	(C_SFX_DEF)                               {file="SVM_11_YouWannaFoolMe.WAV";};
-instance  svm_11_YouAreHurt 		(C_SFX_DEF)                               {file="SVM_11_YouAreHurt.WAV";};
-instance  svm_11_WhatAreYouWearing 	(C_SFX_DEF)                               {file="SVM_11_WhatAreYouWearing.WAV";};
-instance  svm_11_WearingThisIsDangerous (C_SFX_DEF)                              {file="SVM_11_WearingThisIsDangerous.WAV";};
-instance  svm_11_ChangedSideEh 		(C_SFX_DEF)                               {file="SVM_11_ChangedSideEh.WAV";};
-instance  svm_11_NothingToSay 		(C_SFX_DEF)                               {file="SVM_11_NothingToSay.WAV";};
-instance  svm_11_FriendlyBye 		(C_SFX_DEF)                               {file="SVM_11_FriendlyBye.WAV";};
-instance  svm_11_NeutralBye 		(C_SFX_DEF)                               {file="SVM_11_NeutralBye.WAV";};
-instance  svm_11_AngryBye 			(C_SFX_DEF)                               {file="SVM_11_AngryBye.WAV";};
-instance  svm_11_SectGreetings 		(C_SFX_DEF)                               {file="SVM_11_SectGreetings.WAV";};
-instance  svm_11_ALGreetings 		(C_SFX_DEF)                               {file="SVM_11_ALGreetings.WAV";};
-instance  svm_11_MageGreetings 		(C_SFX_DEF)                               {file="SVM_11_MageGreetings.WAV";};
-instance  svm_11_NLGreetings 		(C_SFX_DEF)                               {file="SVM_11_NLGreetings.WAV";};
-instance  svm_11_FriendlyGreetings 	(C_SFX_DEF)                               {file="SVM_11_FriendlyGreetings.WAV";};
-instance  svm_11_NotNow 			(C_SFX_DEF)                               {file="SVM_11_NotNow.WAV";};
-instance  svm_11_SCName0 			(C_SFX_DEF)                               {file="SVM_11_SCName0.WAV";};
-instance  svm_11_SCName1 			(C_SFX_DEF)                               {file="SVM_11_SCName1.WAV";};
-instance  svm_11_SCName2 			(C_SFX_DEF)                               {file="SVM_11_SCName2.WAV";};
-instance  svm_11_SCName3 			(C_SFX_DEF)                               {file="SVM_11_SCName3.WAV";};
-instance  svm_11_SCName4 			(C_SFX_DEF)                               {file="SVM_11_SCName4.WAV";};
-instance  svm_11_HeyYou 			(C_SFX_DEF)                               {file="SVM_11_HeyYou.WAV";};
-instance  svm_11_ComeOverHere 		(C_SFX_DEF)                               {file="SVM_11_ComeOverHere.WAV";};
-instance  svm_11_HowAreYou 			(C_SFX_DEF)                               {file="SVM_11_HowAreYou.WAV";};
-instance  svm_11_Snort 				(C_SFX_DEF)                               {file="SVM_11_Snort.WAV";};
-instance  svm_11_What 				(C_SFX_DEF)                               {file="SVM_11_What.WAV";};
-instance  svm_11_YouKilledEBr 		(C_SFX_DEF)                         	  {file="SVM_11_YouKilledEBr.WAV";};
-instance  svm_11_YouKilledGrd 		(C_SFX_DEF)    	                          {file="SVM_11_YouKilledGrd.WAV";};
-instance  svm_11_YouKilledStt 		(C_SFX_DEF)                               {file="SVM_11_YouKilledStt.WAV";};
-instance  svm_11_YouKilledVLK 		(C_SFX_DEF)                               {file="SVM_11_YouKilledVLK.WAV";};
-instance  svm_11_YouKilledSld 		(C_SFX_DEF)                               {file="SVM_11_YouKilledSld.WAV";};
-instance  svm_11_YouKilledOrg 		(C_SFX_DEF)                               {file="SVM_11_YouKilledOrg.WAV";};
-instance  svm_11_YouKilledBau 		(C_SFX_DEF)                               {file="SVM_11_YouKilledBau.WAV";};
-instance  svm_11_YouKilledSfB 		(C_SFX_DEF)                               {file="SVM_11_YouKilledSfB.WAV";};
-instance  svm_11_YouKilledGur 		(C_SFX_DEF)                               {file="SVM_11_YouKilledGur.WAV";};
-instance  svm_11_YouKilledNov 		(C_SFX_DEF)                               {file="SVM_11_YouKilledNov.WAV";};
-instance  svm_11_YouKilledTpl 		(C_SFX_DEF)                               {file="SVM_11_YouKilledTpl.WAV";};
-instance  svm_11_YouKilledMage 		(C_SFX_DEF)                               {file="SVM_11_YouKilledMage.WAV";};
-instance  svm_11_YouKnockedALBrat 	(C_SFX_DEF)                               {file="SVM_11_YouKnockedALBrat.WAV";};
-instance  svm_11_YouKnockedNLBrat 	(C_SFX_DEF)                               {file="SVM_11_YouKnockedNLBrat.WAV";};
-instance  svm_11_YouKnockedSTBrat 	(C_SFX_DEF)                               {file="SVM_11_YouKnockedSTBrat.WAV";};
-instance  svm_11_YouKilledMyFriend 	(C_SFX_DEF)                               {file="SVM_11_YouKilledMyFriend.WAV";};
-instance  svm_11_TheyKilledMyFriend (C_SFX_DEF)                               {file="SVM_11_TheyKilledMyFriend.WAV";};
-instance  svm_11_ThoughtYouWereDead (C_SFX_DEF)                               {file="SVM_11_ThoughtYouWereDead.WAV";};
-instance  svm_11_GladYouWereDead 	(C_SFX_DEF)                               {file="SVM_11_GladYouWereDead.WAV";};
-instance  svm_11_LookingForTroubleAgain 	(C_SFX_DEF)                       {file="SVM_11_LookingForTroubleAgain.WAV";};
-instance  svm_11_LetsForgetOurLittleFight 	(C_SFX_DEF)                       {file="SVM_11_LetsForgetOurLittleFight.WAV";};
-instance  svm_11_YouAttackedMyFriend 	(C_SFX_DEF)                           {file="SVM_11_YouAttackedMyFriend.WAV";};
-instance  svm_11_YouAttackedEBr 		(C_SFX_DEF)                           {file="SVM_11_YouAttackedEBr.WAV";};
-instance  svm_11_YouAttackedGur 		(C_SFX_DEF)                           {file="SVM_11_YouAttackedGur.WAV";};
-instance  svm_11_YouAttackedMage 		(C_SFX_DEF)                           {file="SVM_11_YouAttackedMage.WAV";};
-instance  svm_11_YouWillRegretThisVictory 	(C_SFX_DEF)                       {file="SVM_11_YouWillRegretThisVictory.WAV";};
-instance  svm_11_YouDefeatedMeWell 	(C_SFX_DEF)                               {file="SVM_11_YouDefeatedMeWell.WAV";};
-instance  svm_11_SuckerDefeatedEBr 	(C_SFX_DEF)                               {file="SVM_11_SuckerDefeatedEBr.WAV";};
-instance  svm_11_SuckerDefeatedGur 	(C_SFX_DEF)                               {file="SVM_11_SuckerDefeatedGur.WAV";};
-instance  svm_11_TheyWantMeToKnockYou 	(C_SFX_DEF)                           {file="SVM_11_TheyWantMeToKnockYou.WAV";};
-instance  svm_11_DontTryKnockingMe 	(C_SFX_DEF)                               {file="SVM_11_DontTryKnockingMe.WAV";};
-instance  svm_11_YouWonCoolFight 	(C_SFX_DEF)                               {file="SVM_11_YouWonCoolFight.WAV";};
-instance  svm_11_SuckerDefeatedByFriend 	(C_SFX_DEF)                       {file="SVM_11_SuckerDefeatedByFriend.WAV";};
-instance  svm_11_SuckerGotSome 		(C_SFX_DEF)                               {file="SVM_11_SuckerGotSome.WAV";};
-instance  svm_11_YouStoleFromEBr 	(C_SFX_DEF)                               {file="SVM_11_YouStoleFromEBr.WAV";};
-instance  svm_11_YouStoleFromGur 	(C_SFX_DEF)                               {file="SVM_11_YouStoleFromGur.WAV";};
-instance  svm_11_StoleFromMage 		(C_SFX_DEF)                               {file="SVM_11_StoleFromMage.WAV";};
-instance  svm_11_YouStoleFromMe 	(C_SFX_DEF)                               {file="SVM_11_YouStoleFromMe.WAV";};
-instance  svm_11_YouStoleFromUs 	(C_SFX_DEF)                               {file="SVM_11_YouStoleFromUs.WAV";};
-instance  svm_11_YouPissedMeOff 	(C_SFX_DEF)                               {file="SVM_11_YouPissedMeOff.WAV";};
-instance  svm_11_YouMeddledWithDuel (C_SFX_DEF)                               {file="SVM_11_YouMeddledWithDuel.WAV";};
-          
-          
-          
-          
-          
-          
+
+instance SVM_11_CATCHUP(C_SFX_DEF)
+{
+	file = "SVM_11_CatchUp.WAV";
+};
+
+instance SVM_11_CATCHUPORFORGETIT(C_SFX_DEF)
+{
+	file = "SVM_11_CatchUpOrForgetIt.WAV";
+};
+
+instance SVM_11_FORGETIT(C_SFX_DEF)
+{
+	file = "SVM_11_ForgetIt.WAV";
+};
+
+instance SVM_11_YOUARENOTONEOFUS(C_SFX_DEF)
+{
+	file = "SVM_11_YouAreNotOneOfUs.WAV";
+};
+
+instance SVM_11_IKNOWTHISSUCKER(C_SFX_DEF)
+{
+	file = "SVM_11_IknowThisSucker.WAV";
+};
+
+instance SVM_11_THATSOURARMOR(C_SFX_DEF)
+{
+	file = "SVM_11_ThatsOurArmor.WAV";
+};
+
+instance SVM_11_THATSMYHELMET(C_SFX_DEF)
+{
+	file = "SVM_11_ThatsMyHelmet.WAV";
+};
+
+instance SVM_11_THATSMYWEAPON(C_SFX_DEF)
+{
+	file = "SVM_11_ThatsMyWeapon.WAV";
+};
+
+instance SVM_11_GIVEITTOME(C_SFX_DEF)
+{
+	file = "SVM_11_GiveItToMe.WAV";
+};
+
+instance SVM_11_WHATSTHAT(C_SFX_DEF)
+{
+	file = "SVM_11_WhatsThat.WAV";
+};
+
+instance SVM_11_AHHYES(C_SFX_DEF)
+{
+	file = "SVM_11_AhhYes.WAV";
+};
+
+instance SVM_11_WHYDIDYOUDOTHIS(C_SFX_DEF)
+{
+	file = "SVM_11_WhyDidYouDoThis.WAV";
+};
+
+instance SVM_11_THANKS(C_SFX_DEF)
+{
+	file = "SVM_11_Thanks.WAV";
+};
+
+instance SVM_11_YOUWASTEYOURPOWERS(C_SFX_DEF)
+{
+	file = "SVM_11_YouWasteYourPowers.WAV";
+};
+
+instance SVM_11_STOPTHAT(C_SFX_DEF)
+{
+	file = "SVM_11_StopThat.WAV";
+};
+
+instance SVM_11_YOUSCAREDMETODEATH(C_SFX_DEF)
+{
+	file = "SVM_11_YouScaredMeToDeath.WAV";
+};
+
+instance SVM_11_WEWILLMEETAGAIN(C_SFX_DEF)
+{
+	file = "SVM_11_WeWillMeetAgain.WAV";
+};
+
+instance SVM_11_HELP(C_SFX_DEF)
+{
+	file = "SVM_11_Help.WAV";
+};
+
+instance SVM_11_OUTOFMYWAY(C_SFX_DEF)
+{
+	file = "SVM_11_OutOfMyWay.WAV";
+};
+
+instance SVM_11_YOUDEAFORWHAT(C_SFX_DEF)
+{
+	file = "SVM_11_YouDeafOrWhat.WAV";
+};
+
+instance SVM_11_MAKEWAY(C_SFX_DEF)
+{
+	file = "SVM_11_MakeWay.WAV";
+};
+
+instance SVM_11_ALARM(C_SFX_DEF)
+{
+	file = "SVM_11_Alarm.WAV";
+};
+
+instance SVM_11_BEHINDYOU(C_SFX_DEF)
+{
+	file = "SVM_11_BehindYou.WAV";
+};
+
+instance SVM_11_NOWWAIT(C_SFX_DEF)
+{
+	file = "SVM_11_NowWait.WAV";
+};
+
+instance SVM_11_DIE(C_SFX_DEF)
+{
+	file = "SVM_11_Die.WAV";
+};
+
+instance SVM_11_REVENGE(C_SFX_DEF)
+{
+	file = "SVM_11_Revenge.WAV";
+};
+
+instance SVM_11_DIRTYTHIEF(C_SFX_DEF)
+{
+	file = "SVM_11_DirtyThief.WAV";
+};
+
+instance SVM_11_YEAHWELLDONE(C_SFX_DEF)
+{
+	file = "SVM_11_YeahWellDone.WAV";
+};
+
+instance SVM_11_WATCHYOURAIM(C_SFX_DEF)
+{
+	file = "SVM_11_WatchYourAim.WAV";
+};
+
+instance SVM_11_WHATAREYOUDOING(C_SFX_DEF)
+{
+	file = "SVM_11_WhatAreYouDoing.WAV";
+};
+
+instance SVM_11_STOPMAGIC(C_SFX_DEF)
+{
+	file = "SVM_11_StopMagic.WAV";
+};
+
+instance SVM_11_ISAIDSTOPMAGIC(C_SFX_DEF)
+{
+	file = "SVM_11_ISaidStopMagic.WAV";
+};
+
+instance SVM_11_GETLOST(C_SFX_DEF)
+{
+	file = "SVM_11_GetLost.WAV";
+};
+
+instance SVM_11_ISAIDGETLOST(C_SFX_DEF)
+{
+	file = "SVM_11_ISaidGetLost.WAV";
+};
+
+instance SVM_11_LOOKINGFORTROUBLEEH(C_SFX_DEF)
+{
+	file = "SVM_11_LookingForTroubleEh.WAV";
+};
+
+instance SVM_11_HEYHEYHEY(C_SFX_DEF)
+{
+	file = "SVM_11_HeyHeyHey.WAV";
+};
+
+instance SVM_11_RUNCOWARD(C_SFX_DEF)
+{
+	file = "SVM_11_RunCoward.WAV";
+};
+
+instance SVM_11_OOH(C_SFX_DEF)
+{
+	file = "SVM_11_Ooh.WAV";
+};
+
+instance SVM_11_CHEERFIGHT(C_SFX_DEF)
+{
+	file = "SVM_11_CheerFight.WAV";
+};
+
+instance SVM_11_CHEERFRIEND(C_SFX_DEF)
+{
+	file = "SVM_11_CheerFriend.WAV";
+};
+
+instance SVM_11_HEYTHATSMINE(C_SFX_DEF)
+{
+	file = "SVM_11_HeyThatsMine.WAV";
+};
+
+instance SVM_11_IFORGIVEYOU(C_SFX_DEF)
+{
+	file = "SVM_11_IForgiveYou.WAV";
+};
+
+instance SVM_11_IDONTWANTTHIS(C_SFX_DEF)
+{
+	file = "SVM_11_IdontWantThis.WAV";
+};
+
+instance SVM_11_HANDSOFF(C_SFX_DEF)
+{
+	file = "SVM_11_HandsOff.WAV";
+};
+
+instance SVM_11_YOULLBESORRYFORTHIS(C_SFX_DEF)
+{
+	file = "SVM_11_YoullBeSorryForThis.WAV";
+};
+
+instance SVM_11_WISEMOVE(C_SFX_DEF)
+{
+	file = "SVM_11_WiseMove.WAV";
+};
+
+instance SVM_11_YOUWANNAFOOLME(C_SFX_DEF)
+{
+	file = "SVM_11_YouWannaFoolMe.WAV";
+};
+
+instance SVM_11_YOUAREHURT(C_SFX_DEF)
+{
+	file = "SVM_11_YouAreHurt.WAV";
+};
+
+instance SVM_11_WHATAREYOUWEARING(C_SFX_DEF)
+{
+	file = "SVM_11_WhatAreYouWearing.WAV";
+};
+
+instance SVM_11_WEARINGTHISISDANGEROUS(C_SFX_DEF)
+{
+	file = "SVM_11_WearingThisIsDangerous.WAV";
+};
+
+instance SVM_11_CHANGEDSIDEEH(C_SFX_DEF)
+{
+	file = "SVM_11_ChangedSideEh.WAV";
+};
+
+instance SVM_11_NOTHINGTOSAY(C_SFX_DEF)
+{
+	file = "SVM_11_NothingToSay.WAV";
+};
+
+instance SVM_11_FRIENDLYBYE(C_SFX_DEF)
+{
+	file = "SVM_11_FriendlyBye.WAV";
+};
+
+instance SVM_11_NEUTRALBYE(C_SFX_DEF)
+{
+	file = "SVM_11_NeutralBye.WAV";
+};
+
+instance SVM_11_ANGRYBYE(C_SFX_DEF)
+{
+	file = "SVM_11_AngryBye.WAV";
+};
+
+instance SVM_11_SECTGREETINGS(C_SFX_DEF)
+{
+	file = "SVM_11_SectGreetings.WAV";
+};
+
+instance SVM_11_ALGREETINGS(C_SFX_DEF)
+{
+	file = "SVM_11_ALGreetings.WAV";
+};
+
+instance SVM_11_MAGEGREETINGS(C_SFX_DEF)
+{
+	file = "SVM_11_MageGreetings.WAV";
+};
+
+instance SVM_11_NLGREETINGS(C_SFX_DEF)
+{
+	file = "SVM_11_NLGreetings.WAV";
+};
+
+instance SVM_11_FRIENDLYGREETINGS(C_SFX_DEF)
+{
+	file = "SVM_11_FriendlyGreetings.WAV";
+};
+
+instance SVM_11_NOTNOW(C_SFX_DEF)
+{
+	file = "SVM_11_NotNow.WAV";
+};
+
+instance SVM_11_SCNAME0(C_SFX_DEF)
+{
+	file = "SVM_11_SCName0.WAV";
+};
+
+instance SVM_11_SCNAME1(C_SFX_DEF)
+{
+	file = "SVM_11_SCName1.WAV";
+};
+
+instance SVM_11_SCNAME2(C_SFX_DEF)
+{
+	file = "SVM_11_SCName2.WAV";
+};
+
+instance SVM_11_SCNAME3(C_SFX_DEF)
+{
+	file = "SVM_11_SCName3.WAV";
+};
+
+instance SVM_11_SCNAME4(C_SFX_DEF)
+{
+	file = "SVM_11_SCName4.WAV";
+};
+
+instance SVM_11_HEYYOU(C_SFX_DEF)
+{
+	file = "SVM_11_HeyYou.WAV";
+};
+
+instance SVM_11_COMEOVERHERE(C_SFX_DEF)
+{
+	file = "SVM_11_ComeOverHere.WAV";
+};
+
+instance SVM_11_HOWAREYOU(C_SFX_DEF)
+{
+	file = "SVM_11_HowAreYou.WAV";
+};
+
+instance SVM_11_SNORT(C_SFX_DEF)
+{
+	file = "SVM_11_Snort.WAV";
+};
+
+instance SVM_11_WHAT(C_SFX_DEF)
+{
+	file = "SVM_11_What.WAV";
+};
+
+instance SVM_11_YOUKILLEDEBR(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledEBr.WAV";
+};
+
+instance SVM_11_YOUKILLEDGRD(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledGrd.WAV";
+};
+
+instance SVM_11_YOUKILLEDSTT(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledStt.WAV";
+};
+
+instance SVM_11_YOUKILLEDVLK(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledVLK.WAV";
+};
+
+instance SVM_11_YOUKILLEDSLD(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledSld.WAV";
+};
+
+instance SVM_11_YOUKILLEDORG(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledOrg.WAV";
+};
+
+instance SVM_11_YOUKILLEDBAU(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledBau.WAV";
+};
+
+instance SVM_11_YOUKILLEDSFB(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledSfB.WAV";
+};
+
+instance SVM_11_YOUKILLEDGUR(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledGur.WAV";
+};
+
+instance SVM_11_YOUKILLEDNOV(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledNov.WAV";
+};
+
+instance SVM_11_YOUKILLEDTPL(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledTpl.WAV";
+};
+
+instance SVM_11_YOUKILLEDMAGE(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledMage.WAV";
+};
+
+instance SVM_11_YOUKNOCKEDALBRAT(C_SFX_DEF)
+{
+	file = "SVM_11_YouKnockedALBrat.WAV";
+};
+
+instance SVM_11_YOUKNOCKEDNLBRAT(C_SFX_DEF)
+{
+	file = "SVM_11_YouKnockedNLBrat.WAV";
+};
+
+instance SVM_11_YOUKNOCKEDSTBRAT(C_SFX_DEF)
+{
+	file = "SVM_11_YouKnockedSTBrat.WAV";
+};
+
+instance SVM_11_YOUKILLEDMYFRIEND(C_SFX_DEF)
+{
+	file = "SVM_11_YouKilledMyFriend.WAV";
+};
+
+instance SVM_11_THEYKILLEDMYFRIEND(C_SFX_DEF)
+{
+	file = "SVM_11_TheyKilledMyFriend.WAV";
+};
+
+instance SVM_11_THOUGHTYOUWEREDEAD(C_SFX_DEF)
+{
+	file = "SVM_11_ThoughtYouWereDead.WAV";
+};
+
+instance SVM_11_GLADYOUWEREDEAD(C_SFX_DEF)
+{
+	file = "SVM_11_GladYouWereDead.WAV";
+};
+
+instance SVM_11_LOOKINGFORTROUBLEAGAIN(C_SFX_DEF)
+{
+	file = "SVM_11_LookingForTroubleAgain.WAV";
+};
+
+instance SVM_11_LETSFORGETOURLITTLEFIGHT(C_SFX_DEF)
+{
+	file = "SVM_11_LetsForgetOurLittleFight.WAV";
+};
+
+instance SVM_11_YOUATTACKEDMYFRIEND(C_SFX_DEF)
+{
+	file = "SVM_11_YouAttackedMyFriend.WAV";
+};
+
+instance SVM_11_YOUATTACKEDEBR(C_SFX_DEF)
+{
+	file = "SVM_11_YouAttackedEBr.WAV";
+};
+
+instance SVM_11_YOUATTACKEDGUR(C_SFX_DEF)
+{
+	file = "SVM_11_YouAttackedGur.WAV";
+};
+
+instance SVM_11_YOUATTACKEDMAGE(C_SFX_DEF)
+{
+	file = "SVM_11_YouAttackedMage.WAV";
+};
+
+instance SVM_11_YOUWILLREGRETTHISVICTORY(C_SFX_DEF)
+{
+	file = "SVM_11_YouWillRegretThisVictory.WAV";
+};
+
+instance SVM_11_YOUDEFEATEDMEWELL(C_SFX_DEF)
+{
+	file = "SVM_11_YouDefeatedMeWell.WAV";
+};
+
+instance SVM_11_SUCKERDEFEATEDEBR(C_SFX_DEF)
+{
+	file = "SVM_11_SuckerDefeatedEBr.WAV";
+};
+
+instance SVM_11_SUCKERDEFEATEDGUR(C_SFX_DEF)
+{
+	file = "SVM_11_SuckerDefeatedGur.WAV";
+};
+
+instance SVM_11_THEYWANTMETOKNOCKYOU(C_SFX_DEF)
+{
+	file = "SVM_11_TheyWantMeToKnockYou.WAV";
+};
+
+instance SVM_11_DONTTRYKNOCKINGME(C_SFX_DEF)
+{
+	file = "SVM_11_DontTryKnockingMe.WAV";
+};
+
+instance SVM_11_YOUWONCOOLFIGHT(C_SFX_DEF)
+{
+	file = "SVM_11_YouWonCoolFight.WAV";
+};
+
+instance SVM_11_SUCKERDEFEATEDBYFRIEND(C_SFX_DEF)
+{
+	file = "SVM_11_SuckerDefeatedByFriend.WAV";
+};
+
+instance SVM_11_SUCKERGOTSOME(C_SFX_DEF)
+{
+	file = "SVM_11_SuckerGotSome.WAV";
+};
+
+instance SVM_11_YOUSTOLEFROMEBR(C_SFX_DEF)
+{
+	file = "SVM_11_YouStoleFromEBr.WAV";
+};
+
+instance SVM_11_YOUSTOLEFROMGUR(C_SFX_DEF)
+{
+	file = "SVM_11_YouStoleFromGur.WAV";
+};
+
+instance SVM_11_STOLEFROMMAGE(C_SFX_DEF)
+{
+	file = "SVM_11_StoleFromMage.WAV";
+};
+
+instance SVM_11_YOUSTOLEFROMME(C_SFX_DEF)
+{
+	file = "SVM_11_YouStoleFromMe.WAV";
+};
+
+instance SVM_11_YOUSTOLEFROMUS(C_SFX_DEF)
+{
+	file = "SVM_11_YouStoleFromUs.WAV";
+};
+
+instance SVM_11_YOUPISSEDMEOFF(C_SFX_DEF)
+{
+	file = "SVM_11_YouPissedMeOff.WAV";
+};
+
+instance SVM_11_YOUMEDDLEDWITHDUEL(C_SFX_DEF)
+{
+	file = "SVM_11_YouMeddledWithDuel.WAV";
+};
 

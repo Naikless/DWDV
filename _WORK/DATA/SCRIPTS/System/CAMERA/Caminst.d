@@ -1,532 +1,471 @@
-/*********************************************
-**	Camera Instanzen				**
-*********************************************/
 
-/* Standard Camera loaded at beginning */
-// minRange besser nicht unter 1.5
-
-
-
-INSTANCE CamModRun(CCamSys_Def)
+instance CAMMODRUN(CCAMSYS_DEF)
 {
-	bestRange 			= 2.5 ;  
-	minRange  			= 1.4 ;  
-	maxRange  			= 6.0 ;  
-	bestElevation		= 25.0 ;
-	minElevation		= 0.0;
-	maxElevation		= 89.0; 
-	bestAzimuth			= 0.0;  
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0; 
-	rotOffsetX			= 20.0;   
-	rotOffsetY			= 0.0;  
+	bestrange = 2.5;
+	minrange = 1.4;
+	maxrange = 6;
+	bestelevation = 25;
+	minelevation = 0;
+	maxelevation = 89;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
+	rotoffsetx = 20;
+	rotoffsety = 0;
 };
 
-INSTANCE CamModLookBack(CCamSys_Def)
+instance CAMMODLOOKBACK(CCAMSYS_DEF)
 {
-	bestRange 			= 0.5 ;  
-	minRange  			= 1.0 ;  
-	maxRange  			= 6.0 ;  
-	bestElevation			= 35.0 ;
-	minElevation			= 0.0;
-	maxElevation			= 89.0; 
-	bestAzimuth			= 0.0;  
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0; 
-	rotOffsetX			= 20.0;   
-	rotOffsetY			= 180.0;  
-	veloRot 			= 5;
+	bestrange = 0.5;
+	minrange = 1;
+	maxrange = 6;
+	bestelevation = 35;
+	minelevation = 0;
+	maxelevation = 89;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
+	rotoffsetx = 20;
+	rotoffsety = 180;
+	velorot = 5;
 };
 
-/* Tombraider Style - Azimuth Grenzen 0/0/0 - Rotations-Stop-Geschw. langsam, Offset X -15 Grad */
-
-INSTANCE CAMMODNORMAL (CCAMSYS_DEF)
+instance CAMMODNORMAL(CCAMSYS_DEF)
 {
-     bestrange = 2.5;
-     minrange = 2.0;
-     maxrange = 6.0;
-     bestelevation = 25.0;
-     maxelevation = 90.000000000;
-     minazimuth = -90.000000000;
-     maxazimuth = 90.000000000;
-     rotoffsetx = 20.0;
+	bestrange = 2.5;
+	minrange = 2;
+	maxrange = 6;
+	bestelevation = 25;
+	maxelevation = 90;
+	minazimuth = -90;
+	maxazimuth = 90;
+	rotoffsetx = 20;
 };
 
-
-INSTANCE CamModDialog(CCamSys_Def)
+instance CAMMODDIALOG(CCAMSYS_DEF)
 {
-	bestRange 			= 3.0 ;
-	minRange  			= 2.5 ;
-	maxRange  			= 3.5 ;
-	bestElevation		= 10.0 ;
-	minElevation		= 0.0;
-	maxElevation		= 90.0;
-	bestAzimuth			= 45.0;
-	minAzimuth			= -45.0;  
-	maxAzimuth			= 45.0;   
-	rotOffsetX			= 0.0;
-	rotOffsetY			= -20.0;
+	bestrange = 3;
+	minrange = 2.5;
+	maxrange = 3.5;
+	bestelevation = 10;
+	minelevation = 0;
+	maxelevation = 90;
+	bestazimuth = 45;
+	minazimuth = -45;
+	maxazimuth = 45;
+	rotoffsetx = 0;
+	rotoffsety = -20;
 };
 
-
-INSTANCE CamModInventory(CCamSys_Def)
+instance CAMMODINVENTORY(CCAMSYS_DEF)
 {
-	bestrange = 2.200000000;
-    minrange = 2.900000095;
-    maxrange = 3.099999905;
-    bestelevation = 20.000000000;
-    maxelevation = 90.000000000;
-    bestazimuth = 0.000000000;
-    minazimuth = -90.000000000;
-    maxazimuth = 90.000000000;
-    rotoffsetx = 0.000000000;
-    rotoffsety = 0.000000000;
+	bestrange = 2.2;
+	minrange = 2.9;
+	maxrange = 3.1;
+	bestelevation = 20;
+	maxelevation = 90;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
+	rotoffsetx = 0;
+	rotoffsety = 0;
 };
 
-
-INSTANCE CAMMODMELEE (CCAMSYS_DEF)
+instance CAMMODMELEE(CCAMSYS_DEF)
 {
-	bestRange 			= 2.5 ;  
-	minRange  			= 1.4 ;  
-	maxRange  			= 6.0 ;  
-	bestElevation		= 35.0 ;
-	minElevation		= 0.0;
-	maxElevation		= 89.0; 
-	bestAzimuth			= 0.0;  
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0; 
-	rotOffsetX			= 20.0;   
-	rotOffsetY			= 0.0;  
+	bestrange = 2.5;
+	minrange = 1.4;
+	maxrange = 6;
+	bestelevation = 35;
+	minelevation = 0;
+	maxelevation = 89;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
+	rotoffsetx = 20;
+	rotoffsety = 0;
 };
 
-INSTANCE CamModMeleeMult(CCamSys_Def)
+instance CAMMODMELEEMULT(CCAMSYS_DEF)
 {
-	bestRange 			= 6.0 ;
-	minRange  			= 2.5 ;
-	maxRange  			= 10.0 ;
-	bestElevation		= 15.0 ;
-	minElevation		= 0.0;
-	maxElevation		= 89.0; 
-	bestAzimuth			= 0.0;  
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0; 
+	bestrange = 6;
+	minrange = 2.5;
+	maxrange = 10;
+	bestelevation = 15;
+	minelevation = 0;
+	maxelevation = 89;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
 };
 
-
-INSTANCE CamModRanged(CCamSys_Def)
+instance CAMMODRANGED(CCAMSYS_DEF)
 {
-	bestRange 			= 3.5 ; 
-	minRange  			= 2.0 ; 
-	maxRange  			= 4.5 ; 
-	bestElevation		= 45.0 ;
-	minElevation		= 0.0;
-	maxElevation		= 90.0; 
-	bestAzimuth			= 30.0;  
-	minAzimuth			= -30.0;
-	maxAzimuth			= 30.0; 
-	rotOffsetX			= 20.0; 
-	rotOffsetY			= 0.0;  
+	bestrange = 3.5;
+	minrange = 2;
+	maxrange = 4.5;
+	bestelevation = 45;
+	minelevation = 0;
+	maxelevation = 90;
+	bestazimuth = 30;
+	minazimuth = -30;
+	maxazimuth = 30;
+	rotoffsetx = 20;
+	rotoffsety = 0;
 };
 
-
-INSTANCE CamModMagic(CCamSys_Def)
+instance CAMMODMAGIC(CCAMSYS_DEF)
 {
-	bestRange 			= 2.5 ;  
-	minRange  			= 1.4 ;  
-	maxRange  			= 6.0 ;  
-	bestElevation		= 35.0 ;
-	minElevation		= 0.0;
-	maxElevation		= 89.0; 
-	bestAzimuth			= 0.0;  
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0; 
-	rotOffsetX			= 20.0;   
-	rotOffsetY			= 0.0;  
+	bestrange = 2.5;
+	minrange = 1.4;
+	maxrange = 6;
+	bestelevation = 35;
+	minelevation = 0;
+	maxelevation = 89;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
+	rotoffsetx = 20;
+	rotoffsety = 0;
 };
 
-
-INSTANCE CamModSwim(CCamSys_Def)
+instance CAMMODSWIM(CCAMSYS_DEF)
 {
-	bestRange 			= 3.0 ;
-	minRange  			= 2.9 ;
-	maxRange  			= 3.1 ;
-	bestElevation		= 20.0 ;
-	minElevation		= 10.0;
-	maxElevation		= 45.0;
-	bestAzimuth			= 0.0;
-	minAzimuth			= -45.0;
-	maxAzimuth			= 45.0;
-	rotOffsetX			= 15.0;
-	rotOffsetY			= 0.0;
+	bestrange = 3;
+	minrange = 2.9;
+	maxrange = 3.1;
+	bestelevation = 20;
+	minelevation = 10;
+	maxelevation = 45;
+	bestazimuth = 0;
+	minazimuth = -45;
+	maxazimuth = 45;
+	rotoffsetx = 15;
+	rotoffsety = 0;
 };
 
-
-INSTANCE CamModDive(CCamSys_Def)
+instance CAMMODDIVE(CCAMSYS_DEF)
 {
-	bestRange 			= 3.0 ;
-	minRange  			= 3.0 ;
-	maxRange  			= 3.0 ;
-	bestElevation		= -20.0 ;
-	minElevation		= -60.0;
-	maxElevation		= -10.0;
-	bestAzimuth			= 0.0;
-	minAzimuth			= -45.0;
-	maxAzimuth			= 45.0;
-	rotOffsetX			= -10.0;
-	rotOffsetY			= 0.0;
+	bestrange = 3;
+	minrange = 3;
+	maxrange = 3;
+	bestelevation = -20;
+	minelevation = -60;
+	maxelevation = -10;
+	bestazimuth = 0;
+	minazimuth = -45;
+	maxazimuth = 45;
+	rotoffsetx = -10;
+	rotoffsety = 0;
 };
 
-
-INSTANCE CamModJump(CCamSys_Def)
+instance CAMMODJUMP(CCAMSYS_DEF)
 {
-	bestRange 			= 2.0 ; 
-	minRange  			= 1.0 ; 
-	maxRange  			= 2.5 ; 
-	bestElevation		= 35.0 ;
-	minElevation		= 0.0;
-	maxElevation		= 90.0; 
-	bestAzimuth			= 0.0;  
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0; 
+	bestrange = 2;
+	minrange = 1;
+	maxrange = 2.5;
+	bestelevation = 35;
+	minelevation = 0;
+	maxelevation = 90;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
 };
 
-
-INSTANCE CamModJumpUp(CCamSys_Def)
+instance CAMMODJUMPUP(CCAMSYS_DEF)
 {
-	bestRange 			= 2.0 ;
-	minRange  			= 1.0 ;
-	maxRange  			= 2.5 ;
-	bestElevation		= -30.0 ;
-	minElevation		= -90.0;
-	maxElevation		= 0.0;
-	bestAzimuth			= 0.0;
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0;
+	bestrange = 2;
+	minrange = 1;
+	maxrange = 2.5;
+	bestelevation = -30;
+	minelevation = -90;
+	maxelevation = 0;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
 };
 
-
-INSTANCE CamModClimb(CCamSys_Def)
+instance CAMMODCLIMB(CCAMSYS_DEF)
 {
-	bestRange 			= 2.0 ;
-	minRange  			= 1.5 ;
-	maxRange  			= 2.5 ;
-	bestElevation		= 30.0 ;
-	minElevation		= -90.0;
-	maxElevation		= 90.0;
-	bestAzimuth			= 0.0;
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0;
+	bestrange = 2;
+	minrange = 1.5;
+	maxrange = 2.5;
+	bestelevation = 30;
+	minelevation = -90;
+	maxelevation = 90;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
 };
 
-
-INSTANCE CamModFall(CCamSys_Def)
+instance CAMMODFALL(CCAMSYS_DEF)
 {
-	bestRange 			= 2.0 ;
-	minRange  			= 1.5 ;
-	maxRange  			= 2.5 ;
-	bestElevation		= 60.0 ;
-	minElevation		= 0.0;
-	maxElevation		= 90.0;
-	bestAzimuth			= 0.0;
-	minAzimuth			= -30.0;
-	maxAzimuth			= 30.0;
-	rotOffsetX			= -10.0;
-	rotOffsetY			= 0.0;
+	bestrange = 2;
+	minrange = 1.5;
+	maxrange = 2.5;
+	bestelevation = 60;
+	minelevation = 0;
+	maxelevation = 90;
+	bestazimuth = 0;
+	minazimuth = -30;
+	maxazimuth = 30;
+	rotoffsetx = -10;
+	rotoffsety = 0;
 };
 
-
-INSTANCE CamModDeath(CCamSys_Def)
+instance CAMMODDEATH(CCAMSYS_DEF)
 {
-	bestRange 			= 3.0 ;
-	minRange  			= 2.0 ;
-	maxRange  			= 10.0 ;
-	bestElevation		= 80.0 ;
-	minElevation		= 0.0;
-	maxElevation		= 90.0;
-	bestAzimuth			= 180.0;
-	minAzimuth			= -89.0;
-	maxAzimuth			= 89.0;
-	rotOffsetX			= 0.0;
-	rotOffsetY			= 0.0;
+	bestrange = 3;
+	minrange = 2;
+	maxrange = 10;
+	bestelevation = 80;
+	minelevation = 0;
+	maxelevation = 90;
+	bestazimuth = 180;
+	minazimuth = -89;
+	maxazimuth = 89;
+	rotoffsetx = 0;
+	rotoffsety = 0;
 };
 
-
-INSTANCE CamModFocus(CCamSys_Def)
+instance CAMMODFOCUS(CCAMSYS_DEF)
 {
-	bestRange 			= 2.5 ; 
-	minRange  			= 1.9 ; 
-	maxRange  			= 3.5 ; 
-	bestElevation			= 25.0 ;
-	minElevation			= 0.0;
-	maxElevation			= 90.0; 
-	bestAzimuth			= 45.0;  
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0; 
-	rotOffsetX			= 0.0; 
-	rotOffsetY			= 0.0;  
+	bestrange = 2.5;
+	minrange = 1.9;
+	maxrange = 3.5;
+	bestelevation = 25;
+	minelevation = 0;
+	maxelevation = 90;
+	bestazimuth = 45;
+	minazimuth = -90;
+	maxazimuth = 90;
+	rotoffsetx = 0;
+	rotoffsety = 0;
 };
 
-
-// MOBSI Cam-Modes
-
-// DEFAULT
-INSTANCE CamModMOBDefault(CCamSys_Def)
+instance CAMMODMOBDEFAULT(CCAMSYS_DEF)
 {
-	bestRange 			= 2.0 ; 
-	minRange  			= 1.4 ; 
-	maxRange  			= 3.0 ; 
-	bestElevation		= 35.0 ;
-	minElevation		= 15.0;
-	maxElevation		= 90.0; 
-	bestAzimuth			= 45.0;  
-	minAzimuth			= 0.0;
-	maxAzimuth			= 90.0; 
-	rotOffsetX			= 0.0; 
-	rotOffsetY			= 5.0;  
+	bestrange = 2;
+	minrange = 1.4;
+	maxrange = 3;
+	bestelevation = 35;
+	minelevation = 15;
+	maxelevation = 90;
+	bestazimuth = 45;
+	minazimuth = 0;
+	maxazimuth = 90;
+	rotoffsetx = 0;
+	rotoffsety = 5;
 };
 
-// Tür aufziehen (FRONT)
-INSTANCE CAMMODMOBDOOR_FRONT (CCAMSYS_DEF)
+instance CAMMODMOBDOOR_FRONT(CCAMSYS_DEF)
 {
-     bestrange = 1.250000000;
-     minrange = 0.750000000;
-     maxrange = 2.000000000;
-     bestelevation = 40.000000000;
-     maxelevation = 90.000000000;
-     minelevation = 30.000000000;
-     bestazimuth = 45.000000000;
-     minazimuth = 30.000000000;
-     maxazimuth = 60.000000000;
-     rotoffsetx = 30.000000000;
-     rotoffsety = -40.000000000;
+	bestrange = 1.25;
+	minrange = 0.75;
+	maxrange = 2;
+	bestelevation = 40;
+	maxelevation = 90;
+	minelevation = 30;
+	bestazimuth = 45;
+	minazimuth = 30;
+	maxazimuth = 60;
+	rotoffsetx = 30;
+	rotoffsety = -40;
 };
 
-// Tür aufstossen (BACK)
-INSTANCE CAMMODMOBDOOR_BACK (CCAMSYS_DEF)
+instance CAMMODMOBDOOR_BACK(CCAMSYS_DEF)
 {
-     bestrange = 1.250000000;
-     minrange = 0.750000000;
-     maxrange = 2.000000000;
-     bestelevation = 40.000000000;
-     maxelevation = 60.000000000;
-     minelevation = 30.000000000;
-     bestazimuth = -45.000000000;
-     minazimuth = -30.000000000;
-     maxazimuth = -60.000000000;
-     rotoffsetx = 30.000000000;
-     rotoffsety = 40.000000000;
+	bestrange = 1.25;
+	minrange = 0.75;
+	maxrange = 2;
+	bestelevation = 40;
+	maxelevation = 60;
+	minelevation = 30;
+	bestazimuth = -45;
+	minazimuth = -30;
+	maxazimuth = -60;
+	rotoffsetx = 30;
+	rotoffsety = 40;
 };
 
-// Leiterbenutzung
-INSTANCE CAMMODMOBLADDER (CCAMSYS_DEF)
+instance CAMMODMOBLADDER(CCAMSYS_DEF)
 {
-     bestrange = 3.50000000;
-     minrange = 1.500000000;
-     maxrange = 6.000000000;
-     bestelevation = 0.000000000;
-     maxelevation = 30.000000000;
-     minelevation = -30.000000000;
-     bestazimuth = 0.000000000;
-     minazimuth = -90.000000000;
-     maxazimuth = 90.000000000;
-     rotoffsetx = 0.000000000;
-     rotoffsety = 0.000000000;
+	bestrange = 3.5;
+	minrange = 1.5;
+	maxrange = 6;
+	bestelevation = 0;
+	maxelevation = 30;
+	minelevation = -30;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
+	rotoffsetx = 0;
+	rotoffsety = 0;
 };
 
-// Betten
-
-// Schema: BED_FRONT)
-INSTANCE CAMMODMOBBED_FRONT (CCAMSYS_DEF)
+instance CAMMODMOBBED_FRONT(CCAMSYS_DEF)
 {
-     bestrange = 2.00000000;
-     minrange = 1.000000000;
-     maxrange = 3.000000000;
-     bestelevation = 80.000000000;
-     maxelevation = 90.000000000;
-     minelevation = 60.000000000;
-     bestazimuth = 90.000000000;
-     minazimuth = 0.000000000;
-     maxazimuth = 180.000000000;
-     rotoffsetx = 0.000000000;
-     rotoffsety = 0.000000000;
-};
-// Schema: BED_BACK)
-INSTANCE CAMMODMOBBED_BACK (CCAMSYS_DEF)
-{
-     bestrange = 2.00000000;
-     minrange = 1.000000000;
-     maxrange = 3.000000000;
-     bestelevation = 80.000000000;
-     maxelevation = 90.000000000;
-     minelevation = 60.000000000;
-     bestazimuth = 90.000000000;
-     minazimuth = 0.000000000;
-     maxazimuth = 180.000000000;
+	bestrange = 2;
+	minrange = 1;
+	maxrange = 3;
+	bestelevation = 80;
+	maxelevation = 90;
+	minelevation = 60;
+	bestazimuth = 90;
+	minazimuth = 0;
+	maxazimuth = 180;
+	rotoffsetx = 0;
+	rotoffsety = 0;
 };
 
-// Schema: BEDHIGH_FRONT
-INSTANCE CAMMODMOBBEDHIGH_FRONT (CCAMSYS_DEF)
+instance CAMMODMOBBED_BACK(CCAMSYS_DEF)
 {
-     bestrange = 2.00000000;
-     minrange = 1.000000000;
-     maxrange = 3.000000000;
-     bestelevation = 80.000000000;
-     maxelevation = 90.000000000;
-     minelevation = 60.000000000;
-     bestazimuth = 90.000000000;
-     minazimuth = 0.000000000;
-     maxazimuth = 180.000000000;
-};
-// Schema: BEDHIGH_BACK
-INSTANCE CAMMODMOBBEDHIGH_BACK (CCAMSYS_DEF)
-{
-     bestrange = 2.00000000;
-     minrange = 1.000000000;
-     maxrange = 3.000000000;
-     bestelevation = 80.000000000;
-     maxelevation = 90.000000000;
-     minelevation = 60.000000000;
-     bestazimuth = 90.000000000;
-     minazimuth = 0.000000000;
-     maxazimuth = 180.000000000;
+	bestrange = 2;
+	minrange = 1;
+	maxrange = 3;
+	bestelevation = 80;
+	maxelevation = 90;
+	minelevation = 60;
+	bestazimuth = 90;
+	minazimuth = 0;
+	maxazimuth = 180;
 };
 
-// Schema: BEDLOW_FRONT
-INSTANCE CAMMODMOBBEDLOW_FRONT (CCAMSYS_DEF)
+instance CAMMODMOBBEDHIGH_FRONT(CCAMSYS_DEF)
 {
-     bestrange = 2.00000000;
-     minrange = 1.000000000;
-     maxrange = 3.000000000;
-     bestelevation = 80.000000000;
-     maxelevation = 90.000000000;
-     minelevation = 60.000000000;
-     bestazimuth = 90.000000000;
-     minazimuth = 0.000000000;
-     maxazimuth = 180.000000000;
-};
-// Schema: BEDLOW_BACK
-INSTANCE CAMMODMOBBEDLOW_BACK (CCAMSYS_DEF)
-{
-     bestrange = 2.00000000;
-     minrange = 1.000000000;
-     maxrange = 3.000000000;
-     bestelevation = 80.000000000;
-     maxelevation = 90.000000000;
-     minelevation = 60.000000000;
-     bestazimuth = 90.000000000;
-     minazimuth = 0.000000000;
-     maxazimuth = 180.000000000;
+	bestrange = 2;
+	minrange = 1;
+	maxrange = 3;
+	bestelevation = 80;
+	maxelevation = 90;
+	minelevation = 60;
+	bestazimuth = 90;
+	minazimuth = 0;
+	maxazimuth = 180;
 };
 
-// auf Stuhl sitzen (CHAIR)
-/*	[EDENFELD] Auskommentiert. Macht noch Probs...
-INSTANCE CAMMODMOBCHAIR (CCAMSYS_DEF)
+instance CAMMODMOBBEDHIGH_BACK(CCAMSYS_DEF)
 {
-     bestrange = 1.50000000;
-     minrange = 0.500000000;
-     maxrange = 2.500000000;
-     bestelevation = -10.000000000;
-     minelevation = 30.000000000;
-     maxelevation = 90.000000000;
-     bestazimuth = 180.000000000;
-     minazimuth = -180.000000000;
-     maxazimuth = 180.000000000;
-     rotoffsetx = 0.000000000;
-};
-*/
-// auf Bank sitzen (BENCH)
-INSTANCE CAMMODMOBBENCH (CCAMSYS_DEF)
-{
-     bestrange = 1.20000000;
-     minrange = 0.500000000;
-     maxrange = 1.900000000;
-     bestelevation = 10.000000000;
-     minelevation = 30.000000000;
-     maxelevation = 90.000000000;
-     bestazimuth = 0.000000000;
-     minazimuth = -180.000000000;
-     maxazimuth = 180.000000000;
-     rotoffsetx = 0.000000000;
+	bestrange = 2;
+	minrange = 1;
+	maxrange = 3;
+	bestelevation = 80;
+	maxelevation = 90;
+	minelevation = 60;
+	bestazimuth = 90;
+	minazimuth = 0;
+	maxazimuth = 180;
 };
 
-// im Faß verstecken
-INSTANCE CAMMODMOBBARRELO (CCAMSYS_DEF)
+instance CAMMODMOBBEDLOW_FRONT(CCAMSYS_DEF)
 {
-     bestrange = 1.5000000;
-     minrange = 0.500000000;
-     maxrange = 3.000000000;
-     bestelevation = 75.000000000;
-     maxelevation = 90.000000000;
-     minelevation = 0.000000000;
-     bestazimuth = -30.000000000;
-     minazimuth = -90.000000000;
-     maxazimuth = 90.000000000;
-     rotoffsetx = 20.000000000;
-     rotoffsety = 0.000000000;
+	bestrange = 2;
+	minrange = 1;
+	maxrange = 3;
+	bestelevation = 80;
+	maxelevation = 90;
+	minelevation = 60;
+	bestazimuth = 90;
+	minazimuth = 0;
+	maxazimuth = 180;
 };
 
-// internal Cameras. Change at own risk
-
-// Firstperson Camera
-// bis auf die Trägheitsconstanten indolenceTrans & indolenceHead sind die Vars irrelevant
-// vielleicht sind auch noch andere Parameter sinnvoll
-
-INSTANCE CamModFirstPerson(CCamSys_Def)
+instance CAMMODMOBBEDLOW_BACK(CCAMSYS_DEF)
 {
-	bestRange 			= 2.0 ; 
-	minRange  			= 1.5 ;
-	maxRange  			= 2.5 ;
-	bestElevation		= 0.0 ;
-	minElevation		= -90.0;
-	maxElevation		= 90.0;
-	bestAzimuth			= 0.0;
-	minAzimuth			= -45.0;
-	maxAzimuth			= 45.0;
-	rotOffsetX			= 60.0;
-	rotOffsetY			= 0.0;
+	bestrange = 2;
+	minrange = 1;
+	maxrange = 3;
+	bestelevation = 80;
+	maxelevation = 90;
+	minelevation = 60;
+	bestazimuth = 90;
+	minazimuth = 0;
+	maxazimuth = 180;
 };
 
-
-INSTANCE CamModLook(CCamSys_Def)
+instance CAMMODMOBBENCH(CCAMSYS_DEF)
 {
-	bestRange 			= 3.0 ; 
-	minRange  			= 1.5 ; 
-	maxRange  			= 6.5 ; 
-	bestElevation		= 30.0 ;
-	minElevation		= -55.0;
-	maxElevation		= 80.0; 
-	bestAzimuth			= 0.0;  
-	minAzimuth			= -90.0;
-	maxAzimuth			= 90.0; 
-	veloTrans			= 5;
+	bestrange = 2.2;
+	minrange = 1.5;
+	maxrange = 2.9;
+	bestelevation = 10;
+	minelevation = 30;
+	maxelevation = 90;
+	bestazimuth = 0;
+	minazimuth = -180;
+	maxazimuth = 180;
+	rotoffsetx = 0;
 };
 
-
-INSTANCE CamModRangedShort(CCamSys_Def)
+instance CAMMODMOBBARRELO(CCAMSYS_DEF)
 {
-	bestRange 			= 0.5 ;
-	minRange  			= 0.4 ;
-	maxRange  			= 1.2 ;
-	bestElevation		= 60.0 ;
-	minElevation		= 40.0;
-	maxElevation		= 90.0;		// CHANGED
-	bestAzimuth			= 34.0;
-	minAzimuth			= 34.0;
-	maxAzimuth			= 34.0;
-	rotOffsetX			= 55.0;
-	rotOffsetY			= -27.0;
+	bestrange = 1.5;
+	minrange = 0.5;
+	maxrange = 3;
+	bestelevation = 75;
+	maxelevation = 90;
+	minelevation = 0;
+	bestazimuth = -30;
+	minazimuth = -90;
+	maxazimuth = 90;
+	rotoffsetx = 20;
+	rotoffsety = 0;
 };
 
-INSTANCE CamModShoulder(CCamSys_Def)
+instance CAMMODFIRSTPERSON(CCAMSYS_DEF)
 {
-	bestRange 			= 0.75 ;
-	minRange  			= 0.4 ;
-	maxRange  			= 1.2 ;
-	bestElevation		= 80.0 ;
-	minElevation		= 40.0;
-	maxElevation		= 90.0;		// CHANGED
-	bestAzimuth			= 90.0;
-	minAzimuth			= 0.0;
-	maxAzimuth			= 0.0;
+	bestrange = 2;
+	minrange = 1.5;
+	maxrange = 2.5;
+	bestelevation = 0;
+	minelevation = -90;
+	maxelevation = 90;
+	bestazimuth = 0;
+	minazimuth = -45;
+	maxazimuth = 45;
+	rotoffsetx = 60;
+	rotoffsety = 0;
+};
+
+instance CAMMODLOOK(CCAMSYS_DEF)
+{
+	bestrange = 3;
+	minrange = 1.5;
+	maxrange = 6.5;
+	bestelevation = 30;
+	minelevation = -55;
+	maxelevation = 80;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
+	velotrans = 5;
+};
+
+instance CAMMODRANGEDSHORT(CCAMSYS_DEF)
+{
+	bestrange = 0.5;
+	minrange = 0.4;
+	maxrange = 1.2;
+	bestelevation = 60;
+	minelevation = 40;
+	maxelevation = 90;
+	bestazimuth = 34;
+	minazimuth = 34;
+	maxazimuth = 34;
+	rotoffsetx = 55;
+	rotoffsety = -27;
+};
+
+instance CAMMODSHOULDER(CCAMSYS_DEF)
+{
+	bestrange = 0.75;
+	minrange = 0.4;
+	maxrange = 1.2;
+	bestelevation = 80;
+	minelevation = 40;
+	maxelevation = 90;
+	bestazimuth = 90;
+	minazimuth = 0;
+	maxazimuth = 0;
 };
 

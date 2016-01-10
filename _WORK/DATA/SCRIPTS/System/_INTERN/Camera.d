@@ -1,101 +1,55 @@
-	
 
-//////////////////////////////////////
-
-// 	 
-
-//	Cam_sys Class
-
-//	
-
-//////////////////////////////////////
-
-CLASS CCamSys 
+class CCAMSYS
 {
-	// angles -180 to 180 
-	VAR FLOAT bestRange;
-	VAR FLOAT minRange;
-	VAR FLOAT maxRange;
-	VAR FLOAT bestElevation;
-	VAR FLOAT minElevation;
-	VAR FLOAT maxElevation;
-	VAR FLOAT bestAzimuth;
-	VAR FLOAT minAzimuth;
-	VAR FLOAT maxAzimuth;
-	VAR FLOAT bestRotZ;
-	VAR FLOAT minRotZ;
-	VAR FLOAT maxRotZ;
-	VAR FLOAT rotOffsetX;
-	VAR FLOAT rotOffsetY;
-	VAR FLOAT rotOffsetZ;
-	VAR FLOAT targetOffsetX;
-	VAR FLOAT targetOffsetY;
-	VAR FLOAT targetOffsetZ;
-
-	// dynamic 
-	VAR	FLOAT veloTrans;				  	// velocity while easing   to best position
-	VAR FLOAT veloRot;			  			// velocity while rotating to best orientation
-
-	VAR INT	  translate;			    	// rotate around target, 1: on, 0:off
-	VAR INT	  rotate;			    		// rotate around target, 1: on, 0:off
-	VAR INT	  collision;					// disable collision for this mode (ideal pos must be near player)
+	var float bestrange;
+	var float minrange;
+	var float maxrange;
+	var float bestelevation;
+	var float minelevation;
+	var float maxelevation;
+	var float bestazimuth;
+	var float minazimuth;
+	var float maxazimuth;
+	var float bestrotz;
+	var float minrotz;
+	var float maxrotz;
+	var float rotoffsetx;
+	var float rotoffsety;
+	var float rotoffsetz;
+	var float targetoffsetx;
+	var float targetoffsety;
+	var float targetoffsetz;
+	var float velotrans;
+	var float velorot;
+	var int translate;
+	var int rotate;
+	var int collision;
 };
 
-
-
-PROTOTYPE CCamSys_Def(CCamSys) {
-
-	bestRange 			= 2.0 ; 
-
-	minRange  			= 1.99 ; 
-
-	maxRange  			= 4.01 ; 
-
-	bestElevation			= 0.0 ;
-
-	minElevation			= 0.0;
-
-	maxElevation			= 89.0; 
-
-	bestAzimuth			= 0.0;  
-
-	minAzimuth			= -90.0;
-
-	maxAzimuth			= 90.0; 
-
-	bestRotZ			= 0.0;  
-
-	minRotZ				= 0.0;  
-
-	maxRotZ				= 0.0;  
-
-	rotOffsetX			= 20.0; 
-
-	rotOffsetY			= 0.0;  
-
-	rotOffsetZ			= 0.0;  
-
-	targetOffsetX			= 0.0;
-	targetOffsetY			= 0.0;
-	targetOffsetZ			= 0.0;
-
-	translate			= 1;    // translate to target, 1: on, 0: off
-
-	rotate				= 1;    // rotate around target, 1: on, 0:off
-
-	collision			= 1;	// disable collision for this mode (ideal pos must be near player)
-
-	// dynamic 
-	veloTrans			= 30;				  	// velocity while easing   to best position
-	veloRot				= 2;			  		// velocity while rotating to best orientation
-
+prototype CCAMSYS_DEF(CCAMSYS)
+{
+	bestrange = 2;
+	minrange = 1.99;
+	maxrange = 4.01;
+	bestelevation = 0;
+	minelevation = 0;
+	maxelevation = 89;
+	bestazimuth = 0;
+	minazimuth = -90;
+	maxazimuth = 90;
+	bestrotz = 0;
+	minrotz = 0;
+	maxrotz = 0;
+	rotoffsetx = 20;
+	rotoffsety = 0;
+	rotoffsetz = 0;
+	targetoffsetx = 0;
+	targetoffsety = 0;
+	targetoffsetz = 0;
+	translate = 1;
+	rotate = 1;
+	collision = 1;
+	velotrans = 30;
+	velorot = 2;
 };
-
-
-
-
-
-
-
-
 

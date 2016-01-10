@@ -1,22 +1,16 @@
-// Menue-Definitionen (Texturen, Fonts etc.)
-menu\menu_defines.d
+// GothicSourcer workspace file
+// WARNING: DO NOT EDIT OR DELETE THIS FILE!
 
-// Deklarationen
-_intern\menu.d
-
-// Menue (Spielmenue)
-menu\menu_main.d
-menu\menu_opt.d
-menu\menu_opt_game.d
-menu\menu_opt_graphics.d
-menu\menu_opt_video.d
-menu\menu_opt_audio.d
-menu\menu_opt_controls.d
-menu\menu_misc.d
-menu\menu_savegame.d
-
-// Log-Screen
-menu\menu_log.d
-
-// Status-Screen
-menu\menu_status.d
+Menu\menu_defines.d
+_Intern\Menu.d
+Menu\menu_main.d
+Menu\menu_opt.d
+Menu\menu_opt_game.d
+Menu\menu_opt_graphics.d
+Menu\menu_opt_video.d
+Menu\menu_opt_audio.d
+Menu\menu_opt_controls.d
+Menu\menu_misk.d
+Menu\menu_savegame.d
+Menu\menu_log.d
+Menu\menu_status.d

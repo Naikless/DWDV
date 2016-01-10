@@ -1,147 +1,129 @@
-	
-//////////////////////////////////////
-//	
-// 	Visual-Effects	v0.02
-//	Class - Definition
-//	Author: Carsten Edenfeld
-//	
-//////////////////////////////////////
 
 const int VFX_NUM_USERSTRINGS = 3;
 
-CLASS C_ParticleFXEmitKey {
-
-	// particle effect related key vars
-
-	// vars which influence all particles all time
-	VAR STRING	visName_S;
-	VAR FLOAT   visSizeScale;
-	VAR FLOAT   scaleDuration;						// time to reach full scale at this key for relevant vars (size, alpha, etc.)
-
-	VAR FLOAT	pfx_ppsValue;
-	VAR INT		pfx_ppsIsSmoothChg;					// changes pps smoothing of pfx if set to 1 and pfx pps scale keys are set
-	VAR INT     pfx_ppsIsLoopingChg;					// changes looping of pfx if set to 1
-	VAR FLOAT	pfx_scTime;
-	VAR STRING	pfx_flyGravity_S;
-
-	// vars which influence particles at creation level only
-	VAR STRING	pfx_shpDim_S;
-	VAR INT		pfx_shpIsVolumeChg;					// changes volume rendering of pfx if set to 1
-	VAR FLOAT	pfx_shpScaleFPS;
-	VAR FLOAT	pfx_shpDistribWalkSpeed;
-	VAR STRING	pfx_shpOffsetVec_S;
-	VAR STRING	pfx_shpDistribType_S;
-	VAR STRING	pfx_dirMode_S;
-	VAR STRING	pfx_dirFOR_S;
-	VAR STRING	pfx_dirModeTargetFOR_S;
-	VAR STRING	pfx_dirModeTargetPos_S;
-	VAR FLOAT	pfx_velAvg;
-	VAR FLOAT	pfx_lspPartAvg;
-	VAR FLOAT	pfx_visAlphaStart;
-
-	VAR STRING	lightPresetName;
-	VAR FLOAT	lightRange;
-	VAR STRING	sfxID;
-	VAR INT		sfxIsAmbient;
-	VAR STRING	emCreateFXID;
-
-	VAR float	emFlyGravity;
-	VAR STRING	emSelfRotVel_S;
-	VAR STRING	emTrjMode_S;
-	VAR FLOAT	emTrjEaseVel;
-	VAR INT		emCheckCollision;
-	VAR FLOAT	emFXLifeSpan;
+class C_PARTICLEFXEMITKEY
+{
+	var string visname_s;
+	var float vissizescale;
+	var float scaleduration;
+	var float pfx_ppsvalue;
+	var int pfx_ppsissmoothchg;
+	var int pfx_ppsisloopingchg;
+	var float pfx_sctime;
+	var string pfx_flygravity_s;
+	var string pfx_shpdim_s;
+	var int pfx_shpisvolumechg;
+	var float pfx_shpscalefps;
+	var float pfx_shpdistribwalkspeed;
+	var string pfx_shpoffsetvec_s;
+	var string pfx_shpdistribtype_s;
+	var string pfx_dirmode_s;
+	var string pfx_dirfor_s;
+	var string pfx_dirmodetargetfor_s;
+	var string pfx_dirmodetargetpos_s;
+	var float pfx_velavg;
+	var float pfx_lsppartavg;
+	var float pfx_visalphastart;
+	var string lightpresetname;
+	var float lightrange;
+	var string sfxid;
+	var int sfxisambient;
+	var string emcreatefxid;
+	var float emflygravity;
+	var string emselfrotvel_s;
+	var string emtrjmode_s;
+	var float emtrjeasevel;
+	var int emcheckcollision;
+	var float emfxlifespan;
 };
 
-
-CLASS CFx_Base {
-
-	VAR STRING	visName_S;
-	VAR STRING	visSize_S;
-	VAR FLOAT	visAlpha;
-	VAR STRING	visAlphaBlendFunc_S;
-	VAR FLOAT   visTexAniFPS;
-	VAR INT     visTexAniIsLooping;
-	VAR STRING	emTrjMode_S;						// none, target, line, spline, random
-	VAR STRING	emTrjOriginNode;
-	VAR STRING	emTrjTargetNode;
-	VAR FLOAT   emTrjTargetRange;
-	VAR FLOAT	emTrjTargetAzi;
-	VAR FLOAT   emTrjTargetElev;
-	VAR INT		emTrjNumKeys;
-	VAR INT		emTrjNumKeysVar;
-	VAR FLOAT	emTrjAngleElevVar;
-	VAR FLOAT	emTrjAngleHeadVar;
-	VAR FLOAT	emTrjKeyDistVar;
-	VAR STRING  emTrjLoopMode_S;
-	VAR STRING  emTrjEaseFunc_S;
-	VAR FLOAT	emTrjEaseVel;
-	VAR FLOAT	emTrjDynUpdateDelay;
-	VAR INT		emTrjDynUpdateTargetOnly;
-	VAR STRING	emFXCreate_S;
-	VAR STRING	emFXInvestOrigin_S;
-	VAR STRING	emFXInvestTarget_S;
-	VAR FLOAT	emFXTriggerDelay;
-	VAR INT		emFXCreatedOwnTrj;
-	VAR STRING  emActionCollDyn_S;			// CREATE, BOUNCE, CREATEONCE, NORESP, COLLIDE
-	VAR STRING  emActionCollStat_S;			// CREATE, BOUNCE, CREATEONCE, NORESP, COLLIDE, CREATEQUAD
-	VAR STRING	emFXCollStat_S;
-	VAR STRING	emFXCollDyn_S;
-	VAR STRING	emFXCollStatAlign_S;			// TRAJECTORY, COLLISIONNORMAL
-	VAR STRING	emFXCollDynAlign_S;
-	VAR FLOAT	emFXLifeSpan;
-	VAR INT		emCheckCollision;
-	VAR INT		emAdjustShpToOrigin;
-	VAR FLOAT	emInvestNextKeyDuration;
-	VAR FLOAT	emFlyGravity;
-	VAR STRING  emSelfRotVel_S;
-	VAR STRING  userString[VFX_NUM_USERSTRINGS];
-	VAR STRING	lightPresetName;
-	VAR STRING	sfxID;
-	VAR INT 	sfxIsAmbient;
-	VAR INT		sendAssessMagic;
-	VAR float	secsPerDamage;
-	
+class CFX_BASE
+{
+	var string visname_s;
+	var string vissize_s;
+	var float visalpha;
+	var string visalphablendfunc_s;
+	var float vistexanifps;
+	var int vistexaniislooping;
+	var string emtrjmode_s;
+	var string emtrjoriginnode;
+	var string emtrjtargetnode;
+	var float emtrjtargetrange;
+	var float emtrjtargetazi;
+	var float emtrjtargetelev;
+	var int emtrjnumkeys;
+	var int emtrjnumkeysvar;
+	var float emtrjangleelevvar;
+	var float emtrjangleheadvar;
+	var float emtrjkeydistvar;
+	var string emtrjloopmode_s;
+	var string emtrjeasefunc_s;
+	var float emtrjeasevel;
+	var float emtrjdynupdatedelay;
+	var int emtrjdynupdatetargetonly;
+	var string emfxcreate_s;
+	var string emfxinvestorigin_s;
+	var string emfxinvesttarget_s;
+	var float emfxtriggerdelay;
+	var int emfxcreatedowntrj;
+	var string emactioncolldyn_s;
+	var string emactioncollstat_s;
+	var string emfxcollstat_s;
+	var string emfxcolldyn_s;
+	var string emfxcollstatalign_s;
+	var string emfxcolldynalign_s;
+	var float emfxlifespan;
+	var int emcheckcollision;
+	var int emadjustshptoorigin;
+	var float eminvestnextkeyduration;
+	var float emflygravity;
+	var string emselfrotvel_s;
+	var string userstring[3];
+	var string lightpresetname;
+	var string sfxid;
+	var int sfxisambient;
+	var int sendassessmagic;
+	var float secsperdamage;
 };
 
-PROTOTYPE CFx_Base_Proto(CFx_Base) {
-
-	visName_S			= "";
-	visAlpha			= 1;
-	emTrjMode_S			= "FIXED";		// none, target, line, spline, random
-	emTrjOriginNode			= "ZS_RIGHTHAND";
-	emTrjTargetNode			= "";
-	emTrjTargetRange		= 10;
-	emTrjTargetAzi			= 0;
-	emTrjTargetElev			= 0;
-	emTrjNumKeys			= 10;
-	emTrjNumKeysVar			= 0;
-	emTrjAngleElevVar		= 0;
-	emTrjAngleHeadVar		= 0;
-	emTrjKeyDistVar			= 0;
-	emTrjLoopMode_S			= "NONE";
-	emTrjEaseFunc_S			= "LINEAR";
-	emTrjEaseVel			= 100;
-	emTrjDynUpdateDelay		= 2000000;
-	emTrjDynUpdateTargetOnly	= 0;
-	emFXCreate_S			= "";
-	emFXTriggerDelay		= 0;
-	emFXCreatedOwnTrj		= 0;
-	emActionCollDyn_S		= "";			// CREATE, BOUNCE
-	emActionCollStat_S		= "";			// CREATE, BOUNCE
-	emFXCollStat_S			= "";
-	emFXCollDyn_S			= "";
-	emFXCollStatAlign_S		= "";			// TRAJECTORY, COLLISIONNORMAL
-	emFXCollDynAlign_S		= "";
-	emCheckCollision		= 0;
-	emAdjustShpToOrigin		= 0;
-	emInvestNextKeyDuration		= 0;
-	emFlyGravity			= 0;
-	emFXLifeSpan			= -1;			// -1: forever 
-	emSelfRotVel_S			= "0 0 0";
-	lightPresetName			= "";
-	sfxID					= "";
-	sendAssessMagic			= 0;
-	secsPerDamage			= -1;
+prototype CFX_BASE_PROTO(CFX_BASE)
+{
+	visname_s = "";
+	visalpha = 1;
+	emtrjmode_s = "FIXED";
+	emtrjoriginnode = "ZS_RIGHTHAND";
+	emtrjtargetnode = "";
+	emtrjtargetrange = 10;
+	emtrjtargetazi = 0;
+	emtrjtargetelev = 0;
+	emtrjnumkeys = 10;
+	emtrjnumkeysvar = 0;
+	emtrjangleelevvar = 0;
+	emtrjangleheadvar = 0;
+	emtrjkeydistvar = 0;
+	emtrjloopmode_s = "NONE";
+	emtrjeasefunc_s = "LINEAR";
+	emtrjeasevel = 100;
+	emtrjdynupdatedelay = 2e+006;
+	emtrjdynupdatetargetonly = 0;
+	emfxcreate_s = "";
+	emfxtriggerdelay = 0;
+	emfxcreatedowntrj = 0;
+	emactioncolldyn_s = "";
+	emactioncollstat_s = "";
+	emfxcollstat_s = "";
+	emfxcolldyn_s = "";
+	emfxcollstatalign_s = "";
+	emfxcolldynalign_s = "";
+	emcheckcollision = 0;
+	emadjustshptoorigin = 0;
+	eminvestnextkeyduration = 0;
+	emflygravity = 0;
+	emfxlifespan = -1;
+	emselfrotvel_s = "0 0 0";
+	lightpresetname = "";
+	sfxid = "";
+	sendassessmagic = 0;
+	secsperdamage = -1;
 };
 

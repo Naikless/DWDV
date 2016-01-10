@@ -1,4 +1,7 @@
-_intern\ParticleFXDef.d
-pfx\ParticleFXEngine.d
-pfx\PFX.d
-pfx\PFXMagic.d
+// GothicSourcer workspace file
+// WARNING: DO NOT EDIT OR DELETE THIS FILE!
+
+_Intern\particlefxdef.d
+Pfx\particlefxengine.d
+Pfx\Pfx.d
+Pfx\PfxMagic.d
