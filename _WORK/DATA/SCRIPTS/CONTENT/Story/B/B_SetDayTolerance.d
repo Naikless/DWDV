@@ -9,5 +9,6 @@ func int B_SetDayTolerance()
 	{
 		return Wld_GetDay();
 	};
+	return 0;
 };
 

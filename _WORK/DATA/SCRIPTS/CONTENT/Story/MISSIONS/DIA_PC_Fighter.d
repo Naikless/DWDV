@@ -223,6 +223,7 @@ instance DIA_Gorn_DuHehler(C_Info)
 
 func int Dia_Gorn_DuHehler_Condition()
 {
+	return FALSE;
 };
 
 func void Dia_Gorn_DuHehler_Info()

@@ -50,6 +50,7 @@ func int ZS_Berzerk_Loop()
 			AI_GotoWP(self,Npc_GetNextWP(self));
 			B_SayOverlay(self,NULL,"$Berzerk");
 			AI_PlayAni(self,"T_SEARCH");
+			return 0;
 		};
 	};
 };

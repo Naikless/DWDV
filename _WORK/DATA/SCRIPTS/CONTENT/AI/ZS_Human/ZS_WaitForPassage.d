@@ -17,6 +17,7 @@ func int ZS_WaitForPassage_Loop()
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_WaitForPassage_Loop");
 	if(Npc_IsWayBlocked(self))
 	{
+		return 0;
 	}
 	else
 	{
@@ -24,6 +25,7 @@ func int ZS_WaitForPassage_Loop()
 		return 1;
 	};
 	AI_Wait(self,0.5);
+	return 0;
 };
 
 func void ZS_WaitForPassage_End()

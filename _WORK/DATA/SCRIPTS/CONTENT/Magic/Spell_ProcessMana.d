@@ -184,5 +184,6 @@ func int Spell_ProcessMana(var int manaInvested)
 	{
 		return Spell_Logic_Shrink(manaInvested);
 	};
+	return 0;
 };
 

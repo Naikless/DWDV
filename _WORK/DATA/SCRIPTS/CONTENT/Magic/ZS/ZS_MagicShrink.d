@@ -1,5 +1,5 @@
 
-func int ZS_MagicShrink()
+func void ZS_MagicShrink()
 {
 	PrintDebugNpc(PD_ZS_FRAME,"ZS_MagicShrink");
 	if(!Npc_HasBodyFlag(self,BS_FLAG_INTERRUPTABLE))

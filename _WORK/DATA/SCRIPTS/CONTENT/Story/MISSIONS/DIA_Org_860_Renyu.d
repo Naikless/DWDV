@@ -34,6 +34,7 @@ instance ORG_860_Renyu_GetLost(C_Info)
 
 func int ORG_860_Renyu_GetLost_Condition()
 {
+	return FALSE;
 };
 
 func void ORG_860_Renyu_GetLost_Info()
@@ -123,8 +124,8 @@ func int org_860_renyu_lost_condition()
 {
 	var C_Npc Renyu;
 	Renyu = Hlp_GetNpc(Org_860_Renyu);
-	(Renyu.aivar[AIV_WASDEFEATEDBYSC] == TRUE) && Npc_KnowsInfo(hero,org_860_renyu_deal) && (Kalom_DrugMonopol == LOG_RUNNING) && (idiots_deal == FALSE)Renyu.aivar[AIV_WASDEFEATEDBYSC];
-	if()
+//	Renyu.aivar[AIV_WASDEFEATEDBYSC];
+	if(	(Renyu.aivar[AIV_WASDEFEATEDBYSC] == TRUE) && Npc_KnowsInfo(hero,org_860_renyu_deal) && (Kalom_DrugMonopol == LOG_RUNNING) && (idiots_deal == FALSE))
 	{
 		return TRUE;
 	};

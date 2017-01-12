@@ -12,6 +12,7 @@ func int zs_drunk_loop()
 		return 1;
 	};
 	AI_Wait(self,1);
+	return 0;
 };
 
 func void zs_drunk_end()

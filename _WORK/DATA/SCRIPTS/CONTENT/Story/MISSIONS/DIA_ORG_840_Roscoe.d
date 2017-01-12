@@ -189,7 +189,7 @@ func int Info_Roscoe_LastWarn_Condition()
 	};
 };
 
-func int Info_Roscoe_LastWarn_Info()
+func void Info_Roscoe_LastWarn_Info()
 {
 	AI_Output(self,hero,"Info_Roscoe_LastWarn_10_00");	//Du hörst wohl schlecht.
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Roscoe_CHECKPOINT);
@@ -217,7 +217,7 @@ func int Info_Roscoe_Attack_Condition()
 	};
 };
 
-func int Info_Roscoe_Attack_Info()
+func void Info_Roscoe_Attack_Info()
 {
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;

@@ -15,7 +15,7 @@ func void B_StopZapped()
 	};
 };
 
-func int ZS_Zapped()
+func void ZS_Zapped()
 {
 	PrintDebugNpc(PD_MAGIC,"ZS_Zapped");
 	Npc_PercEnable(self,PERC_ASSESSSTOPMAGIC,B_StopZapped);

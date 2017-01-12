@@ -13,6 +13,7 @@ instance Sld_701_Orik_Exit(C_Info)
 
 func int Sld_701_Orik_Exit_Condition()
 {
+	return FALSE;
 };
 
 func void Sld_701_Orik_Exit_Info()

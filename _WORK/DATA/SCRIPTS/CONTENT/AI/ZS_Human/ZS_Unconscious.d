@@ -56,6 +56,7 @@ func int ZS_Unconscious_Loop()
 		return 1;
 	};
 	AI_Wait(self,1);
+	return 0;
 };
 
 func void ZS_Unconscious_End()

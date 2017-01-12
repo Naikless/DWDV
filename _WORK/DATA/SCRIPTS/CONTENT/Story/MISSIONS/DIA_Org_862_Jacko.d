@@ -62,6 +62,7 @@ instance ORG_862_Jacko_GUARD(C_Info)
 
 func int ORG_862_Jacko_GUARD_Condition()
 {
+	return FALSE;
 };
 
 func void ORG_862_Jacko_GUARD_Info()

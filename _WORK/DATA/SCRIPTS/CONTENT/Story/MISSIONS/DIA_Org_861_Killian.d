@@ -35,6 +35,7 @@ instance ORG_861_Killian_GetLost(C_Info)
 
 func int ORG_861_Killian_GetLost_Condition()
 {
+	return FALSE;
 };
 
 func void ORG_861_Killian_GetLost_Info()
@@ -88,7 +89,7 @@ func int org_861_killian_deal_condition()
 
 func void org_861_killian_deal_info()
 {
-	AI_Output(other,self,"Org_861_Killian_DEAL_Info_15_01");	//Wie läufts Kumpel?
+	AI_Output(other,self,"Org_861_Killian_DEAL_Info_15_01");	//Wie läuft's Kumpel?
 	AI_Output(self,other,"Org_861_Killian_DEAL_Info_13_02");	//Wir haben zwar eine Abmachung, aber ich bin nicht dein Kumpel, Penner!
 };
 
@@ -108,8 +109,8 @@ func int org_861_killian_lost_condition()
 {
 	var C_Npc Killian;
 	Killian = Hlp_GetNpc(Org_861_Killian);
-	(Killian.aivar[AIV_WASDEFEATEDBYSC] == TRUE) && (Kalom_DrugMonopol == LOG_RUNNING) && Npc_KnowsInfo(hero,org_860_renyu_deal)Killian.aivar[AIV_WASDEFEATEDBYSC];
-	if()
+//	Killian.aivar[AIV_WASDEFEATEDBYSC];
+	if((Killian.aivar[AIV_WASDEFEATEDBYSC] == TRUE) && (Kalom_DrugMonopol == LOG_RUNNING) && Npc_KnowsInfo(hero,org_860_renyu_deal) && (idiots_deal == FALSE))
 	{
 		return TRUE;
 	};
@@ -117,8 +118,8 @@ func int org_861_killian_lost_condition()
 
 func void org_861_killian_lost_info()
 {
-	AI_Output(other,self,"Org_861_Killian_LOST_Info_15_01");	//Und du penner? Hältst du jetzt die Füße still?
-	AI_Output(self,other,"Org_861_Killian_LOST_Info_13_02");	//Hey KUMPEL, ich wusste ja nicht, das die Bruderschaft da soviel Wert darauf legt!
+	AI_Output(other,self,"Org_861_Killian_LOST_Info_15_01");	//Und du Penner? Hältst du jetzt die Füße still?
+	AI_Output(self,other,"Org_861_Killian_LOST_Info_13_02");	//Hey KUMPEL, ich wusste ja nicht, dass die Bruderschaft da soviel Wert darauf legt!
 	AI_Output(other,self,"Org_861_Killian_LOST_Info_15_03");	//Ich bin nicht dein Kumpel, Penner! 
 	Kalom_DrugMonopol = LOG_SUCCESS;
 	Npc_ExchangeRoutine(self,"ARBEITSLOS");

@@ -1,5 +1,5 @@
 
-func int On_OCC_GATE_Trigger()
+func void On_OCC_GATE_Trigger()
 {
 	var C_Npc wache;
 	PrintDebugNpc(PD_TA_CHECK,"On_OCC_GATE_Trigger");
@@ -9,7 +9,7 @@ func int On_OCC_GATE_Trigger()
 	wache.aivar[AIV_Trigger3] = 1;
 };
 
-func int On_OCR_NORTHGATE_Trigger()
+func void On_OCR_NORTHGATE_Trigger()
 {
 	var C_Npc wache;
 	PrintDebugNpc(PD_TA_CHECK,"On_OCR_NORTHGATE_Trigger");
@@ -19,7 +19,7 @@ func int On_OCR_NORTHGATE_Trigger()
 	wache.aivar[AIV_Trigger3] = 1;
 };
 
-func int On_OCR_MAINGATE_Trigger()
+func void On_OCR_MAINGATE_Trigger()
 {
 	var C_Npc wache;
 	PrintDebugNpc(PD_TA_CHECK,"On_OCR_MAINGATE_Trigger");
@@ -29,7 +29,7 @@ func int On_OCR_MAINGATE_Trigger()
 	wache.aivar[AIV_Trigger3] = 1;
 };
 
-func int On_OCC_BARONSDOOR_Trigger()
+func void On_OCC_BARONSDOOR_Trigger()
 {
 	var C_Npc wache;
 	PrintDebugNpc(PD_TA_CHECK,"On_OCC_BARONSDOOR_Trigger");
@@ -39,7 +39,7 @@ func int On_OCC_BARONSDOOR_Trigger()
 	wache.aivar[AIV_Trigger3] = 1;
 };
 
-func int on_psi_labdoor_trigger()
+func void on_psi_labdoor_trigger()
 {
 	var C_Npc wache;
 	PrintDebugNpc(PD_TA_CHECK,"ON_PSI_LABDOOR_TRIGGER");
@@ -47,7 +47,7 @@ func int on_psi_labdoor_trigger()
 	wache.aivar[AIV_Trigger3] = 1;
 };
 
-func int on_psi_temple_gate_trigger()
+func void on_psi_temple_gate_trigger()
 {
 	var C_Npc wache;
 	PrintDebugNpc(PD_TA_CHECK,"ON_PSI_TEMPLE_GATE_TRIGGER");
@@ -61,7 +61,7 @@ func int on_psi_temple_gate_trigger()
 	wache.aivar[AIV_Trigger3] = 1;
 };
 
-func int on_nc_mageramp_trigger()
+func void on_nc_mageramp_trigger()
 {
 	var C_Npc wache;
 	PrintDebugNpc(PD_TA_CHECK,"ON_NC_MAGERAMP_TRIGGER");
@@ -71,7 +71,7 @@ func int on_nc_mageramp_trigger()
 	wache.aivar[AIV_Trigger3] = 1;
 };
 
-func int on_nc_magecave_trigger()
+func void on_nc_magecave_trigger()
 {
 	var C_Npc wache;
 	PrintDebugNpc(PD_TA_CHECK,"ON_NC_MAGECAVE_TRIGGER");
@@ -81,7 +81,7 @@ func int on_nc_magecave_trigger()
 	wache.aivar[AIV_Trigger3] = 1;
 };
 
-func int on_nc_gate_trigger()
+func void on_nc_gate_trigger()
 {
 	PrintDebugNpc(PD_TA_CHECK,"ON_NC_GATE_TRIGGER");
 };
