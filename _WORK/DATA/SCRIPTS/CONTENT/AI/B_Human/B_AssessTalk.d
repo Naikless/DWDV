@@ -33,7 +33,7 @@ func void B_AssessTalk()
 		hero.aivar[AIV_IMPORTANT] = FALSE;
 		Npc_ClearAIQueue(self);
 		Npc_SetPercTime(self,1);
-		if(C_BodyStateContains(self,BS_SIT) || !Npc_CanSeeNpc(self,hero) || (Npc_IsInState(self,ZS_HerbAlchemy) || Npc_IsInState(self,ZS_Smoke)))
+		if( (!Npc_CanSeeNpc(self,hero)) || (Npc_IsInState(self,ZS_HerbAlchemy) || Npc_IsInState(self,ZS_Smoke)))
 		{
 			AI_OutputSVM_Overlay(hero,NULL,"$SC_HeyTurnAround");
 			AI_Wait(self,1);
@@ -45,9 +45,13 @@ func void B_AssessTalk()
 			AI_Wait(self,1);
 			AI_StartState(self,ZS_Talk,1,"");
 		}
-		else
+		else if (C_BodyStateContains(self,BS_SIT))
 		{
 			AI_StartState(self,ZS_Talk,0,"");
+		}
+		else 
+		{
+			AI_StartState(self,ZS_Talk,1,"");
 		};
 	};
 };
