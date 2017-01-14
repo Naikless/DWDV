@@ -610,7 +610,7 @@ instance KDW_600_Saturas_NOMOREOC(C_Info)
 
 func int KDW_600_Saturas_NOMOREOC_Condition()
 {
-	if(Npc_KnowsInfo(hero,Info_Saturas_MURDER) && ((oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF)))
+	if(Npc_KnowsInfo(hero,Info_Saturas_MURDER) && ((oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF) || (oldHeroGuild == GIL_EBR)))
 	{
 		return TRUE;
 	};
@@ -640,7 +640,7 @@ instance KDW_600_Saturas_GOTOLEE(C_Info)
 
 func int KDW_600_Saturas_GOTOLEE_Condition()
 {
-	if((oldHeroGuild == GIL_GRD) && Npc_KnowsInfo(hero,KDW_600_Saturas_NOMOREOC))
+	if(((oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_EBR)) && Npc_KnowsInfo(hero,KDW_600_Saturas_NOMOREOC))
 	{
 		return TRUE;
 	};
@@ -1048,7 +1048,7 @@ func int Info_Saturas_XARDAS_Condition()
 {
 	if(Npc_KnowsInfo(hero,Info_Saturas_COLLAPSE) && Npc_KnowsInfo(hero,Info_Saturas_MURDER))
 	{
-		if((Npc_GetTrueGuild(hero) != GIL_GRD) && (Npc_GetTrueGuild(hero) != GIL_KDF))
+		if((Npc_GetTrueGuild(hero) != GIL_GRD) && (Npc_GetTrueGuild(hero) != GIL_KDF) && (Npc_GetTrueGuild(hero) != GIL_EBR))
 		{
 			return TRUE;
 		};
