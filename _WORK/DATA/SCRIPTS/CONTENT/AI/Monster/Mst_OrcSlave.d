@@ -33,7 +33,6 @@ func void Set_OrcSlave_Visuals()
 
 instance OrcSlave(Mst_Default_OrcSlave)
 {
-	guild = gil_orcslave;
 	Set_OrcSlave_Visuals();
 };
 

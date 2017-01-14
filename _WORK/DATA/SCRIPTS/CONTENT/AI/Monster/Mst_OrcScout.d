@@ -29,68 +29,8 @@ prototype Mst_Default_OrcScout(C_Npc)
 	aivar[AIV_HAS_ERPRESSED] = 5;
 	aivar[AIV_BEGGAR] = 10;
 	aivar[AIV_OBSERVEINTRUDER] = FALSE;
-	Mst_Default_OrcScout.INVENTAR_5 = Hlp_Random(100);
-	if(Mst_Default_OrcScout.INVENTAR_5 <= 10)
-	{
-		CreateInvItems(self,ItAt_Meatbug_01,2);
-		CreateInvItems(self,ItFo_Potion_Mana_01,1);
-		CreateInvItems(self,ItMi_Stuff_OldCoin_01,4);
-	}
-	else if(Mst_Default_OrcScout.INVENTAR_5 <= 20)
-	{
-		CreateInvItems(self,ItFoMuttonRaw,1);
-		CreateInvItems(self,ItFo_Plants_Berrys_01,1);
-	}
-	else if(Mst_Default_OrcScout.INVENTAR_5 <= 30)
-	{
-		CreateInvItems(self,ItFo_Plants_Seraphis_01,1);
-		CreateInvItems(self,ItMiNugget,9);
-		CreateInvItems(self,ItFo_Plants_Berrys_01,2);
-	}
-	else if(Mst_Default_OrcScout.INVENTAR_5 <= 40)
-	{
-		CreateInvItems(self,ItMi_Stuff_Barbknife_01,1);
-		CreateInvItems(self,ItMiNugget,3);
-		CreateInvItems(self,ItMi_Stuff_Pipe_01,1);
-	}
-	else if(Mst_Default_OrcScout.INVENTAR_5 <= 50)
-	{
-		CreateInvItems(self,ItFo_Plants_Seraphis_01,1);
-		CreateInvItems(self,ItMi_Stuff_OldCoin_01,14);
-		CreateInvItems(self,ItMi_Stuff_Cup_01,1);
-	}
-	else if(Mst_Default_OrcScout.INVENTAR_5 <= 60)
-	{
-		CreateInvItems(self,ItMi_Alchemy_Moleratlubric_01,1);
-		CreateInvItems(self,ItFo_Plants_mountainmoos_01,1);
-		CreateInvItems(self,ItFo_Potion_Mana_01,1);
-	}
-	else if(Mst_Default_OrcScout.INVENTAR_5 <= 70)
-	{
-		CreateInvItems(self,ItFo_Plants_OrcHerb_02,1);
-		CreateInvItems(self,ItMiNugget,16);
-		CreateInvItems(self,ItFo_Potion_Health_01,1);
-	}
-	else if(Mst_Default_OrcScout.INVENTAR_5 <= 80)
-	{
-		CreateInvItems(self,ItFo_Plants_Nightshadow_01,2);
-		CreateInvItems(self,ItFo_Plants_Berrys_01,2);
-	}
-	else if(Mst_Default_OrcScout.INVENTAR_5 <= 90)
-	{
-		CreateInvItems(self,ItFo_Plants_OrcHerb_01,1);
-		CreateInvItems(self,ItFo_Plants_mushroom_01,3);
-		CreateInvItems(self,ItFo_Potion_Mana_01,1);
-	}
-	else if(Mst_Default_OrcScout.INVENTAR_5 <= 100)
-	{
-		CreateInvItems(self,ItFoMuttonRaw,2);
-		CreateInvItems(self,ItMi_Stuff_OldCoin_01,3);
-	};
 	start_aistate = ZS_GuardPatrol;
 };
-
-var int mst_default_orcscout.inventar_5;
 
 func void Set_OrcScout_Visuals()
 {
@@ -107,73 +47,11 @@ instance OrcScout(Mst_Default_OrcScout)
 
 instance OrcPeasantEatAndDrink(Mst_Default_OrcScout)
 {
-	guild = GIL_ORCSCOUT;
 	name[0] = "Ork";
 	Set_OrcScout_Visuals();
 	EquipItem(self,ItMw2hOrcSword01);
-	inventar_6 = Hlp_Random(100);
-	if(inventar_6 <= 10)
-	{
-		CreateInvItems(self,ItAt_Meatbug_01,2);
-		CreateInvItems(self,ItFo_Potion_Mana_01,1);
-		CreateInvItems(self,ItMi_Stuff_OldCoin_01,4);
-	}
-	else if(inventar_6 <= 20)
-	{
-		CreateInvItems(self,ItFoMuttonRaw,1);
-		CreateInvItems(self,ItFo_Plants_Berrys_01,1);
-	}
-	else if(inventar_6 <= 30)
-	{
-		CreateInvItems(self,ItFo_Plants_Seraphis_01,1);
-		CreateInvItems(self,ItMiNugget,9);
-		CreateInvItems(self,ItFo_Plants_Berrys_01,2);
-	}
-	else if(inventar_6 <= 40)
-	{
-		CreateInvItems(self,ItMi_Stuff_Barbknife_01,1);
-		CreateInvItems(self,ItMiNugget,3);
-		CreateInvItems(self,ItMi_Stuff_Pipe_01,1);
-	}
-	else if(inventar_6 <= 50)
-	{
-		CreateInvItems(self,ItFo_Plants_Seraphis_01,1);
-		CreateInvItems(self,ItMi_Stuff_OldCoin_01,14);
-		CreateInvItems(self,ItMi_Stuff_Cup_01,1);
-	}
-	else if(inventar_6 <= 60)
-	{
-		CreateInvItems(self,ItMi_Alchemy_Moleratlubric_01,1);
-		CreateInvItems(self,ItFo_Plants_mountainmoos_01,1);
-		CreateInvItems(self,ItFo_Potion_Mana_01,1);
-	}
-	else if(inventar_6 <= 70)
-	{
-		CreateInvItems(self,ItFo_Plants_OrcHerb_02,1);
-		CreateInvItems(self,ItMiNugget,16);
-		CreateInvItems(self,ItFo_Potion_Health_01,1);
-	}
-	else if(inventar_6 <= 80)
-	{
-		CreateInvItems(self,ItFo_Plants_Nightshadow_01,2);
-		CreateInvItems(self,ItFo_Plants_Berrys_01,2);
-	}
-	else if(inventar_6 <= 90)
-	{
-		CreateInvItems(self,ItFo_Plants_OrcHerb_01,1);
-		CreateInvItems(self,ItFo_Plants_mushroom_01,3);
-		CreateInvItems(self,ItFo_Potion_Mana_01,1);
-	}
-	else if(inventar_6 <= 100)
-	{
-		CreateInvItems(self,ItFoMuttonRaw,2);
-		CreateInvItems(self,ItMi_Stuff_OldCoin_01,3);
-	};
 	start_aistate = ZS_Orc_EatAndDrink;
 };
-
-
-var int orcpeasanteatanddrink.inventar_6;
 
 instance OrcScoutGYD(Mst_Default_OrcScout)
 {
@@ -188,65 +66,5 @@ instance OrcScoutGYD(Mst_Default_OrcScout)
 	aivar[AIV_Trigger3] = OnlyRoutine;
 	Set_OrcScout_Visuals();
 	EquipItem(self,ItMw2hOrcSword01);
-	inventar_7 = Hlp_Random(100);
-	if(inventar_7 <= 10)
-	{
-		CreateInvItems(self,ItAt_Meatbug_01,2);
-		CreateInvItems(self,ItFo_Potion_Mana_01,1);
-		CreateInvItems(self,ItMi_Stuff_OldCoin_01,4);
-	}
-	else if(inventar_7 <= 20)
-	{
-		CreateInvItems(self,ItFoMuttonRaw,1);
-		CreateInvItems(self,ItFo_Plants_Berrys_01,1);
-	}
-	else if(inventar_7 <= 30)
-	{
-		CreateInvItems(self,ItFo_Plants_Seraphis_01,1);
-		CreateInvItems(self,ItMiNugget,9);
-		CreateInvItems(self,ItFo_Plants_Berrys_01,2);
-	}
-	else if(inventar_7 <= 40)
-	{
-		CreateInvItems(self,ItMi_Stuff_Barbknife_01,1);
-		CreateInvItems(self,ItMiNugget,3);
-		CreateInvItems(self,ItMi_Stuff_Pipe_01,1);
-	}
-	else if(inventar_7 <= 50)
-	{
-		CreateInvItems(self,ItFo_Plants_Seraphis_01,1);
-		CreateInvItems(self,ItMi_Stuff_OldCoin_01,14);
-		CreateInvItems(self,ItMi_Stuff_Cup_01,1);
-	}
-	else if(inventar_7 <= 60)
-	{
-		CreateInvItems(self,ItMi_Alchemy_Moleratlubric_01,1);
-		CreateInvItems(self,ItFo_Plants_mountainmoos_01,1);
-		CreateInvItems(self,ItFo_Potion_Mana_01,1);
-	}
-	else if(inventar_7 <= 70)
-	{
-		CreateInvItems(self,ItFo_Plants_OrcHerb_02,1);
-		CreateInvItems(self,ItMiNugget,16);
-		CreateInvItems(self,ItFo_Potion_Health_01,1);
-	}
-	else if(inventar_7 <= 80)
-	{
-		CreateInvItems(self,ItFo_Plants_Nightshadow_01,2);
-		CreateInvItems(self,ItFo_Plants_Berrys_01,2);
-	}
-	else if(inventar_7 <= 90)
-	{
-		CreateInvItems(self,ItFo_Plants_OrcHerb_01,1);
-		CreateInvItems(self,ItFo_Plants_mushroom_01,3);
-		CreateInvItems(self,ItFo_Potion_Mana_01,1);
-	}
-	else if(inventar_7 <= 100)
-	{
-		CreateInvItems(self,ItFoMuttonRaw,2);
-		CreateInvItems(self,ItMi_Stuff_OldCoin_01,3);
-	};
 };
 
-
-var int orcscoutgyd.inventar_7;

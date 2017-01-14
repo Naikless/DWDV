@@ -98,6 +98,8 @@ var int baallukor_ansprechbar;
 var int NC_Joints_verteilt;
 var int Cronos_Messenger;
 var int Thorus_MordragMageMessenger;
+var int Goblin_Randomizer;
+var int Orc_Randomizer;
 var int book_circle_01;
 var int book_circle_02;
 var int book_circle_03;

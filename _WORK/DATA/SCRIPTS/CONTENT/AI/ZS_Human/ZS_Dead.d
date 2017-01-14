@@ -9,10 +9,12 @@ func void ZS_Dead()
 	{
 		B_DeathXP();
 	};
-	if(C_NpcIsMonster(self))
-	{
-		B_GiveDeathInv();
-	};
+    
+    if	C_NpcIsMonster(self) || C_NpcIsOrc(self)
+    {
+        B_GiveDeathInv();
+    };
+    
 	B_CheckDeadMissionNPCs();
 	B_Respawn(self);
 	AI_UnequipWeapons(self);
