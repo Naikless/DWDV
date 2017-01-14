@@ -376,7 +376,7 @@ instance Info_Thorus_BribeGuard(C_Info)
 
 func int Info_Thorus_BribeGuard_Condition()
 {
-	if(Npc_KnowsInfo(hero,Info_Thorus_EnterCastle) && (Npc_GetTrueGuild(other) != GIL_STT) && (Npc_GetTrueGuild(other) != GIL_GRD))
+	if(Npc_KnowsInfo(hero,Info_Thorus_EnterCastle) && (Npc_GetTrueGuild(other) != GIL_STT) && (Npc_GetTrueGuild(other) != GIL_GRD) && (Npc_GetTrueGuild(other) != GIL_EBR) && (Npc_GetTrueGuild(other) != GIL_KDF))
 	{
 		return 1;
 	};
@@ -396,6 +396,7 @@ func void Info_Thorus_BribeGuard_Info()
 
 
 var int erzbezahlt;
+var int thorus_Amulettgezeigt;
 
 instance Info_Thorus_Give1000Ore(C_Info)
 {
@@ -410,7 +411,7 @@ instance Info_Thorus_Give1000Ore(C_Info)
 
 func int Info_Thorus_Give1000Ore_Condition()
 {
-	if(Npc_KnowsInfo(hero,Info_Thorus_BribeGuard) && (ERZBEZAHLT == FALSE))
+	if(Npc_KnowsInfo(hero,Info_Thorus_BribeGuard) && (ERZBEZAHLT == FALSE) && (thorus_Amulettgezeigt == FALSE) && (Npc_GetTrueGuild(other) != GIL_STT) && (Npc_GetTrueGuild(other) != GIL_GRD) && (Npc_GetTrueGuild(other) != GIL_EBR) && (Npc_GetTrueGuild(other) != GIL_KDF))
 	{
 		return 1;
 	};
@@ -552,7 +553,6 @@ func void Info_Thorus_Krautbote_Info()
 };
 
 
-var int thorus_Amulettgezeigt;
 
 instance Info_Thorus_KdWSiegel(C_Info)
 {
@@ -800,7 +800,7 @@ instance GRD_200_Thorus_Teach(C_Info)
 
 func int GRD_200_Thorus_Teach_Condition()
 {
-	if(Npc_GetTrueGuild(hero) == GIL_GRD)
+	if((Npc_GetTrueGuild(hero) == GIL_GRD) || (Npc_GetTrueGuild(hero) == GIL_EBR))
 	{
 		return TRUE;
 	};
@@ -887,7 +887,7 @@ instance GRD_200_Thorus_ZWEIHAND1(C_Info)
 
 func int GRD_200_Thorus_ZWEIHAND1_Condition()
 {
-	if((Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 2) && (Npc_GetTalentSkill(hero,NPC_TALENT_2H) < 1) && (Npc_GetTrueGuild(hero) == GIL_GRD))
+	if((Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 2) && (Npc_GetTalentSkill(hero,NPC_TALENT_2H) < 1) && ((Npc_GetTrueGuild(hero) == GIL_GRD) || (Npc_GetTrueGuild(hero) == GIL_EBR)))
 	{
 		return TRUE;
 	};
@@ -928,7 +928,7 @@ instance GRD_200_Thorus_ZWEIHAND2(C_Info)
 
 func int GRD_200_Thorus_ZWEIHAND2_Condition()
 {
-	if((Npc_GetTalentSkill(hero,NPC_TALENT_2H) == 1) && (Npc_GetTrueGuild(hero) == GIL_GRD))
+	if((Npc_GetTalentSkill(hero,NPC_TALENT_2H) == 1) && ((Npc_GetTrueGuild(hero) == GIL_GRD) || (Npc_GetTrueGuild(hero) == GIL_EBR)))
 	{
 		return TRUE;
 	};

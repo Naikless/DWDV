@@ -486,7 +486,7 @@ func int Info_Fletcher_DIE_Condition()
 func void Info_Fletcher_DIE_Info()
 {
 	AI_GotoNpc(self,hero);
-	if((oldHeroGuild == GIL_STT) || (oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF))
+	if((oldHeroGuild == GIL_STT) || (oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF) || (oldHeroGuild == GIL_EBR))
 	{
 		if(oldHeroGuild == GIL_GRD)
 		{

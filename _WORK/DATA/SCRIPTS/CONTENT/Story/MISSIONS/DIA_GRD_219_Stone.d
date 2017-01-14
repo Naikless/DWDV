@@ -38,7 +38,7 @@ instance DIA_Stone_NotSelling(C_Info)
 
 func int DIA_Stone_NotSelling_Condition()
 {
-	if((Npc_GetTrueGuild(hero) != GIL_GRD) && (Kapitel < 4))
+	if(((Npc_GetTrueGuild(hero) != GIL_GRD) && (Npc_GetTrueGuild(hero) != GIL_EBR)) && (Kapitel < 4))
 	{
 		return TRUE;
 	};

@@ -160,7 +160,7 @@ instance DIA_ORG_829_SCGOMEZ(C_Info)
 
 func int dia_org_829_scgomez_condition()
 {
-	if((other.guild == GIL_STT) || (other.guild == GIL_GRD))
+	if((other.guild == GIL_STT) || (other.guild == GIL_GRD) || (other.guild == GIL_EBR))
 	{
 		return 1;
 	};

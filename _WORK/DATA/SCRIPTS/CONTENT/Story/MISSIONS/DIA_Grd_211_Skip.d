@@ -36,7 +36,7 @@ instance DIA_Skip_First(C_Info)
 
 func int DIA_Skip_First_Condition()
 {
-	if(!((Npc_GetTrueGuild(other) == GIL_STT) || (Npc_GetTrueGuild(other) == GIL_GRD) || (Npc_GetTrueGuild(other) == GIL_KDF)))
+	if(!((Npc_GetTrueGuild(other) == GIL_STT) || (Npc_GetTrueGuild(other) == GIL_GRD) || (Npc_GetTrueGuild(other) == GIL_KDF) || (Npc_GetTrueGuild(hero) == GIL_EBR)))
 	{
 		return 1;
 	};
@@ -133,7 +133,7 @@ instance DIA_Skip_VERPATZT(C_Info)
 
 func int DIA_Skip_VERPATZT_Condition()
 {
-	if(!((Npc_GetTrueGuild(other) == GIL_STT) || (Npc_GetTrueGuild(other) == GIL_GRD) || (Npc_GetTrueGuild(other) == GIL_KDF)) && (Npc_KnowsInfo(hero,DIA_Skip_First) && (Skip_TradeFree == FALSE)))
+	if(!((Npc_GetTrueGuild(other) == GIL_STT) || (Npc_GetTrueGuild(other) == GIL_GRD) || (Npc_GetTrueGuild(other) == GIL_KDF) || (Npc_GetTrueGuild(hero) == GIL_EBR)) && (Npc_KnowsInfo(hero,DIA_Skip_First) && (Skip_TradeFree == FALSE)))
 	{
 		return 1;
 	};
@@ -159,7 +159,7 @@ instance GRD_211_Skip_TRADE(C_Info)
 
 func int GRD_211_Skip_TRADE_Condition()
 {
-	if((Npc_GetTrueGuild(other) == GIL_STT) || (Npc_GetTrueGuild(other) == GIL_GRD) || (Npc_GetTrueGuild(other) == GIL_KDF) || (Skip_TradeFree == TRUE))
+	if((Npc_GetTrueGuild(other) == GIL_STT) || (Npc_GetTrueGuild(other) == GIL_GRD) || (Npc_GetTrueGuild(other) == GIL_KDF) || (Npc_GetTrueGuild(hero) == GIL_EBR) || (Skip_TradeFree == TRUE))
 	{
 		return TRUE;
 	};

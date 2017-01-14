@@ -215,7 +215,7 @@ func void Info_Jackal_PAYDAY_Info()
 {
 	if(C_NpcBelongsToNewCamp(hero))
 	{
-		if((oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF) || (oldHeroGuild == GIL_STT))
+		if((oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF) || (oldHeroGuild == GIL_STT) || (oldHeroGuild == GIL_EBR))
 		{
 			AI_Output(self,other,"Info_Jackal_PAYDAY_07_01");	//Sieh mal einer an. Der Verräter, der das Lager gewechselt hat!
 			AI_Output(self,other,"Info_Jackal_PAYDAY_07_02");	//Du hättest dich nicht mit diesen Verlierern einlassen sollen, dann würdest du noch zu uns gehören!
@@ -226,7 +226,7 @@ func void Info_Jackal_PAYDAY_Info()
 			AI_Output(self,other,"Info_Jackal_PAYDAY_07_04");	//Wenn du damals schlauer gewesen wärst, würdest du heute zu uns - den Siegern - gehören!
 		};
 	}
-	else if(((Npc_GetTrueGuild(hero) == GIL_None) && (oldHeroGuild == GIL_GRD)) || ((Npc_GetTrueGuild(hero) == GIL_None) && (oldHeroGuild == GIL_KDF)) || ((Npc_GetTrueGuild(hero) == GIL_None) && (oldHeroGuild == GIL_STT)))
+	else if(((Npc_GetTrueGuild(hero) == GIL_None) && (oldHeroGuild == GIL_GRD)) || ((Npc_GetTrueGuild(hero) == GIL_None) && (oldHeroGuild == GIL_KDF)) || ((Npc_GetTrueGuild(hero) == GIL_None) && (oldHeroGuild == GIL_STT)) || ((Npc_GetTrueGuild(hero) == GIL_None) && (oldHeroGuild == GIL_EBR)))
 	{
 		AI_Output(self,other,"Info_Jackal_PAYDAY_11_05");	//Sieh mal einer an. Eine ehemaliges Mitglied unseres Lagers.
 		AI_Output(self,other,"Info_Jackal_PAYDAY_11_06");	//Du hättest uns nicht verraten sollen, dann würdest du heute zu uns - den Siegern - gehören!
