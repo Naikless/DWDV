@@ -366,6 +366,8 @@ func void ORG_801_Lares_Reicht_Info()
 		Log_CreateTopic(CH1_JoinPsi,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinPsi,LOG_FAILED);
 		B_LogEntry(CH1_JoinPsi,"Die Bruderschaft muss nun wohl doch ohne mich auskommen, denn das Neue Lager ist nun mein neues Zuhause.");
+		ORE_VLK = LOG_OBSOLETE;
+		Log_SetTopicStatus(CH1_HEROVLK,LOG_OBSOLETE);
 	}
 	else
 	{

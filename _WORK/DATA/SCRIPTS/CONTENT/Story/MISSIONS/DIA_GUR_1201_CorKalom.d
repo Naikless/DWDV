@@ -286,6 +286,8 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 			Log_CreateTopic(CH1_JoinNC,LOG_MISSION);
 			Log_SetTopicStatus(CH1_JoinNC,LOG_FAILED);
 			B_LogEntry(CH1_JoinNC,"Eine Aufnahme bei den Banditen des Neuen Lagers ist nun nicht mehr möglich, denn meine neue Heimat ist die Bruderschaft des Schläfers");
+			ORE_VLK = LOG_OBSOLETE;
+			Log_SetTopicStatus(CH1_HEROVLK,LOG_OBSOLETE);
 		}
 		else
 		{

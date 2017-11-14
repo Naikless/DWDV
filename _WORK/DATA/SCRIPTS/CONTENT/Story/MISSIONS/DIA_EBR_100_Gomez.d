@@ -245,6 +245,8 @@ func void DIA_Gomez_Dabei_Info()
 	Log_CreateTopic(CH1_JoinPsi,LOG_MISSION);
 	Log_SetTopicStatus(CH1_JoinPsi,LOG_FAILED);
 	B_LogEntry(CH1_JoinPsi,"Von nun an ist das Alte Lager mein neues Zuhause. Die Bruderschaft des Schläfers wird ohne mich auskommen müssen.");
+	ORE_VLK = LOG_OBSOLETE;
+	Log_SetTopicStatus(CH1_HEROVLK,LOG_OBSOLETE);
 	AI_StopProcessInfos(self);
 };
 
