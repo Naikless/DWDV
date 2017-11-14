@@ -329,7 +329,7 @@ instance GRD_233_BLOODWYN_GETOUT(C_Info)
 
 func int grd_233_bloodwyn_getout_condition()
 {
-	if((Npc_GetTrueGuild(hero) == GIL_ORG) || (Npc_GetTrueGuild(hero) == GIL_SLD))
+	if(((Npc_GetTrueGuild(hero) == GIL_ORG) || (Npc_GetTrueGuild(hero) == GIL_SLD)) && (FMTaken == FALSE))
 	{
 		return TRUE;
 	};
