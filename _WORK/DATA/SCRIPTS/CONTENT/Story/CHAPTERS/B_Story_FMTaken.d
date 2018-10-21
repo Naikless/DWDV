@@ -40,6 +40,13 @@ func void B_Story_FMTaken()
 	if(FMC_SMITH == LOG_SUCCESS)
 	{
 		Npc_ExchangeRoutine(SLD_704_Blade,"START");
+	}	
+	else if (FMC_SMITH == LOG_RUNNING)
+	{
+		FMC_SMITH = LOG_FAILED;
+		Log_SetTopicStatus(CH1_FMCSMITH,LOG_FAILED);
+		B_LogEntry(CH1_FMCSMITH,"Da die Freie Mine nun von Gomez' Gardisten kontrolliert wird, hat sich das mit dem neuen Schmied wohl eher erledigt.");
+	
 	};
 	Wld_InsertNpc(Grd_283_Gardist,"FMC_ENTRANCE");
 	Wld_InsertNpc(Grd_285_Gardist,"FMC_ENTRANCE");
