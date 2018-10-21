@@ -54,15 +54,18 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 			CreateInvItems(VLK_524_Dusty,ItMw_1H_Hatchet_01,1);
 			AI_EquipBestMeleeWeapon(VLK_524_Dusty);
 		};
-		B_ChangeGuild(Vlk_580_Grim,GIL_STT);
-		Mdl_SetVisualBody(Vlk_580_Grim,"hum_body_Naked0",0,1,"Hum_Head_Thief",72,2,stt_armor_m);
-		Mdl_ApplyOverlayMds(Vlk_580_Grim,"Humans_Relaxed.mds");
-		CreateInvItems(Vlk_580_Grim,ItAmArrow,12);
-		Npc_RemoveInvItem(Vlk_580_Grim,ItMw_1H_Club_01);
-		CreateInvItems(Vlk_580_Grim,ItMw_1H_Sword_Short_03,1);
-		CreateInvItems(Vlk_580_Grim,ItRw_Bow_Small_03,1);
-		AI_EquipBestMeleeWeapon(Vlk_580_Grim);
-		AI_EquipBestRangedWeapon(Vlk_580_Grim);
+        if(!Npc_IsDead(Vlk_580_Grim))
+        {
+            B_ChangeGuild(Vlk_580_Grim,GIL_STT);
+            Mdl_SetVisualBody(Vlk_580_Grim,"hum_body_Naked0",0,1,"Hum_Head_Thief",72,2,stt_armor_m);
+            Mdl_ApplyOverlayMds(Vlk_580_Grim,"Humans_Relaxed.mds");
+            CreateInvItems(Vlk_580_Grim,ItAmArrow,12);
+            Npc_RemoveInvItem(Vlk_580_Grim,ItMw_1H_Club_01);
+            CreateInvItems(Vlk_580_Grim,ItMw_1H_Sword_Short_03,1);
+            CreateInvItems(Vlk_580_Grim,ItRw_Bow_Small_03,1);
+            AI_EquipBestMeleeWeapon(Vlk_580_Grim);
+            AI_EquipBestRangedWeapon(Vlk_580_Grim);
+        };
 		Mdl_SetVisualBody(Tpl_1422_GorHanis,"hum_body_Naked0",1,1,"Hum_Head_Bald",66,1,tpl_armor_m);
 		Npc_RemoveInvItem(Tpl_1422_GorHanis,ItMw_1H_Sword_01);
 		CreateInvItems(Tpl_1422_GorHanis,ItMw_2H_Sword_Light_01,1);
