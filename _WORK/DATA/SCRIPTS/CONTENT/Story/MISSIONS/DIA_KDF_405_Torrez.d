@@ -38,7 +38,10 @@ instance DIA_Torrez_Hello(C_Info)
 
 func int DIA_Torrez_Hello_Condition()
 {
-	return 1;
+	if (!Npc_KnowsInfo(hero,DIA_Milten_ComesBack))
+	{
+		return 1;
+	};
 };
 
 func void DIA_Torrez_Hello_Info()
