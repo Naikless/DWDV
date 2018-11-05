@@ -303,18 +303,47 @@ func void dia_logan_hunt_info()
 {
 	AI_Output(other,self,"DIA_Org_5033_Logan_Hunt_15_00");	//Lass uns jagen gehen.
 	AI_Output(self,other,"DIA_Org_5033_Logan_Hunt_13_01");	//Gut. Vorher muss ich dir noch was erzählen.
+	AI_StandUp(self);
 	AI_Output(self,other,"DIA_Org_5033_Logan_Hunt_13_02");	//Als ich das letzte mal unten war, lief mir ein Snapper über den Weg. Ich hab' ja schon viele von den Biestern gesehen, aber der...
 	AI_Output(self,other,"DIA_Org_5033_Logan_Hunt_13_03");	//Das Vieh hatte einen eiskalten Blick. So als würde es keinen Moment zögern dich in tausend Fetzen zu zerreißen.
 	AI_Output(self,other,"DIA_Org_5033_Logan_Hunt_13_04");	//Wenn du mir hilfst das Vieh zu erledigen, bin ich dir was schuldig.
-	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	SNAPPER_HUNT = LOG_RUNNING;
 	Log_CreateTopic(CH1_SNAPPER,LOG_MISSION);
 	Log_SetTopicStatus(CH1_SNAPPER,LOG_RUNNING);
-	B_LogEntry(CH1_SNAPPER,"Wenn Logan mir helfen soll, soll ich ihm zuerst auf der Jagd begleiten. Er erzählte mir, dass er vor kurzem einem fiesen Snapper begegnet ist. Wenn ich ihm helfe den zu erledigen, wird er auch mir erzählen was ich wissen möchte.");
-	Wld_InsertNpc(badsnapper,"FP_ROAM_OW_SCA_01_BADITS2");
+	B_LogEntry(CH1_SNAPPER,"Wenn Logan mir helfen soll, soll ich ihn zuerst auf der Jagd begleiten. Er erzählte mir, dass er vor kurzem einem fiesen Snapper begegnet ist. Wenn ich ihm helfe, den zu erledigen, wird er auch mir erzählen, was ich wissen möchte.");
+	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	Npc_ExchangeRoutine(self,"FMTAKEN");
+	self.senses_range = 3000;
 	AI_StopProcessInfos(self);
-	Npc_ExchangeRoutine(self,"FMTAKEN");
+	Wld_InsertNpc(badsnapper,"FP_ROAM_OW_SCA_01_BADITS2");
+};
+
+
+instance DIA_LOGAN_APPROACH_SNAPPER(C_Info)
+{
+	npc = org_871_logan;
+	nr = 1;
+	condition = dia_logan_approach_snapper_condition;
+	information = dia_logan_approach_snapper_info;
+	permanent = 0;
+	important = 1;
+};
+
+
+func int dia_logan_approach_snapper_condition()
+{
+	if((SNAPPER_HUNT == LOG_RUNNING) && Npc_GetDistToWP(self,"SPAWN_OW_SCA_01_BADITS7") < 3000)
+	{
+		return 1;
+	};
+};
+
+func void dia_logan_approach_snapper_info()
+{
+	AI_Output(self,other,"DIA_Org_5033_Logan_APPROACH_13_00");	//Da vorne ist er, ich erkenne ihn wieder!
+	AI_ReadyMeleeWeapon(self);
+	AI_Output(self,other,"DIA_Org_5033_Logan_APPROACH_13_01");	//Auf geht's!
+	AI_StopProcessInfos(self);
 };
 
 
@@ -333,7 +362,7 @@ instance DIA_LOGAN_SUCCESS(C_Info)
 
 func int dia_logan_success_condition()
 {
-	if((SNAPPER_HUNT == LOG_RUNNING) && Npc_HasItems(hero,itat_claws_snapper))
+	if((SNAPPER_HUNT == LOG_RUNNING) && Npc_IsDead(badsnapper))
 	{
 		return 1;
 	};
@@ -341,23 +370,21 @@ func int dia_logan_success_condition()
 
 func void dia_logan_success_info()
 {
-	AI_Output(self,other,"DIA_Org_5033_Logan_SUCCESS_15_00");	//Das Vieh ist erledigt.
+	AI_Output(other,self,"DIA_Org_5033_Logan_SUCCESS_15_00");	//Das Vieh ist erledigt.
 	AI_Output(self,other,"DIA_Org_5033_Logan_SUCCESS_13_01");	//Gute Arbeit, du bist ja doch zu was zu gebrauchen.
 	AI_Output(self,other,"DIA_Org_5033_Logan_SUCCESS_13_02");	//Wie ich dir gesagt habe, helfe ich dir jetzt.
-	AI_Output(self,other,"DIA_Org_5033_Logan_SUCCESS_13_03");	//Ich bin der Meinung das Esteban bald unser neuer Anführer ist.
+	AI_Output(self,other,"DIA_Org_5033_Logan_SUCCESS_13_03");	//Ich bin der Meinung, dass Esteban bald unser neuer Anführer ist.
 	AI_Output(self,other,"DIA_Org_5033_Logan_SUCCESS_13_04");	//Nicht mehr lange und er wird sich gegen Quentin auflehnen.
-	AI_Output(self,other,"DIA_Org_5033_Logan_SUCCESS_13_05");	//Auch wenn Quentin immer gut für uns gesorgt hat, die Zeiten ändern sich denke ich.
+	AI_Output(self,other,"DIA_Org_5033_Logan_SUCCESS_13_05");	//Auch wenn Quentin immer gut für uns gesorgt hat, die Zeiten ändern sich, denke ich.
 	AI_Output(self,other,"DIA_Org_5033_Logan_SUCCESS_13_06");	//Mehr wolltest du nicht wissen oder? Dann seh'n wir uns im Lager.
-	B_GiveInvItems(other,self,itat_claws_snapper,1);
-	Npc_RemoveInvItems(self,itat_claws_snapper,1);
 	SNAPPER_HUNT = LOG_SUCCESS;
 	Log_SetTopicStatus(CH1_SNAPPER,LOG_SUCCESS);
-	B_LogEntry(CH1_SNAPPER,"Logan ist zufrieden mit mir. Ab jetzt vertraut er mir und hilft mir wenn was ist.");
+	B_LogEntry(CH1_SNAPPER,"Logan ist zufrieden mit mir. Ab jetzt vertraut er mir und hilft mir, wenn was ist.");
 	B_GiveXP(XP_SNAPPER);
-	B_LogEntry(CH1_ESTEBANQUENTIN,"Logan ist der Meinung das Quentin nicht mehr lange Anführer sein wird. Er kann Quentin zwar gut leiden, sagt aber das sich die Zeiten ändern.");
+	B_LogEntry(CH1_ESTEBANQUENTIN,"Logan ist der Meinung, dass Quentin nicht mehr lange Anführer sein wird. Er kann Quentin zwar gut leiden, sagt aber, dass sich die Zeiten ändern.");
+	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"START");
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	LOGAN_ESTEBAN = TRUE;
-	AI_StopProcessInfos(self);
 };
 

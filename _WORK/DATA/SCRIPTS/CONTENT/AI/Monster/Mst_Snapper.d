@@ -54,6 +54,5 @@ instance BADSNAPPER(Mst_Default_Snapper)
 	attribute[ATR_DEXTERITY] = 75;
 	attribute[ATR_HITPOINTS_MAX] = 160;
 	attribute[ATR_HITPOINTS] = 160;
-	CreateInvItems(self,itat_claws_snapper,1);
 };
 

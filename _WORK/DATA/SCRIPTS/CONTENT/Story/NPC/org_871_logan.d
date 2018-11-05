@@ -46,8 +46,8 @@ func void Rtn_start_871()
 
 func void Rtn_FMTaken_871()
 {
-	TA_FollowPC(0,0,12,0,"LOCATION_11_12_LOGAN");
-	TA_FollowPC(12,0,0,0,"LOCATION_11_12_LOGAN");
+	TA_GuidePC(0,0,12,0,"SPAWN_OW_SCA_01_BADITS7");
+	TA_GuidePC(12,0,0,0,"SPAWN_OW_SCA_01_BADITS7");
 };
 
 func void Rtn_OMFull_871()
