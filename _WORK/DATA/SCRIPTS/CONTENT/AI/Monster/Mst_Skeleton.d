@@ -8,8 +8,8 @@ prototype Mst_Default_Skeleton(C_Npc)
 	attribute[ATR_DEXTERITY] = 70;
 	attribute[ATR_HITPOINTS_MAX] = 150;
 	attribute[ATR_HITPOINTS] = 150;
-	attribute[ATR_MANA_MAX] = 0;
-	attribute[ATR_MANA] = 0;
+	attribute[ATR_MANA_MAX] = 200;
+	attribute[ATR_MANA] = 200;
 	protection[PROT_BLUNT] = 30;
 	protection[PROT_EDGE] = 30;
 	protection[PROT_POINT] = 1000;
