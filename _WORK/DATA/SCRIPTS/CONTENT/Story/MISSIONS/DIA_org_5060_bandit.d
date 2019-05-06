@@ -41,7 +41,7 @@ func int org_5060_bandit_fakehelp_condition()
 
 func void org_5060_bandit_fakehelp_info()
 {
-	AI_Output(self,other,"DIA_ORG_5060_Help_15_00");	//Hey du! Warte mal!
+	AI_Output(self,other,"DIA_ORG_5060_Help_15_00");	//Hey du! Warte mal du Hund!
 	AI_Output(other,self,"DIA_ORG_5060_Help_15_01");	//Was willst du von mir?
 	AI_Output(self,other,"DIA_ORG_5060_Help_15_02");	//Mein Kumpel und ich bräuchten ein wenig Hilfe. Wir jagen Scavenger in der Gegend und bräuchten jemanden, der uns dabei hilft die Viecher zu erledigen.
 	AI_Output(self,other,"DIA_ORG_5060_Help_15_03");	//Du kommst mir da gerade recht. Wenn du mir und meinem Kumpel hilfst, kriegst du auch deinen Teil der Beute ab.
@@ -109,31 +109,31 @@ func void org_5060_bandit_trapped_info()
 };
 
 
-instance ORG_5060_BANDIT_BEATED(C_Info)
+instance ORG_5060_BANDIT_BEATEN(C_Info)
 {
 	npc = org_5060_bandit;
 	nr = 1;
-	condition = org_5060_bandit_beated_condition;
-	information = org_5060_bandit_beated_info;
+	condition = org_5060_bandit_beaten_condition;
+	information = org_5060_bandit_beaten_info;
 	permanent = 0;
 	important = 1;
 };
 
 
-func int org_5060_bandit_beated_condition()
+func int org_5060_bandit_beaten_condition()
 {
-	if((Npc_KnowsInfo(hero,org_5060_bandit_trapped) && Npc_HasItems(hero,ItWr_Fire_Letter_01)) || (Npc_HasItems(hero,ItWr_Fire_Letter_02) && (self.aivar[AIV_HASDEFEATEDSC] == TRUE)))
+	if(Npc_KnowsInfo(hero,org_5060_bandit_trapped) && (Npc_HasItems(hero,ItWr_Fire_Letter_01) || Npc_HasItems(hero,ItWr_Fire_Letter_02)) && (self.aivar[AIV_HASDEFEATEDSC] == TRUE))
 	{
 		return TRUE;
 	};
 };
 
-func void org_5060_bandit_beated_info()
+func void org_5060_bandit_beaten_info()
 {
 	AI_Output(self,other,"DIA_ORG_5060_Beated_15_00");	//Was hast du denn da für einen Brief dabei gehabt?
 	B_UseFakeScroll();
-	AI_Output(self,other,"DIA_ORG_5060_Beated_15_01");	//Interessant, dass klingt wertvoll. Da springt bestimmt eine schöne Belohnung für mich bei raus. Hehe.
-	AI_Output(self,other,"DIA_ORG_5060_Beated_15_02");	//Jetzt mach' das du wegkommst.
+	AI_Output(self,other,"DIA_ORG_5060_Beated_15_01");	//Interessant, das klingt wertvoll. Da springt bestimmt eine schöne Belohnung für mich bei raus. Hehe.
+	AI_Output(self,other,"DIA_ORG_5060_Beated_15_02");	//Jetzt mach' dass du wegkommst!
 	CreateInvItem(self,ItWr_Fire_Letter_02);
 	Npc_RemoveInvItem(hero,ItWr_Fire_Letter_01);
 	Npc_RemoveInvItem(hero,ItWr_Fire_Letter_02);
