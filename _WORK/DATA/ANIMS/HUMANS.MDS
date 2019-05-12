@@ -3316,7 +3316,7 @@ Model ("HuS")
 			ani			("s_BSANVIL_S1"				1	"s_BSANVIL_S1"		0.0	0.0	M.	"Hum_BSAnvil_Jue00.asc"		F	10	47)
 			ani			("t_BSANVIL_S1_2_S0"		1	"s_BSANVIL_S0"		0.0	0.0	M.	"Hum_BSAnvil_Jue00.asc"		R	4	9)
 			{
-				*eventTag(	(9	"DEF_EXCHANGE_ITEM"	"ZS_LEFTHAND"	"ItMiSwordbladehot")
+				*eventTag	(9	"DEF_EXCHANGE_ITEM"	"ZS_LEFTHAND"	"ItMiSwordbladehot")
 				*eventTag	(4	"DEF_REMOVE_ITEM")
 			}
 
@@ -3334,7 +3334,7 @@ Model ("HuS")
 			ani			("s_BSCOOL_S1"				1	"s_BSCOOL_S1"		0.0	0.0	M.	"Hum_BSCool_M01.asc"		F	10	50)
 			ani			("t_BSCOOL_S1_2_S0"			1	"s_BSCOOL_S0"		0.0	0.0	M.	"Hum_BSCool_M01.asc"		R	4	9)
 			{
-				*eventTag(	(9	"DEF_EXCHANGE_ITEM"	"ZS_LEFTHAND"	"ItMiSwordblade")
+				*eventTag	(9	"DEF_EXCHANGE_ITEM"	"ZS_LEFTHAND"	"ItMiSwordblade")
 				*eventTag	(4	"DEF_REMOVE_ITEM")
 			}
 
@@ -3352,7 +3352,8 @@ Model ("HuS")
 			ani			("s_BSSHARP_S1"				1	"s_BSSHARP_S1"		0.0	0.0	M.	"Hum_BSSharp_M01.asc"		F	15	80)
 			ani			("t_BSSHARP_S1_2_S0"		1	"s_BSSHARP_S0"		0.0	0.0	M.	"Hum_BSSharp_M01.asc"		R	4	14)
 			{
-				//*eventTag(	(4	"DEF_EXCHANGE_ITEM"	"ZS_LEFTHAND"	"ItMw_1h_Sword_01")
+				//*eventTag	(14	"DEF_EXCHANGE_ITEM"	"ZS_LEFTHAND"	"itmw_1h_sword_01_smith")
+                *eventTag	(4	"DEF_DESTROY_ITEM")
 			}
 
 // ---------------------------------------------------------------------------------------------------------------

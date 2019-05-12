@@ -63,7 +63,6 @@ func int pc_smith_itmw_1h_sword_01_condition()
 func void pc_smith_itmw_1h_sword_01_info()
 {
 	CreateInvItem(hero,itmw_1h_sword_01_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -93,7 +92,6 @@ func int pc_smith_itmw_1h_lightguardssword_03_condition()
 func void pc_smith_itmw_1h_lightguardssword_03_info()
 {
 	CreateInvItem(hero,itmw_1h_lightguardssword_03_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -123,7 +121,6 @@ func int pc_smith_itmw_1h_sword_03_condition()
 func void pc_smith_itmw_1h_sword_03_info()
 {
 	CreateInvItem(hero,itmw_1h_sword_03_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -153,7 +150,6 @@ func int pc_smith_itmw_1h_sword_broad_04_condition()
 func void pc_smith_itmw_1h_sword_broad_04_info()
 {
 	CreateInvItem(hero,itmw_1h_sword_broad_04_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -183,7 +179,6 @@ func int pc_smith_itmw_1h_mace_01_condition()
 func void pc_smith_itmw_1h_mace_01_info()
 {
 	CreateInvItem(hero,itmw_1h_mace_01_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -213,7 +208,6 @@ func int pc_smith_itmw_1h_mace_04_condition()
 func void pc_smith_itmw_1h_mace_04_info()
 {
 	CreateInvItem(hero,itmw_1h_mace_04_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -243,7 +237,6 @@ func int pc_smith_itmw_1h_sword_05_condition()
 func void pc_smith_itmw_1h_sword_05_info()
 {
 	CreateInvItem(hero,itmw_1h_sword_05_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -273,7 +266,6 @@ func int pc_smith_itmw_2h_sword_light_01_condition()
 func void pc_smith_itmw_2h_sword_light_01_info()
 {
 	CreateInvItem(hero,itmw_2h_sword_light_01_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -303,7 +295,6 @@ func int pc_smith_itmw_2h_sword_light_02_condition()
 func void pc_smith_itmw_2h_sword_light_02_info()
 {
 	CreateInvItem(hero,itmw_2h_sword_light_02_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -333,7 +324,6 @@ func int pc_smith_itmw_2h_sword_light_04_condition()
 func void pc_smith_itmw_2h_sword_light_04_info()
 {
 	CreateInvItem(hero,itmw_2h_sword_light_04_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -363,7 +353,6 @@ func int pc_smith_roter_wind_condition()
 func void pc_smith_roter_wind_info()
 {
 	CreateInvItem(hero,roter_wind_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -393,7 +382,6 @@ func int pc_smith_itmw_1h_mace_war_01_condition()
 func void pc_smith_itmw_1h_mace_war_01_info()
 {
 	CreateInvItem(hero,itmw_1h_mace_war_01_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -423,7 +411,6 @@ func int pc_smith_itmw_1h_war_02_condition()
 func void pc_smith_itmw_1h_war_02_info()
 {
 	CreateInvItem(hero,itmw_1h_mace_war_02_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -453,7 +440,6 @@ func int pc_smith_itmw_1h_war_03_condition()
 func void pc_smith_itmw_1h_war_03_info()
 {
 	CreateInvItem(hero,itmw_1h_mace_war_03_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -483,7 +469,6 @@ func int pc_smith_itmw_2h_sword_light_03_condition()
 func void pc_smith_itmw_2h_sword_light_03_info()
 {
 	CreateInvItem(hero,itmw_2h_axe_light_01_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -513,7 +498,6 @@ func int pc_smith_itmw_2h_sword_01_condition()
 func void pc_smith_itmw_2h_sword_01_info()
 {
 	CreateInvItem(hero,itmw_2h_axe_heavy_01_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
@@ -543,7 +527,6 @@ func int pc_smith_itmw_2h_sword_heavy_02_condition()
 func void pc_smith_itmw_2h_sword_heavy_02_info()
 {
 	CreateInvItem(hero,itmw_2h_axe_heavy_02_smith);
-	Npc_RemoveInvItem(hero,ItMiSwordblade);
 	PrintScreen("Waffe hergestellt!",-1,-1,"font_old_20_white.tga",1);
 	AI_StopProcessInfos(self);
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
