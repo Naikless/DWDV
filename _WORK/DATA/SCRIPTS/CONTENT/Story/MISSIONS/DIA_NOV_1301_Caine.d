@@ -891,7 +891,7 @@ func void nov_1301_caine_traenke_crawlerelixier()
 		PrintScreen("Lerne: Crawler-Elixier",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_CrawlerElixier_06_01");	//Achte darauf, dass du die Pflanzen und Kräuter zusammen in die Laborwasserflasche gibst, bevor du die verschiedenen Flüssigkeit
 		AI_Output(self,other,"Nov_1301_Caine_Traenke_CrawlerElixier_06_02");	//Wenn du alles richtig machst, solltest du das gewünschte Ergebnis erhalten.
-		KNOWS_DEXELIXIER = TRUE;
+		KNOWS_PSICRAWLER = TRUE;
 		Log_CreateTopic(GE_ALCHEMIE,LOG_NOTE);
 		B_LogEntry(GE_ALCHEMIE,"Crawler-Elixier - 1 Wasser, 4 Sumpfkraut, 4 Crawlerzangen");
 	}
