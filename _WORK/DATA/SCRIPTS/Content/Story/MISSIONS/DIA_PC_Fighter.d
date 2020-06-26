@@ -226,7 +226,7 @@ func int Dia_Gorn_DuHehler_Condition()
 	if(Npc_KnowsInfo(hero,ORG_801_Lares_BringListBack))
 	{
 		return 1;
-	};
+};
 };
 
 func void Dia_Gorn_DuHehler_Info()
@@ -1399,7 +1399,7 @@ func void Info_Gorn_FMGATE_Info()
 	AI_Output(hero,self,"Info_Gorn_FMGATE_15_02");	//Ein alter Bekannter ... aber die Rechnung ist beglichen.
 	if(!FM_GateOpen)
 	{
-		AI_Output(self,hero,"Info_Gorn_FMGATE_09_03");	//Gut, öffne du das Tor, ich pass' hier auf!
+	AI_Output(self,hero,"Info_Gorn_FMGATE_09_03");	//Gut, öffne du das Tor, ich pass' hier auf!
 	};
 	Npc_ExchangeRoutine(self,"WaitFM");
 	AI_StopProcessInfos(self);

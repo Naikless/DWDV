@@ -24,7 +24,7 @@ func int ZS_AssessQuietSound()
 	Npc_PercEnable(self,PERC_ASSESSENTERROOM,B_AssessEnterRoom);
 	Npc_PercEnable(self,PERC_ASSESSUSEMOB,B_AssessUseMob);
 	AI_TurnToNPC(self,other);
-	return 0;
+	return 1;
 };
 
 func int ZS_AssessQuietSound_Loop()

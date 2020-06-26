@@ -65,7 +65,7 @@ func int ORG_862_Jacko_GUARD_Condition()
 	if(Kalom_DrugMonopol == LOG_RUNNING)
 	{
 		return 1;
-	};
+};
 };
 
 func void ORG_862_Jacko_GUARD_Info()
